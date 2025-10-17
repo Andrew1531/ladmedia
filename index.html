@@ -1,90 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>LAD MEDIA — AI-Native Creative & Paid Media Agency</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="LAD MEDIA: AI-native creative agency specializing in paid media, SEM, brand storytelling, and modern web experiences." />
-  <style>
-    :root {
-      --bg: #0a0a0a;
-      --fg: #ffffff;
-      --muted: #bdbdbd;
-      --border: #1a1a1a;
-      --headline: #f2f2f2;
-    }
-    body {
-      background: var(--bg);
-      color: var(--fg);
-      margin: 0;
-      font-family: Inter, system-ui, sans-serif;
-      line-height: 1.6;
-    }
-    .page { max-width: 980px; margin: 0 auto; padding: 40px 24px; }
-    .cover {
-      border: 1px solid var(--border);
-      padding: 56px 48px;
-      margin-bottom: 32px;
-      background: linear-gradient(180deg, #0f0f0f 0%, #0a0a0a 100%);
-    }
-    .brand { font-weight: 800; font-size: 22px; letter-spacing: 0.12em; text-transform: uppercase; }
-    .title { font-size: 42px; font-weight: 900; margin: 12px 0; color: var(--headline); }
-    .subtitle { font-size: 18px; color: var(--muted); margin-bottom: 28px; }
-    h2 { font-size: 28px; font-weight: 800; margin: 32px 0 12px; }
-    h3 { font-size: 20px; font-weight: 700; margin: 20px 0 8px; }
-    .section { border: 1px solid var(--border); padding: 28px; margin-bottom: 24px; background: #0b0b0b; }
-    .section-footer { margin-top: 18px; padding-top: 12px; border-top: 1px dashed var(--border); font-size: 12px; color: var(--muted); text-transform: uppercase; }
-    ul { margin: 12px 0; padding-left: 20px; }
-    li { margin: 6px 0; }
-    footer { margin-top: 40px; padding: 24px; border: 1px solid var(--border); background: #0c0c0c; font-size: 13px; color: var(--muted); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAD MEDIA — AI-Driven Results. Human-Centric Strategy.</title>
+    <!-- Load Inter font and Tailwind CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Set Inter as the primary font and define body style for high contrast */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0d; /* Very dark background (near black) */
+            color: #ffffff; /* White text */
+        }
+        /* Custom Marquee Animation (used for client logos) */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            animation: marquee 30s linear infinite;
+        }
+        .marquee-content {
+            display: inline-block;
+            padding-right: 2rem;
+        }
+        /* Style for the Contact button to enforce B&W design */
+        .contact-btn {
+            border-color: white;
+        }
+        .contact-btn:hover {
+            background-color: white;
+            color: #0d0d0d;
+        }
+        /* Style for the numbered infographic steps */
+        .step-number {
+            @apply flex items-center justify-center w-8 h-8 rounded-full border-2 border-white text-sm font-bold mr-4 flex-shrink-0;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Using pure white for primary highlights in a B&W scheme
+                        'primary-highlight': '#ffffff',
+                        'dark-bg': '#0d0d0d',
+                    },
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-  <div class="page">
-    <!-- Cover -->
-    <section class="cover">
-      <div class="brand">LAD MEDIA</div>
-      <h1 class="title">AI-Native Creative & Paid Media Agency</h1>
-      <p class="subtitle">Blending strategy, storytelling, and technology to deliver measurable results for brands in NYC/NJ and beyond.</p>
-    </section>
+<body class="antialiased">
 
-    <!-- About -->
-    <section class="section" id="about">
-      <h2>About Us</h2>
-      <p>Founded in 2012 as an indie record label, LAD MEDIA evolved into a full-stack marketing agency in 2017. Today, we are a top-tier, AI-native agency known for innovation, clarity, and measurable impact. We thrive at the intersection of creativity and technology, helping brands adapt and lead in a rapidly changing digital landscape.</p>
-      <div class="section-footer">Powered by LAD MEDIA</div>
-    </section>
+    <!-- Header Navigation -->
+    <header class="container mx-auto px-4 py-6 border-b border-gray-800">
+        <div class="flex justify-between items-center">
+            <!-- LOGO ADDED HERE: Replaced text with the image. h-8 for mobile, h-10 for desktop. -->
+            <a href="#">
+                <img src="LAD MEDIA LOGO.png" alt="LAD MEDIA Logo" class="h-8 sm:h-10" />
+            </a>
+            <nav>
+                <!-- Button now uses white border and text, inverts on hover -->
+                <a href="#contact" class="text-sm font-medium text-white hover:text-dark-bg transition duration-300 rounded-full border border-white hover:bg-white px-4 py-2 hidden sm:inline-block">
+                    Let's Talk
+                </a>
+            </nav>
+        </div>
+    </header>
 
-    <!-- Services -->
-    <section class="section" id="services">
-      <h2>Our Services</h2>
-      <ul>
-        <li><strong>Paid Media & SEM:</strong> Expert campaign strategy and optimization across Google Ads, Meta, LinkedIn, and TikTok.</li>
-        <li><strong>Creative Direction:</strong> Brand storytelling, multimedia content, and modern minimalist web design.</li>
-        <li><strong>SEO & AI Optimization:</strong> Branded content ranking strategies powered by AI insights.</li>
-        <li><strong>Web & UX:</strong> Seamless, conversion-friendly user flows built with React/Next.js and custom integrations.</li>
-        <li><strong>Blockchain & Web3:</strong> Token ecosystems, payment flows, and dApp integrations for next-gen products.</li>
-      </ul>
-      <div class="section-footer">Powered by LAD MEDIA</div>
-    </section>
+    <main>
+        <!-- 1. Hero Section: Value Proposition (High Impact, High Contrast) -->
+        <section class="container mx-auto px-4 py-16 md:py-32">
+            <div class="max-w-6xl">
+                <!-- Use a subtle gray for secondary text -->
+                <p class="text-xl md:text-2xl font-medium mb-6 text-gray-400">AI-NATIVE AGENCY</p>
+                <h1 class="text-5xl sm:text-7xl md:text-8xl font-black leading-tight tracking-tighter">
+                    AI-Driven Results. <br> Human-Centric <span class="text-white">Strategy.</span>
+                </h1>
+                <p class="mt-8 text-lg md:text-xl max-w-3xl text-gray-300">
+                    LAD MEDIA is the high-performance firm built for brands who demand measurable impact. We blend **radical ownership**, precise execution, and technological clarity to turn potential into reality.
+                </p>
+            </div>
+        </section>
 
-    <!-- Work -->
-    <section class="section" id="work">
-      <h2>Our Work</h2>
-      <p>We’ve directed paid media and product launches for SPORTSBEEP and multiple B2B/consumer clients. From troubleshooting technical infrastructure to architecting token ecosystems, our work blends hands-on execution with strategic oversight.</p>
-      <div class="section-footer">Powered by LAD MEDIA</div>
-    </section>
+        <!-- 2. Client Highlights / Marquee Section (Trust and Social Proof) -->
+        <section class="py-12 border-y border-gray-800">
+            <div class="marquee-container">
+                <div class="marquee">
+                    <!-- Duplicate the content to ensure seamless looping -->
+                    <div class="marquee-content inline-flex space-x-12 sm:space-x-16 md:space-x-24 text-3xl md:text-4xl font-extrabold tracking-tight text-gray-600 uppercase">
+                        <span>SportsBeep</span>
+                        <span>Polar Point HVAC</span>
+                        <span>Superior Pack Group</span>
+                        <span>Mispar.co</span>
+                        <span>A Brand Gym</span>
+                        <!-- Second copy for seamless loop -->
+                        <span>SportsBeep</span>
+                        <span>Polar Point HVAC</span>
+                        <span>Superior Pack Group</span>
+                        <span>Mispar.co</span>
+                        <span>A Brand Gym</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Vision -->
-    <section class="section" id="vision">
-      <h2>Our Vision</h2>
-      <p>We aim to position LAD MEDIA as the leading AI-native agency in the NYC/NJ market. Our long-term goal is to be recognized for innovation, measurable results, and brand integrity—helping clients not just keep up, but set the pace.</p>
-      <div class="section-footer">Powered by LAD MEDIA</div>
-    </section>
+        <!-- 3. ABOUT US SECTION -->
+        <section class="container mx-auto px-4 py-16 md:py-24">
+            <div class="grid md:grid-cols-3 gap-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">About LAD MEDIA</h2>
+                <div class="md:col-span-2">
+                    <p class="text-lg text-gray-300 mb-4">
+                        Founded in 2012 as an indie record label, LAD MEDIA evolved into a full-stack marketing agency in 2017. Today, we are a top-tier, AI-native agency known for **innovation, clarity, and measurable impact.**
+                    </p>
+                    <p class="text-lg text-gray-300">
+                        We thrive at the intersection of creativity and technology, helping brands adapt and lead in a rapidly changing digital landscape.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 4. OUR SERVICES SECTION (Core Capabilities) -->
+        <section class="container mx-auto px-4 py-16 md:py-24 border-t border-gray-800">
+            <h2 class="text-4xl sm:text-5xl font-bold max-w-4xl tracking-tight leading-snug mb-12">
+                Our Core Capabilities
+            </h2>
 
-    <!-- Contact -->
-    <section class="section" id="contact">
-      <h2>Contact Us</h2>
-      <p>Ready to elevate your brand? Let’s talk.</p>
-<div data-tf-live="01K6EBEE0QGRAPCJG42SWAJVHD"></div><script src="//embed.typeform.com/next/embed.js"></script>      <ul>
-        <li>Email: <a href="mailto:andrew@ladmedia.co">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Service 1: Paid Media & SEM -->
+                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-white transition duration-300">
+                    <h3 class="text-xl font-extrabold mb-2 text-primary-highlight">Paid Media & SEM</h3>
+                    <p class="text-gray-400">Expert campaign strategy and optimization across Google Ads, Meta, LinkedIn, and TikTok.</p>
+                </div>
+
+                <!-- Service 2: Creative Direction -->
+                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-white transition duration-300">
+                    <h3 class="text-xl font-extrabold mb-2 text-primary-highlight">Creative Direction</h3>
+                    <p class="text-gray-400">Brand storytelling, multimedia content, and modern minimalist web design.</p>
+                </div>
+
+                <!-- Service 3: SEO & AI Optimization -->
+                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-white transition duration-300">
+                    <h3 class="text-xl font-extrabold mb-2 text-primary-highlight">SEO & AI Optimization</h3>
+                    <p class="text-gray-400">Branded content ranking strategies powered by AI insights for sustained organic growth.</p>
+                </div>
+                
+                <!-- Service 4: Web & UX -->
+                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-white transition duration-300">
+                    <h3 class="text-xl font-extrabold mb-2 text-primary-highlight">Web & UX</h3>
+                    <p class="text-gray-400">Seamless, conversion-friendly user flows built with React/Next.js and custom integrations.</p>
+                </div>
+
+                <!-- Service 5: Blockchain & Web3 (Spans one column, looks fine in 3-column grid) -->
+                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-white transition duration-300">
+                    <h3 class="text-xl font-extrabold mb-2 text-primary-highlight">Blockchain & Web3</h3>
+                    <p class="text-gray-400">Token ecosystems, payment flows, and dApp integrations for next-gen products.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. OUR WORK (Overview) SECTION -->
+        <section class="container mx-auto px-4 py-16 md:py-24 border-t border-gray-800">
+            <div class="grid md:grid-cols-3 gap-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Our Work</h2>
+                <div class="md:col-span-2">
+                    <p class="text-lg text-gray-300">
+                        We’ve directed paid media and product launches for **SPORTSBEEP** and multiple B2B/consumer clients. From troubleshooting technical infrastructure to architecting token ecosystems, our work blends hands-on execution with strategic oversight.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. OUR VISION SECTION -->
+        <section class="container mx-auto px-4 py-16 md:py-24 border-t border-gray-800">
+            <div class="grid md:grid-cols-3 gap-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Our Vision</h2>
+                <div class="md:col-span-2">
+                    <p class="text-lg text-gray-300">
+                        We aim to position LAD MEDIA as the leading **AI-native agency** in the NYC/NJ market. Our long-term goal is to be recognized for innovation, measurable results, and brand integrity—helping clients not just keep up, but set the pace.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 7. SERVICES INFOGRAPHIC / SPORTSBEEP CASE STUDY (Original Section 3, now 7) -->
+        <section class="container mx-auto px-4 py-16 md:py-24 border-t border-gray-800">
+            <h2 class="text-4xl sm:text-5xl font-bold max-w-4xl tracking-tight leading-snug">
+                Case Study: Building & Launching SportsBeep's Cryptocurrency
+            </h2>
+            <p class="mt-4 text-lg text-gray-400 max-w-4xl">
+                We led the end-to-end execution, from blockchain architecture to a full platform rebuild, demonstrating our full-stack capabilities.
+            </p>
+
+            <div class="mt-12 grid md:grid-cols-2 gap-8">
+                
+                <!-- Service Block 1: Strategy & Tokenomics (BUILD) -->
+                <div class="bg-gray-900 p-8 rounded-xl border border-gray-800 hover:border-white transition duration-300 flex items-start">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3 class="text-2xl font-extrabold mb-2 text-primary-highlight">Tokenomics & Architecture</h3>
+                        <p class="text-gray-300">
+                            **Build:** Architected the secure token ecosystem (tokenomics, smart contracts) and defined the core blockchain integration strategy for the SportsBeep cryptocurrency launch.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Block 2: Replatforming & UX (REBUILD SPORTSBEEP.COM) -->
+                <div class="bg-gray-900 p-8 rounded-xl border border-gray-800 hover:border-white transition duration-300 flex items-start">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3 class="text-2xl font-extrabold mb-2 text-primary-highlight">Full Replatform & UX Design</h3>
+                        <p class="text-gray-300">
+                            **Rebuild:** Rebuilt the entire SportsBeep.com platform on a modern, scalable architecture, focusing on conversion-focused user flows and seamless Web3 integration.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Block 3: Pre-Launch Marketing (MARKET) -->
+                <div class="bg-gray-900 p-8 rounded-xl border border-gray-800 hover:border-white transition duration-300 flex items-start">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3 class="text-2xl font-extrabold mb-2 text-primary-highlight">Targeted Pre-Launch Marketing</h3>
+                        <p class="text-gray-300">
+                            **Market:** Developed and executed a multi-channel, AI-driven paid media campaign to build community, generate early buzz, and secure participation for the pre-launch phase.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Block 4: Launch & Optimization (LAUNCH) -->
+                <div class="bg-gray-900 p-8 rounded-xl border border-gray-800 hover:border-white transition duration-300 flex items-start">
+                    <div class="step-number">4</div>
+                    <div>
+                        <h3 class="text-2xl font-extrabold mb-2 text-primary-highlight">Launch & Post-IDO Optimization</h3>
+                        <p class="text-gray-300">
+                            **Launch:** Managed the official cryptocurrency launch (IDO) and provided technical oversight, followed by continuous paid media optimization to drive long-term adoption and network growth.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- END SERVICES INFOGRAPHIC -->
+
+        <!-- 8. Featured Client Spotlight (Testimonial Style) -->
+        <section class="container mx-auto px-4 py-16 md:py-24 bg-[#1a1a1a] rounded-xl my-16">
+            <div class="max-w-3xl mx-auto text-center">
+                <blockquote class="text-3xl md:text-4xl font-semibold leading-relaxed text-white">
+                    “LAD MEDIA saw our full potential. Maybe even more clearly than we did. But more importantly, they turned that potential into reality.”
+                </blockquote>
+                <!-- Client name now subtle gray -->
+                <p class="mt-6 text-lg font-medium text-gray-400">— Client, Superior Pack Group</p>
+            </div>
+        </section>
+
+        <!-- 9. Final CTA / Contact Section -->
+        <section id="contact" class="container mx-auto px-4 pt-16 pb-24 md:pt-24 md:pb-32 text-center">
+            <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+                Ready to elevate your brand?
+            </h2>
+            <p class="mt-4 text-xl text-gray-400">
+                Let's discuss how AI-native strategy can deliver results for you.
+            </p>
+            <div class="mt-10 inline-block">
+                 <!-- The button's href is set to mailto:andrew@ladmedia.co -->
+                 <a href="mailto:andrew@ladmedia.co" class="group relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-white rounded-lg shadow-md hover:bg-white hover:text-dark-bg">
+                    <!-- Inner SVG and text are inverted on hover -->
+                    <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full group-hover:translate-x-0 ease group-hover:text-dark-bg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </span>
+                    <span class="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease group-hover:text-dark-bg">
+                        Start the Conversation
+                    </span>
+                    <span class="relative invisible group-hover:visible">Start the Conversation</span>
+                </a>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 py-8 text-gray-500">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm">
+            <p class="mb-4 md:mb-0">&copy; 2025 LAD MEDIA. All Rights Reserved.</p>
+            <div class="space-x-4">
+                <a href="tel:9734758314" class="hover:text-white transition duration-300">(973) 475-8314</a>
+                <span class="text-gray-700">|</span>
+                <a href="mailto:andrew@ladmedia.co" class="hover:text-white transition duration-300">andrew@ladmedia.co</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

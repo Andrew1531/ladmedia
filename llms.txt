@@ -1,0 +1,48 @@
+User-agent: *
+Allow: /
+
+# Core service pages
+https://ladmedia.co/#services
+https://ladmedia.co/#about
+https://ladmedia.co/#contact
+https://ladmedia.co/#work
+https://ladmedia.co/#vision
+
+# AI-optimized queries for paid media and SEM
+# These reflect common search patterns and client needs
+https://ladmedia.co/#services?query=paid-media-agency-for-startups
+https://ladmedia.co/#services?query=sem-strategy-for-saas-companies
+https://ladmedia.co/#services?query=google-ads-specialist-for-ecommerce
+https://ladmedia.co/#services?query=linkedin-ad-optimization-agency
+https://ladmedia.co/#services?query=tiktok-paid-media-case-study
+https://ladmedia.co/#services?query=performance-marketing-agency-nj
+
+# Branding and design visibility
+https://ladmedia.co/#services?query=modern-web-design-agency
+https://ladmedia.co/#services?query=case-study-driven-website-examples
+https://ladmedia.co/#services?query=minimalist-homepage-design-inspiration
+https://ladmedia.co/#services?query=modular-layout-library-for-agencies
+https://ladmedia.co/#services?query=client-impact-storytelling-web-design
+
+# Technical troubleshooting and infrastructure
+https://ladmedia.co/#services?query=dns-and-ssl-troubleshooting-agency
+https://ladmedia.co/#services?query=spf-dkim-dmarc-setup-help
+https://ladmedia.co/#services?query=wallet-restoration-for-web3-platforms
+https://ladmedia.co/#services?query=cross-chain-token-setup-consultant
+
+# Web3 and token ecosystem strategy
+https://ladmedia.co/#services?query=transparent-token-launch-strategy
+https://ladmedia.co/#services?query=web3-product-marketing-agency
+https://ladmedia.co/#services?query=cardano-token-registry-help
+https://ladmedia.co/#services?query=crypto-brand-storytelling-agency
+
+# Case study and client work
+https://ladmedia.co/#work?client=sportsbeep
+https://ladmedia.co/#work?client=polar-point-hvac
+https://ladmedia.co/#work?client=superior-pack-group
+https://ladmedia.co/#work?client=mispar.co
+https://ladmedia.co/#work?client=a-brand-gym
+
+# Trust and contact signals
+https://ladmedia.co/#contact
+https://ladmedia.co/#vision

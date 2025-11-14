@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog | LAD MEDIA Insights</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Load Inter font and Tailwind CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        main { flex-grow: 1; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-highlight': '#ffffff',
+                        'dark-bg': '#0d0d0d',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased">
 
+    <!-- Header Navigation (Copied from index.html for consistency) -->
+    <header class="sticky top-0 z-10 bg-dark-bg/95 backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <!-- LOGO -->
+            <a href="index.html">
+                <img src="assets/lad-media-logo.png" alt="LAD MEDIA Logo" class="h-8 sm:h-10" />
+            </a>
+            <nav class="flex items-center space-x-6">
+                <!-- Blog Link - Highlighted as active -->
+                <a href="blog.html" class="text-sm font-medium text-white transition duration-300 border-b-2 border-white pb-1">
+                    Blog
+                </a>
+                <!-- Contact Button -->
+                <a href="index.html#contact" class="text-sm font-medium text-white hover:text-dark-bg transition duration-300 rounded-full border border-white hover:bg-white px-4 py-2">
+                    Let's Talk
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-16 md:py-24">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-6xl md:text-7xl font-black mb-4">LAD MEDIA Insights</h1>
+            <p class="text-xl text-gray-400 mb-16">Deep dives into AI strategy, paid media trends, and decentralized marketing.</p>
+
+            <!-- Placeholder Blog Post List -->
+            <div class="space-y-12">
+                <!-- Post 1 -->
+                <div class="border-b border-gray-800 pb-8 group">
+                    <p class="text-sm text-gray-500 mb-2">October 15, 2025</p>
+                    <a href="#" class="block hover:text-primary-highlight transition duration-300">
+                        <h2 class="text-3xl font-bold mb-2">The AI-Native Agency: How to Beat the Algorithms in 2025</h2>
+                        <p class="text-lg text-gray-300 group-hover:text-white transition duration-300">
+                            Forget simple automation. We explore how true AI integration changes the fundamentals of paid media targeting and creative iteration.
+                        </p>
+                    </a>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="border-b border-gray-800 pb-8 group">
+                    <p class="text-sm text-gray-500 mb-2">September 28, 2025</p>
+                    <a href="#" class="block hover:text-primary-highlight transition duration-300">
+                        <h2 class="text-3xl font-bold mb-2">Web3 Marketing: Bridging Decentralization and Mainstream Adoption</h2>
+                        <p class="text-lg text-gray-300 group-hover:text-white transition duration-300">
+                            A look at successful token launch strategies and the importance of community ownership in a decentralized ecosystem.
+                        </p>
+                    </a>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="border-b border-gray-800 pb-8 group">
+                    <p class="text-sm text-gray-500 mb-2">September 1, 2025</p>
+                    <a href="#" class="block hover:text-primary-highlight transition duration-300">
+                        <h2 class="text-3xl font-bold mb-2">Why Your SEO Strategy Needs a Technical Audit (Before You Write Another Article)</h2>
+                        <p class="text-lg text-gray-300 group-hover:text-white transition duration-300">
+                            Technical foundation is non-negotiable. We outline the 5 most common technical SEO pitfalls and how to fix them today.
+                        </p>
+                    </a>
+                </div>
+
+                <!-- Call to action for more content -->
+                <div class="text-center pt-8">
+                     <p class="text-xl text-gray-500">More coming soon!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Copied from index.html for consistency) -->
+    <footer class="border-t border-gray-800 py-8 text-gray-500">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm">
+            <p class="mb-4 md:mb-0">&copy; 2025 LAD MEDIA. All Rights Reserved.</p>
+            <div class="space-x-4">
+                <a href="tel:9734758314" class="hover:text-white transition duration-300">(973) 475-8314</a>
+                <span class="text-gray-700">|</span>
+                <a href="mailto:andrew@ladmedia.co" class="hover:text-white transition duration-300">andrew@ladmedia.co</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,16 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Homepage -->
   <url>
     <loc>https://ladmedia.co/</loc>
-    <lastmod>2025-10-27</lastmod>
+    <lastmod>2025-11-14</lastmod>
     <priority>1.0</priority>
   </url>
-  
+
+  <!-- Core Capabilities / Services -->
   <url>
-    <loc>https://ladmedia.co/#services</loc>
-    <lastmod>2025-10-27</lastmod>
-    <priority>0.5</priority>
+    <loc>https://ladmedia.co/#core-capabilities</loc>
+    <lastmod>2025-11-14</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Case Studies / Work -->
+  <url>
+    <loc>https://ladmedia.co/#work</loc>
+    <lastmod>2025-11-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About / Team -->
+  <url>
+    <loc>https://ladmedia.co/#about</loc>
+    <lastmod>2025-11-14</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://ladmedia.co/#contact</loc>
+    <lastmod>2025-11-14</lastmod>
+    <priority>0.6</priority>
   </url>
 
 </urlset>

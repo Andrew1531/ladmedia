@@ -2,47 +2,67 @@ User-agent: *
 Allow: /
 
 # Core service pages
-https://ladmedia.co/#services
-https://ladmedia.co/#about
-https://ladmedia.co/#contact
-https://ladmedia.co/#work
-https://ladmedia.co/#vision
 
-# AI-optimized queries for paid media and SEM
-# These reflect common search patterns and client needs
-https://ladmedia.co/#services?query=paid-media-agency-for-startups
-https://ladmedia.co/#services?query=sem-strategy-for-saas-companies
-https://ladmedia.co/#services?query=google-ads-specialist-for-ecommerce
-https://ladmedia.co/#services?query=linkedin-ad-optimization-agency
-https://ladmedia.co/#services?query=tiktok-paid-media-case-study
-https://ladmedia.co/#services?query=performance-marketing-agency-nj
+[https://ladmedia.co/#services](https://ladmedia.co/#services)
+[https://ladmedia.co/#about](https://ladmedia.co/#about)
+[https://ladmedia.co/#contact](https://ladmedia.co/#contact)
+[https://ladmedia.co/#work](https://ladmedia.co/#work)
+[https://ladmedia.co/#vision](https://ladmedia.co/#vision)
 
-# Branding and design visibility
-https://ladmedia.co/#services?query=modern-web-design-agency
-https://ladmedia.co/#services?query=case-study-driven-website-examples
-https://ladmedia.co/#services?query=minimalist-homepage-design-inspiration
-https://ladmedia.co/#services?query=modular-layout-library-for-agencies
-https://ladmedia.co/#services?query=client-impact-storytelling-web-design
+# Paid Media & SEM (including NYC focus)
 
-# Technical troubleshooting and infrastructure
-https://ladmedia.co/#services?query=dns-and-ssl-troubleshooting-agency
-https://ladmedia.co/#services?query=spf-dkim-dmarc-setup-help
-https://ladmedia.co/#services?query=wallet-restoration-for-web3-platforms
-https://ladmedia.co/#services?query=cross-chain-token-setup-consultant
+[https://ladmedia.co/#services?query=google-ads-campaign-strategy-nyc](https://ladmedia.co/#services?query=google-ads-campaign-strategy-nyc)
+[https://ladmedia.co/#services?query=meta-facebook-ad-optimization-nyc](https://ladmedia.co/#services?query=meta-facebook-ad-optimization-nyc)
+[https://ladmedia.co/#services?query=linkedin-paid-media-agency-nyc](https://ladmedia.co/#services?query=linkedin-paid-media-agency-nyc)
+[https://ladmedia.co/#services?query=tiktok-ad-strategy-nyc](https://ladmedia.co/#services?query=tiktok-ad-strategy-nyc)
+[https://ladmedia.co/#services?query=sem-for-startups-nyc](https://ladmedia.co/#services?query=sem-for-startups-nyc)
+[https://ladmedia.co/#services?query=performance-marketing-agency-nyc](https://ladmedia.co/#services?query=performance-marketing-agency-nyc)
 
-# Web3 and token ecosystem strategy
-https://ladmedia.co/#services?query=transparent-token-launch-strategy
-https://ladmedia.co/#services?query=web3-product-marketing-agency
-https://ladmedia.co/#services?query=cardano-token-registry-help
-https://ladmedia.co/#services?query=crypto-brand-storytelling-agency
+# Creative Direction & Branding
 
-# Case study and client work
-https://ladmedia.co/#work?client=sportsbeep
-https://ladmedia.co/#work?client=polar-point-hvac
-https://ladmedia.co/#work?client=superior-pack-group
-https://ladmedia.co/#work?client=mispar.co
-https://ladmedia.co/#work?client=a-brand-gym
+[https://ladmedia.co/#services?query=brand-storytelling-agency-nyc](https://ladmedia.co/#services?query=brand-storytelling-agency-nyc)
+[https://ladmedia.co/#services?query=minimalist-web-design-nyc](https://ladmedia.co/#services?query=minimalist-web-design-nyc)
+[https://ladmedia.co/#services?query=visual-identity-development-nyc](https://ladmedia.co/#services?query=visual-identity-development-nyc)
+[https://ladmedia.co/#services?query=creative-direction-for-brands-nyc](https://ladmedia.co/#services?query=creative-direction-for-brands-nyc)
+[https://ladmedia.co/#services?query=multimedia-content-production-nyc](https://ladmedia.co/#services?query=multimedia-content-production-nyc)
 
-# Trust and contact signals
-https://ladmedia.co/#contact
-https://ladmedia.co/#vision
+# SEO & AI Optimization
+
+[https://ladmedia.co/#services?query=technical-seo-services-nyc](https://ladmedia.co/#services?query=technical-seo-services-nyc)
+[https://ladmedia.co/#services?query=ai-powered-content-strategy-nyc](https://ladmedia.co/#services?query=ai-powered-content-strategy-nyc)
+[https://ladmedia.co/#services?query=organic-search-growth-nyc](https://ladmedia.co/#services?query=organic-search-growth-nyc)
+[https://ladmedia.co/#services?query=seo-for-ecommerce-nyc](https://ladmedia.co/#services?query=seo-for-ecommerce-nyc)
+[https://ladmedia.co/#services?query=seo-for-b2b-companies-nyc](https://ladmedia.co/#services?query=seo-for-b2b-companies-nyc)
+
+# Web & UX
+
+[https://ladmedia.co/#services?query=modern-react-nextjs-development-nyc](https://ladmedia.co/#services?query=modern-react-nextjs-development-nyc)
+[https://ladmedia.co/#services?query=conversion-optimized-web-design-nyc](https://ladmedia.co/#services?query=conversion-optimized-web-design-nyc)
+[https://ladmedia.co/#services?query=custom-api-integration-nyc](https://ladmedia.co/#services?query=custom-api-integration-nyc)
+[https://ladmedia.co/#services?query=ux-strategy-for-web-apps-nyc](https://ladmedia.co/#services?query=ux-strategy-for-web-apps-nyc)
+
+# Blockchain & Web3 / Crypto
+
+[https://ladmedia.co/#services?query=crypto-token-ecosystem-architecture](https://ladmedia.co/#services?query=crypto-token-ecosystem-architecture)
+[https://ladmedia.co/#services?query=smart-contract-audit](https://ladmedia.co/#services?query=smart-contract-audit)
+[https://ladmedia.co/#services?query=dapp-development](https://ladmedia.co/#services?query=dapp-development)
+[https://ladmedia.co/#services?query=crypto-payment-flows](https://ladmedia.co/#services?query=crypto-payment-flows)
+[https://ladmedia.co/#services?query=web3-product-marketing-agency](https://ladmedia.co/#services?query=web3-product-marketing-agency)
+[https://ladmedia.co/#services?query=crypto-marketing-agency-nyc](https://ladmedia.co/#services?query=crypto-marketing-agency-nyc)
+[https://ladmedia.co/#services?query=nft-branding-and-launch-nyc](https://ladmedia.co/#services?query=nft-branding-and-launch-nyc)
+[https://ladmedia.co/#services?query=decentralized-finance-strategy-nyc](https://ladmedia.co/#services?query=decentralized-finance-strategy-nyc)
+
+# Case Study & Client Work
+
+[https://ladmedia.co/#work?client=sportsbeep](https://ladmedia.co/#work?client=sportsbeep)
+[https://ladmedia.co/#work?client=polar-point-hvac](https://ladmedia.co/#work?client=polar-point-hvac)
+[https://ladmedia.co/#work?client=superior-pack-group](https://ladmedia.co/#work?client=superior-pack-group)
+[https://ladmedia.co/#work?client=mispar.co](https://ladmedia.co/#work?client=mispar.co)
+[https://ladmedia.co/#work?client=a-brand-gym](https://ladmedia.co/#work?client=a-brand-gym)
+[https://ladmedia.co/#work?client=goldie-foods-inc](https://ladmedia.co/#work?client=goldie-foods-inc)
+[https://ladmedia.co/#work?client=crypto-case-studies](https://ladmedia.co/#work?client=crypto-case-studies)
+
+# Trust & Contact Signals
+
+[https://ladmedia.co/#contact](https://ladmedia.co/#contact)
+[https://ladmedia.co/#vision](https://ladmedia.co/#vision)

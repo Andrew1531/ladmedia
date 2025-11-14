@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <title>Marketing Agency in New Jersey | LAD MEDIA</title>
-<meta name="description" content="LAD MEDIA is a performance-driven marketing agency based in New Jersey, specializing in paid media, SEM, and strategic storytelling for brands that want measurable impact.">
-<meta name="keywords" content="marketing agency in New Jersey, NJ marketing agency, digital marketing NJ, paid media agency, SEM agency New Jersey">
+<meta name="description" content="LAD MEDIA is a performance-driven marketing agency based in New Jersey, specializing in paid media, SEM, and strategic storytelling for brands that want measurable impact. We blend AI-native technology with human-centric strategy.">
+<meta name="keywords" content="marketing agency in New Jersey, NJ marketing agency, digital marketing NJ, paid media agency, SEM agency New Jersey, AI marketing">
 <link rel="canonical" href="https://ladmedia.co/" />
     <script type="application/ld+json">
 {
@@ -91,10 +91,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             background-color: white;
             color: #0d0d0d;
         }
-        /* Style for the numbered infographic steps */
-        .step-number {
+        /* Style for the numbered infographic steps (now removed with case study) */
+        /* .step-number {
             @apply flex items-center justify-center w-8 h-8 rounded-full border-2 border-white text-sm font-bold mr-4 flex-shrink-0;
-        }
+        } */
     </style>
     <script>
         tailwind.config = {
@@ -117,15 +117,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
     <!-- Header Navigation -->
-    <header class="container mx-auto px-4 py-6 border-b border-gray-800">
-        <div class="flex justify-between items-center">
-            <!-- LOGO PATH FIXED: Changed to "assets/lad-media-logo.png" to match user's actual filename -->
+    <header class="sticky top-0 z-10 bg-dark-bg/95 backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <!-- LOGO -->
             <a href="#">
                 <img src="assets/lad-media-logo.png" alt="LAD MEDIA Logo" class="h-8 sm:h-10" />
             </a>
-            <nav>
-                <!-- Button now uses white border and text, inverts on hover -->
-                <a href="#contact" class="text-sm font-medium text-white hover:text-dark-bg transition duration-300 rounded-full border border-white hover:bg-white px-4 py-2 hidden sm:inline-block">
+            <nav class="flex items-center space-x-6">
+                <!-- Blog Link Added Here -->
+                <a href="#blog" class="text-sm font-medium text-gray-300 hover:text-white transition duration-300">
+                    Blog
+                </a>
+                <!-- Contact Button (Navigation simplified) -->
+                <a href="#contact" class="text-sm font-medium text-white hover:text-dark-bg transition duration-300 rounded-full border border-white hover:bg-white px-4 py-2">
                     Let's Talk
                 </a>
             </nav>
@@ -175,7 +179,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">About LAD MEDIA</h2>
                 <div class="md:col-span-2">
                     <p class="text-lg text-gray-300 mb-4">
-                        Founded in 2012 as an indie record label, LAD MEDIA evolved into a full-stack marketing agency in 2017. Today, we are a top-tier, AI-native agency known for **innovation, clarity, and measurable impact.
+                        Founded in 2012 as an indie record label, LAD MEDIA evolved into a full-stack marketing agency in 2017. Today, we are a top-tier, AI-native agency known for **innovation, clarity, and measurable impact.**
                     </p>
                     <p class="text-lg text-gray-300">
                         We thrive at the intersection of creativity and technology, helping brands adapt and lead in a rapidly changing digital landscape.
@@ -184,46 +188,80 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
         
-        <!-- 4. OUR SERVICES SECTION (Core Capabilities) -->
+        <!-- 4. OUR SERVICES SECTION (Core Capabilities - Dynamic Design) -->
         <section class="container mx-auto px-4 py-16 md:py-24 border-t border-gray-800">
-            <h2 class="text-4xl sm:text-5xl font-bold max-w-4xl tracking-tight leading-snug mb-12">
+            <h2 class="text-4xl sm:text-5xl font-bold max-w-4xl tracking-tight leading-snug mb-16">
                 Our Core Capabilities
             </h2>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                 
-                <!-- Service 1: Paid Media & SEM -->
-                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-white transition duration-300">
-                    <h3 class="text-xl font-extrabold mb-2 text-primary-highlight">Paid Media & SEM</h3>
-                    <p class="text-gray-400">Expert campaign strategy and optimization across Google Ads, Meta, LinkedIn, and TikTok.</p>
+                <!-- Card 1: Paid Media & SEM -->
+                <div class="group bg-gray-900 p-8 rounded-2xl border border-gray-800 shadow-xl transition duration-500 hover:border-primary-highlight hover:bg-[#1a1a1a]">
+                    <!-- Icon: Target -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white mb-4 transition duration-500 group-hover:scale-110">
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="6"/>
+                        <circle cx="12" cy="12" r="2"/>
+                    </svg>
+                    <h3 class="text-3xl font-extrabold mb-3 text-primary-highlight">Paid Media & SEM</h3>
+                    <p class="text-lg text-gray-400">Expert campaign strategy and optimization across Google Ads, Meta, LinkedIn, and TikTok. We drive immediate, scalable results.</p>
                 </div>
 
-                <!-- Service 2: Creative Direction -->
-                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-white transition duration-300">
-                    <h3 class="text-xl font-extrabold mb-2 text-primary-highlight">Creative Direction</h3>
-                    <p class="text-gray-400">Brand storytelling, multimedia content, and modern minimalist web design.</p>
+                <!-- Card 2: Creative Direction -->
+                <div class="group bg-gray-900 p-8 rounded-2xl border border-gray-800 shadow-xl transition duration-500 hover:border-primary-highlight hover:bg-[#1a1a1a]">
+                    <!-- Icon: Feather/Wand -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white mb-4 transition duration-500 group-hover:scale-110">
+                        <path d="M12 20h9"/>
+                        <path d="M12 10V6H9a4 4 0 0 0-4 4v4c0 1.1.9 2 2 2h3v-2"/>
+                        <path d="M17 12V6H14a4 4 0 0 0-4 4v4c0 1.1.9 2 2 2h3v-2"/>
+                        <path d="M19 21l2 2"/>
+                    </svg>
+                    <h3 class="text-3xl font-extrabold mb-3 text-primary-highlight">Creative Direction</h3>
+                    <p class="text-lg text-gray-400">Brand storytelling, unique visual identity, multimedia content, and modern minimalist web design that connects with your audience.</p>
                 </div>
 
-                <!-- Service 3: SEO & AI Optimization -->
-                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-white transition duration-300">
-                    <h3 class="text-xl font-extrabold mb-2 text-primary-highlight">SEO & AI Optimization</h3>
-                    <p class="text-gray-400">Branded content ranking strategies powered by AI insights for sustained organic growth.</p>
+                <!-- Card 3: SEO & AI Optimization -->
+                <div class="group bg-gray-900 p-8 rounded-2xl border border-gray-800 shadow-xl transition duration-500 hover:border-primary-highlight hover:bg-[#1a1a1a]">
+                    <!-- Icon: Zap/Chip -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white mb-4 transition duration-500 group-hover:scale-110">
+                        <path d="M16 8h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+                        <path d="M10 3v4"/>
+                        <path d="M14 3v4"/>
+                        <path d="M8 7h8"/>
+                        <path d="M12 7v4"/>
+                        <path d="M12 15v4"/>
+                    </svg>
+                    <h3 class="text-3xl font-extrabold mb-3 text-primary-highlight">SEO & AI Optimization</h3>
+                    <p class="text-lg text-gray-400">Content ranking strategies powered by AI insights, technical SEO fixes, and sustained organic growth planning.</p>
                 </div>
                 
-                <!-- Service 4: Web & UX -->
-                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-white transition duration-300">
-                    <h3 class="text-xl font-extrabold mb-2 text-primary-highlight">Web & UX</h3>
-                    <p class="text-gray-400">Seamless, conversion-friendly user flows built with React/Next.js and custom integrations.</p>
+                <!-- Card 4: Web & UX -->
+                <div class="group bg-gray-900 p-8 rounded-2xl border border-gray-800 shadow-xl transition duration-500 hover:border-primary-highlight hover:bg-[#1a1a1a]">
+                    <!-- Icon: Monitor -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white mb-4 transition duration-500 group-hover:scale-110">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                    <h3 class="text-3xl font-extrabold mb-3 text-primary-highlight">Web & UX</h3>
+                    <p class="text-lg text-gray-400">Seamless, conversion-friendly user flows built with modern stacks (React/Next.js) and custom API integrations for superior performance.</p>
                 </div>
 
-                <!-- Service 5: Blockchain & Web3 (Spans one column, looks fine in 3-column grid) -->
-                <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-white transition duration-300">
-                    <h3 class="text-xl font-extrabold mb-2 text-primary-highlight">Blockchain & Web3</h3>
-                    <p class="text-gray-400">Token ecosystems, payment flows, and dApp integrations for next-gen products.</p>
+                <!-- Card 5: Blockchain & Web3 -->
+                <div class="group bg-gray-900 p-8 rounded-2xl border border-gray-800 shadow-xl transition duration-500 hover:border-primary-highlight hover:bg-[#1a1a1a]">
+                    <!-- Icon: Cube -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white mb-4 transition duration-500 group-hover:scale-110">
+                        <path d="M10 20.73c-1.7-.5-3.3-1.4-4.8-2.6-1.7-1.3-2.6-2.9-2.6-4.9V9.75c0-1.7 1-3.4 2.7-4.4 1.5-.9 3.2-1.3 4.8-1.3h.8c1.7 0 3.3.4 4.8 1.3 1.7 1 2.7 2.7 2.7 4.4v3.52c0 2-1 3.6-2.7 4.9-1.5 1.2-3.1 2.1-4.8 2.6H10z"/>
+                        <path d="M7 14h5v-5"/>
+                        <path d="M17 14h-5v-5"/>
+                    </svg>
+                    <h3 class="text-3xl font-extrabold mb-3 text-primary-highlight">Blockchain & Web3</h3>
+                    <p class="text-lg text-gray-400">Token ecosystems, payment flows, smart contract audits, and dApp integrations for next-generation decentralized products.</p>
                 </div>
             </div>
         </section>
-
+        
         <!-- 5. OUR WORK (Overview) SECTION -->
         <section class="container mx-auto px-4 py-16 md:py-24 border-t border-gray-800">
             <div class="grid md:grid-cols-3 gap-8">
@@ -248,75 +286,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
         
-        <!-- 7. SERVICES INFOGRAPHIC / SPORTSBEEP CASE STUDY (Original Section 3, now 7) -->
-        <section class="container mx-auto px-4 py-16 md:py-24 border-t border-gray-800">
-            <h2 class="text-4xl sm:text-5xl font-bold max-w-4xl tracking-tight leading-snug">
-                Case Study: Building & Launching SportsBeep's Cryptocurrency
-            </h2>
-            <p class="mt-4 text-lg text-gray-400 max-w-4xl">
-                We led the end-to-end execution, from blockchain architecture to a full platform rebuild, demonstrating our full-stack capabilities.
-            </p>
+        <!-- The Case Study section (Section 7) was removed per your request. -->
 
-            <div class="mt-12 grid md:grid-cols-2 gap-8">
-                
-                <!-- Service Block 1: Strategy & Tokenomics (BUILD) -->
-                <div class="bg-gray-900 p-8 rounded-xl border border-gray-800 hover:border-white transition duration-300 flex items-start">
-                    <div class="step-number">1</div>
-                    <div>
-                        <h3 class="text-2xl font-extrabold mb-2 text-primary-highlight">Tokenomics & Architecture</h3>
-                        <p class="text-gray-300">
-                            **Build:** Architected the secure token ecosystem (tokenomics, smart contracts) and defined the core blockchain integration strategy for the SportsBeep cryptocurrency launch.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Service Block 2: Replatforming & UX (REBUILD SPORTSBEEP.COM) -->
-                <div class="bg-gray-900 p-8 rounded-xl border border-gray-800 hover:border-white transition duration-300 flex items-start">
-                    <div class="step-number">2</div>
-                    <div>
-                        <h3 class="text-2xl font-extrabold mb-2 text-primary-highlight">Full Replatform & UX Design</h3>
-                        <p class="text-gray-300">
-                            **Rebuild:** Rebuilt the entire SportsBeep.com platform on a modern, scalable architecture, focusing on conversion-focused user flows and seamless Web3 integration.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Service Block 3: Pre-Launch Marketing (MARKET) -->
-                <div class="bg-gray-900 p-8 rounded-xl border border-gray-800 hover:border-white transition duration-300 flex items-start">
-                    <div class="step-number">3</div>
-                    <div>
-                        <h3 class="text-2xl font-extrabold mb-2 text-primary-highlight">Targeted Pre-Launch Marketing</h3>
-                        <p class="text-gray-300">
-                            **Market:** Developed and executed a multi-channel, AI-driven paid media campaign to build community, generate early buzz, and secure participation for the pre-launch phase.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Service Block 4: Launch & Optimization (LAUNCH) -->
-                <div class="bg-gray-900 p-8 rounded-xl border border-gray-800 hover:border-white transition duration-300 flex items-start">
-                    <div class="step-number">4</div>
-                    <div>
-                        <h3 class="text-2xl font-extrabold mb-2 text-primary-highlight">Launch & Post-IDO Optimization</h3>
-                        <p class="text-gray-300">
-                            **Launch:** Managed the official cryptocurrency launch (IDO) and provided technical oversight, followed by continuous paid media optimization to drive long-term adoption and network growth.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <!-- END SERVICES INFOGRAPHIC -->
-
-        <!-- 8. Featured Client Spotlight (Testimonial Style) -->
+        <!-- 7. Featured Client Spotlight (Testimonial Style) -->
         <section class="container mx-auto px-4 py-16 md:py-24 bg-[#1a1a1a] rounded-xl my-16">
             <div class="max-w-3xl mx-auto text-center">
                 <blockquote class="text-3xl md:text-4xl font-semibold leading-relaxed text-white">
                     “LAD MEDIA saw our full potential. Maybe even more clearly than we did. But more importantly, they turned that potential into reality.”
                 </blockquote>
                 <!-- Client name now subtle gray -->
-                <p class="mt-6 text-lg font-medium text-gray-400">— Client, GOLDIE FOODS INC
+                <p class="mt-6 text-lg font-medium text-gray-400">— Client, GOLDIE FOODS INC</p>
+            </div>
+        </section>
 
-        <!-- 9. Final CTA / Contact Section -->
+        <!-- 8. Final CTA / Contact Section -->
         <section id="contact" class="container mx-auto px-4 pt-16 pb-24 md:pt-24 md:pb-32 text-center">
             <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
                 Ready to elevate your brand?
@@ -325,8 +308,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 Let's discuss how AI-native strategy can deliver results for you.
             </p>
             <div class="mt-10 inline-block">
-                 <!-- The button's href is set to mailto:andrew@ladmedia.co -->
-                 <a href="mailto:andrew@ladmedia.co" class="group relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-white rounded-lg shadow-md hover:bg-white hover:text-dark-bg">
+                <!-- The button's href is set to mailto:andrew@ladmedia.co -->
+                <a href="mailto:andrew@ladmedia.co" class="group relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-white rounded-lg shadow-md hover:bg-white hover:text-dark-bg">
                     <!-- Inner SVG and text are inverted on hover -->
                     <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full group-hover:translate-x-0 ease group-hover:text-dark-bg">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>

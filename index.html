@@ -17,54 +17,54 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #050618; /* Ultra Deep Blue-Black */
+            background-color: #000000; /* Pure Black */
             color: #ffffff;
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
 
-        /* Custom Colors & Utilities */
-        .primary-highlight { color: #00FFFF; } /* Pure Cyan Neon */
-        .card-bg { background-color: #10122A; } /* Darker card background */
-        .dark-bg-section { background-color: #0A0A1A; } /* Slightly lighter section background */
+        /* Custom Colors & Utilities (Grayscale Theme) */
+        .primary-highlight { color: #CCCCCC; } /* Light Gray/Silver Accent */
+        .card-bg { background-color: #1A1A1A; } /* Darker card background */
+        .dark-bg-section { background-color: #0F0F0F; } /* Slightly lighter dark section background */
 
-        /* Neon Glow and Effects */
-        .neon-text {
-            color: #00FFFF;
-            text-shadow: 0 0 8px rgba(0, 255, 255, 0.6), 0 0 15px rgba(0, 255, 255, 0.4);
+        /* Clean Highlight and Shadow Effects (Replacing Neon Glow) */
+        .highlight-text {
+            color: #FFFFFF;
+            text-shadow: 0 0 1px rgba(255, 255, 255, 0.8);
         }
         
-        .holographic-card {
-            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3), inset 0 0 5px rgba(0, 255, 255, 0.1);
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        .subtle-card {
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.1), inset 0 0 3px rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease-out;
         }
-        .holographic-card:hover {
-            box-shadow: 0 0 25px rgba(0, 255, 255, 0.8), inset 0 0 10px rgba(0, 255, 255, 0.4);
-            transform: translateY(-5px);
-            background-color: #15173B;
+        .subtle-card:hover {
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3), inset 0 0 7px rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+            background-color: #252525;
         }
 
-        .neon-button-cta {
-            background: linear-gradient(90deg, #00FFFF 0%, #00CFFF 100%);
-            color: #050618;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+        .primary-button-cta {
+            background: #FFFFFF;
+            color: #000000;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
         }
-        .neon-button-cta:hover {
-            box-shadow: 0 0 30px rgba(77, 210, 255, 1), 0 0 10px rgba(255, 255, 255, 0.8);
+        .primary-button-cta:hover {
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.5), 0 0 10px rgba(0, 0, 0, 0.8);
             transform: scale(1.03);
         }
 
-        /* Subtle Data Grid Overlay */
+        /* Subtle Data Grid Overlay - Grayscale */
         .data-grid-overlay {
-            background-image: radial-gradient(circle at center, rgba(0, 255, 255, 0.05) 1px, transparent 1px),
-                              linear-gradient(to right, rgba(0, 255, 255, 0.02) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(0, 255, 255, 0.02) 1px, transparent 1px);
+            background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
             background-size: 40px 40px;
         }
 
-        /* Marquee Animation */
+        /* Marquee Animation (unchanged) */
         @keyframes marquee {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
@@ -79,15 +79,15 @@
             padding-right: 4rem;
         }
 
-        /* New: Web3 Network Pulse Animation */
+        /* New: Network Pulse Animation - Grayscale */
         @keyframes networkPulse {
-            0% { transform: scale(1); opacity: 0.1; }
-            50% { transform: scale(1.02); opacity: 0.15; }
-            100% { transform: scale(1); opacity: 0.1; }
+            0% { transform: scale(1); opacity: 0.05; }
+            50% { transform: scale(1.02); opacity: 0.1; }
+            100% { transform: scale(1); opacity: 0.05; }
         }
         .network-graphic {
             animation: networkPulse 15s ease-in-out infinite;
-            filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.5));
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
         }
 
     </style>
@@ -96,10 +96,12 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary-highlight': '#00FFFF',
-                        'dark-bg': '#050618',
-                        'card-bg': '#10122A',
-                        'clutch-yellow': '#ffb900',
+                        'primary-highlight': '#CCCCCC', // Light Gray Accent
+                        'dark-bg': '#000000', // Pure Black
+                        'card-bg': '#1A1A1A', // Dark Card Background
+                        'secondary-cta': '#FFFFFF', // White for the main button
+                        'secondary-cta-text': '#000000', // Black text on white
+                        'clutch-bg': '#555555', // Grey for the secondary button
                     },
                 }
             }
@@ -115,21 +117,26 @@
             <!-- Logo -->
             <a href="#hero" class="z-10">
                 <div class="text-3xl font-extrabold tracking-widest uppercase">
-                    <span class="neon-text">LAD</span>
-                    <span class="text-white">MEDIA</span>
+                    <!-- Updated to use the Image Placeholder for LAD MEDIA LOGO.PNG -->
+                    <img 
+                        src="https://placehold.co/160x40/000000/FFFFFF?text=LAD+MEDIA+LOGO" 
+                        alt="LAD MEDIA Logo"
+                        class="h-8 sm:h-10 w-auto rounded-sm shadow-sm"
+                        onerror="this.onerror=null; this.src='https://placehold.co/160x40/1A1A1A/CCCCCC?text=LOGO+ERROR';"
+                    >
                 </div>
             </a>
             <nav class="flex items-center space-x-8">
-                <a href="#capabilities" class="text-sm font-medium text-gray-400 hover:text-primary-highlight transition duration-300">
+                <a href="#capabilities" class="hidden sm:block text-sm font-medium text-gray-400 hover:text-primary-highlight transition duration-300">
                     Capabilities
                 </a>
-                <a href="#vision" class="text-sm font-medium text-gray-400 hover:text-primary-highlight transition duration-300">
+                <a href="#vision" class="hidden sm:block text-sm font-medium text-gray-400 hover:text-primary-highlight transition duration-300">
                     Why Us
                 </a>
-                <a href="blog.html" class="text-sm font-medium text-gray-400 hover:text-primary-highlight transition duration-300">
+                <a href="blog.html" class="hidden sm:block text-sm font-medium text-gray-400 hover:text-primary-highlight transition duration-300">
                     Blog
                 </a>
-                <a href="#contact" class="text-sm font-medium neon-button-cta px-5 py-2 rounded-full shadow-lg">
+                <a href="#contact" class="text-sm font-medium primary-button-cta px-5 py-2 rounded-full shadow-lg">
                     Launch Protocol
                 </a>
             </nav>
@@ -139,41 +146,35 @@
     <main>
         <!-- Hero Section -->
         <section id="hero" class="relative overflow-hidden container mx-auto px-4 py-24 md:py-48">
-            <!-- Web3 Image/Graphic: AI Decentralized Network SVG -->
+            <!-- Web3 Image/Graphic: AI Decentralized Network SVG - Grayscale Update -->
             <div class="absolute inset-0 z-0 opacity-10 pointer-events-none network-graphic">
-                <svg width="100%" height="100%" viewBox="0 0 1400 800" xmlns="http://www.w3.org/2000/svg" class="text-primary-highlight">
-                    <defs>
-                        <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:rgba(0, 255, 255, 0.4);stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:rgba(20, 30, 100, 0.0);stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
+                <svg width="100%" height="100%" viewBox="0 0 1400 800" xmlns="http://www.w3.org/2000/svg" class="text-white">
                     
                     <!-- Larger, more complex geometric shape for depth -->
-                    <path d="M 100 200 C 300 0, 1100 0, 1300 200 L 1300 600 C 1100 800, 300 800, 100 600 Z" stroke="#00FFFF" stroke-width="1.5" fill="none" opacity="0.1"/>
+                    <path d="M 100 200 C 300 0, 1100 0, 1300 200 L 1300 600 C 1100 800, 300 800, 100 600 Z" stroke="#FFFFFF" stroke-width="1.5" fill="none" opacity="0.1"/>
 
                     <!-- Main Ring Structure -->
-                    <circle cx="700" cy="400" r="300" stroke="url(#g1)" stroke-width="3" fill="none" opacity="0.4"/>
-                    <circle cx="700" cy="400" r="150" stroke="#00FFFF" stroke-width="1" fill="none" opacity="0.2"/>
+                    <circle cx="700" cy="400" r="300" stroke="#FFFFFF" stroke-width="2" fill="none" opacity="0.2"/>
+                    <circle cx="700" cy="400" r="150" stroke="#FFFFFF" stroke-width="1" fill="none" opacity="0.1"/>
 
-                    <!-- Central Node (AI Core) - Pulsing effect handled by neon-text glow -->
-                    <circle cx="700" cy="400" r="15" fill="#00FFFF" class="neon-text" />
+                    <!-- Central Node (AI Core) -->
+                    <circle cx="700" cy="400" r="15" fill="#FFFFFF" class="highlight-text" />
 
                     <!-- Connecting Lines (More complex Data Flow) -->
-                    <line x1="700" y1="400" x2="400" y2="200" stroke="#00FFFF" stroke-width="0.5" opacity="0.4"/>
-                    <line x1="700" y1="400" x2="1000" y2="200" stroke="#00FFFF" stroke-width="0.5" opacity="0.4"/>
-                    <line x1="700" y1="400" x2="400" y2="600" stroke="#00FFFF" stroke-width="0.5" opacity="0.4"/>
-                    <line x1="700" y1="400" x2="1000" y2="600" stroke="#00FFFF" stroke-width="0.5" opacity="0.4"/>
-                    <line x1="700" y1="400" x2="700" y2="50" stroke="#00FFFF" stroke-width="0.5" opacity="0.4"/>
-                    <line x1="700" y1="400" x2="700" y2="750" stroke="#00FFFF" stroke-width="0.5" opacity="0.4"/>
+                    <line x1="700" y1="400" x2="400" y2="200" stroke="#FFFFFF" stroke-width="0.5" opacity="0.3"/>
+                    <line x1="700" y1="400" x2="1000" y2="200" stroke="#FFFFFF" stroke-width="0.5" opacity="0.3"/>
+                    <line x1="700" y1="400" x2="400" y2="600" stroke="#FFFFFF" stroke-width="0.5" opacity="0.3"/>
+                    <line x1="700" y1="400" x2="1000" y2="600" stroke="#FFFFFF" stroke-width="0.5" opacity="0.3"/>
+                    <line x1="700" y1="400" x2="700" y2="50" stroke="#FFFFFF" stroke-width="0.5" opacity="0.3"/>
+                    <line x1="700" y1="400" x2="700" y2="750" stroke="#FFFFFF" stroke-width="0.5" opacity="0.3"/>
 
                     <!-- Outer Nodes (Small circles representing decentralized points) -->
-                    <circle cx="400" cy="200" r="5" fill="#00FFFF" opacity="0.6"/>
-                    <circle cx="1000" cy="200" r="5" fill="#00FFFF" opacity="0.6"/>
-                    <circle cx="400" cy="600" r="5" fill="#00FFFF" opacity="0.6"/>
-                    <circle cx="1000" cy="600" r="5" fill="#00FFFF" opacity="0.6"/>
-                    <circle cx="700" cy="50" r="5" fill="#00FFFF" opacity="0.6"/>
-                    <circle cx="700" cy="750" r="5" fill="#00FFFF" opacity="0.6"/>
+                    <circle cx="400" cy="200" r="5" fill="#FFFFFF" opacity="0.5"/>
+                    <circle cx="1000" cy="200" r="5" fill="#FFFFFF" opacity="0.5"/>
+                    <circle cx="400" cy="600" r="5" fill="#FFFFFF" opacity="0.5"/>
+                    <circle cx="1000" cy="600" r="5" fill="#FFFFFF" opacity="0.5"/>
+                    <circle cx="700" cy="50" r="5" fill="#FFFFFF" opacity="0.5"/>
+                    <circle cx="700" cy="750" r="5" fill="#FFFFFF" opacity="0.5"/>
                 </svg>
             </div>
             
@@ -182,7 +183,7 @@
                     DECENTRALIZED STRATEGY // AI-NATIVE EXECUTION
                 </p>
                 <h1 class="text-6xl sm:text-8xl md:text-9xl font-black leading-tight tracking-tighter">
-                    AI-Driven Results. <br> Human-Centric <span class="neon-text">Protocol.</span>
+                    AI-Driven Results. <br> Human-Centric <span class="highlight-text">Protocol.</span>
                 </h1>
                 <p class="mt-10 text-xl md:text-2xl max-w-4xl text-gray-300">
                     LAD MEDIA is the high-performance firm built for crypto and Web3 brands who demand measurable impact. We blend radical ownership, precise execution, and technological clarity to turn potential into reality.
@@ -208,59 +209,59 @@
             </div>
         </section>
 
-        <!-- Capabilities Section (Holographic Grid) -->
+        <!-- Capabilities Section (Subtle Grid) -->
         <section id="capabilities" class="container mx-auto px-4 py-20 md:py-32">
             <h2 class="text-5xl sm:text-6xl font-black max-w-5xl tracking-tight leading-snug mb-20">
-                Core <span class="neon-text">Protocol Capabilities</span>
+                Core <span class="highlight-text">Protocol Capabilities</span>
             </h2>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- Card 1: Paid Media & SEM -->
-                <div class="holographic-card p-10 rounded-3xl card-bg transition duration-500">
+                <div class="subtle-card p-10 rounded-3xl card-bg transition duration-500">
                     <!-- Icon: Trending Up -->
                     <svg class="w-12 h-12 primary-highlight mb-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M3 17l4-5 4 5 5-5 4 5"/></svg>
-                    <h3 class="text-3xl font-extrabold mb-3 neon-text">Paid Media & SEM</h3>
+                    <h3 class="text-3xl font-extrabold mb-3 highlight-text">Paid Media & SEM</h3>
                     <p class="text-lg text-gray-400">Expert campaign strategy and optimization across Google Ads, Meta, LinkedIn, and TikTok. We drive immediate, scalable results using data models.</p>
                 </div>
 
                 <!-- Card 2: Creative Direction -->
-                <div class="holographic-card p-10 rounded-3xl card-bg transition duration-500">
+                <div class="subtle-card p-10 rounded-3xl card-bg transition duration-500">
                     <!-- Icon: Feather (Creative/Writing) -->
                     <svg class="w-12 h-12 primary-highlight mb-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M17 3l4 4-10 10-4 1-1-4 10-10z"/></svg>
-                    <h3 class="text-3xl font-extrabold mb-3 neon-text">Creative Direction</h3>
+                    <h3 class="text-3xl font-extrabold mb-3 highlight-text">Creative Direction</h3>
                     <p class="text-lg text-gray-400">Brand storytelling, unique visual identity, and modern minimalist web design that connects with the decentralized user base.</p>
                 </div>
 
                 <!-- Card 3: SEO & AI Optimization -->
-                <div class="holographic-card p-10 rounded-3xl card-bg transition duration-500">
+                <div class="subtle-card p-10 rounded-3xl card-bg transition duration-500">
                     <!-- Icon: Brain (AI/Optimization) -->
                     <svg class="w-12 h-12 primary-highlight mb-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4c-3.73 0-6.27 2.5-6 6 0 .5-.1 1-.4 1.5-1.1 1.6-1 3.4.1 4.9.4.6.8 1.2 1.3 1.7 1.4 1.5 3.3 2.1 5.3 1.7 1.8-.3 3.4-1.3 4.4-2.8 0-.1 0-.1.1-.2.2-.4.4-.8.5-1.2.6-1.5.5-3.2-.2-4.6-.2-.4-.3-.7-.5-1-.5-1.1-1.2-2.3-2.6-3.1-1.5-.9-3.3-1.4-5.2-1.2z"/></svg>
-                    <h3 class="text-3xl font-extrabold mb-3 neon-text">SEO & AI Optimization</h3>
+                    <h3 class="text-3xl font-extrabold mb-3 highlight-text">SEO & AI Optimization</h3>
                     <p class="text-lg text-gray-400">Content ranking strategies powered by proprietary AI models, technical SEO fixes, and sustained organic growth planning for Web3.</p>
                 </div>
 
                 <!-- Card 4: Web & UX (Web3 Interface) -->
-                <div class="holographic-card p-10 rounded-3xl card-bg transition duration-500">
+                <div class="subtle-card p-10 rounded-3xl card-bg transition duration-500">
                     <!-- Icon: Code -->
                     <svg class="w-12 h-12 primary-highlight mb-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                    <h3 class="text-3xl font-extrabold mb-3 neon-text">Web & UX</h3>
+                    <h3 class="text-3xl font-extrabold mb-3 highlight-text">Web & UX</h3>
                     <p class="text-lg text-gray-400">Building dApp interfaces and decentralized websites using modern stacks (React/Next.js) for superior user experience and speed.</p>
                 </div>
 
                 <!-- Card 5: Blockchain & Web3 -->
-                <div class="holographic-card p-10 rounded-3xl card-bg transition duration-500">
+                <div class="subtle-card p-10 rounded-3xl card-bg transition duration-500">
                     <!-- Icon: Lock (Security/Smart Contracts) -->
                     <svg class="w-12 h-12 primary-highlight mb-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                    <h3 class="text-3xl font-extrabold mb-3 neon-text">Blockchain & Web3</h3>
+                    <h3 class="text-3xl font-extrabold mb-3 highlight-text">Blockchain & Web3</h3>
                     <p class="text-lg text-gray-400">Token ecosystems, smart contract audits, and whitepaper creation. Full advisory for product launches in the decentralized space.</p>
                 </div>
                 
                 <!-- Card 6: Data Analytics (The Core) -->
-                <div class="holographic-card p-10 rounded-3xl card-bg transition duration-500">
+                <div class="subtle-card p-10 rounded-3xl card-bg transition duration-500">
                     <!-- Icon: Bar Chart (Data Analytics) -->
                     <svg class="w-12 h-12 primary-highlight mb-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
-                    <h3 class="text-3xl font-extrabold mb-3 neon-text">Data Analytics</h3>
+                    <h3 class="text-3xl font-extrabold mb-3 highlight-text">Data Analytics</h3>
                     <p class="text-lg text-gray-400">Real-time performance dashboards and predictive modeling to ensure every dollar of marketing spend is optimized for ROI.</p>
                 </div>
 
@@ -272,35 +273,35 @@
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div class="space-y-6">
                     <h2 class="text-5xl font-black tracking-tight leading-snug">
-                        The <span class="neon-text">Decentralized Edge</span>
+                        The <span class="highlight-text">Decentralized Edge</span>
                     </h2>
                     <p class="text-xl text-gray-300">
                         In the noise of Web3 marketing, clarity is the ultimate asset. We don't just run campaigns; we integrate our strategy with your tokenomics and product lifecycle from day one.
                     </p>
                     <ul class="text-lg text-gray-400 space-y-3 pt-4">
                         <li class="flex items-start">
-                            <svg class="w-6 h-6 mr-3 mt-1 neon-text flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <svg class="w-6 h-6 mr-3 mt-1 primary-highlight flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                             **AI Prediction Models:** Forecasting market shifts to optimize launch windows.
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-6 h-6 mr-3 mt-1 neon-text flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <svg class="w-6 h-6 mr-3 mt-1 primary-highlight flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                             **Token Ecosystem Focus:** Marketing aligned with staking, burning, and governance schedules.
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-6 h-6 mr-3 mt-1 neon-text flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <svg class="w-6 h-6 mr-3 mt-1 primary-highlight flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                             **Radical Ownership:** Full transparency and weekly performance deep dives.
                         </li>
                     </ul>
                 </div>
 
-                <!-- Placeholder for a Data Visualization Block (Pure CSS/SVG) -->
-                <div class="relative h-64 md:h-96 rounded-xl holographic-card bg-dark-bg p-6 flex items-center justify-center">
+                <!-- Placeholder for a Data Visualization Block (Grayscale) -->
+                <div class="relative h-64 md:h-96 rounded-xl subtle-card bg-dark-bg p-6 flex items-center justify-center">
                     <div class="absolute inset-0 flex items-center justify-center">
                         <!-- Inner Rings Effect -->
-                        <div class="w-3/4 h-3/4 border-4 border-primary-highlight border-opacity-20 rounded-full animate-spin-slow"></div>
-                        <div class="w-1/2 h-1/2 border-2 border-primary-highlight border-opacity-40 rounded-full absolute"></div>
+                        <div class="w-3/4 h-3/4 border-4 border-white border-opacity-20 rounded-full animate-spin-slow"></div>
+                        <div class="w-1/2 h-1/2 border-2 border-white border-opacity-40 rounded-full absolute"></div>
                         <!-- Core Text -->
-                        <span class="text-4xl font-extrabold neon-text absolute tracking-widest">
+                        <span class="text-4xl font-extrabold highlight-text absolute tracking-widest">
                             DATA CORE
                         </span>
                     </div>
@@ -309,9 +310,9 @@
         </section>
 
         <!-- Testimonial Section -->
-        <section class="container mx-auto px-4 py-16 md:py-24 bg-card-bg/70 rounded-3xl my-20 border border-gray-800 holographic-card">
+        <section class="container mx-auto px-4 py-16 md:py-24 bg-card-bg/70 rounded-3xl my-20 border border-gray-800 subtle-card">
             <div class="max-w-4xl mx-auto text-center">
-                <blockquote class="text-3xl md:text-5xl font-black leading-snug neon-text">
+                <blockquote class="text-3xl md:text-5xl font-black leading-snug highlight-text">
                     “LAD MEDIA saw our full potential. Maybe even more clearly than we did. But more importantly, they turned that potential into reality.”
                 </blockquote>
                 <p class="mt-8 text-xl font-medium text-gray-400">— Client, GOLDIE FOODS INC, <span class="primary-highlight">2024</span></p>
@@ -321,34 +322,34 @@
         <!-- Contact CTA Section -->
         <section id="contact" class="container mx-auto px-4 pt-20 pb-32 md:pt-32 md:pb-40 text-center">
             <h2 class="text-5xl sm:text-7xl font-black tracking-tight">
-                Ready to <span class="neon-text">Elevate Your Protocol?</span>
+                Ready to <span class="highlight-text">Elevate Your Protocol?</span>
             </h2>
             <p class="mt-6 text-xl text-gray-400">
                 Let's discuss how AI-native strategy can deliver decentralized results for you.
             </p>
             <div class="mt-12 inline-block">
-                <!-- Primary CTA: Start the Conversation -->
-                <a href="mailto:andrew@ladmedia.co" class="neon-button-cta group relative inline-flex items-center justify-center p-4 px-10 py-4 overflow-hidden font-extrabold text-xl rounded-full shadow-lg">
-                    <span class="absolute inset-0 flex items-center justify-center w-full h-full text-dark-bg duration-300 -translate-x-full group-hover:translate-x-0 ease">
+                <!-- Primary CTA: Start the Conversation (White Button, Black Text) -->
+                <a href="mailto:andrew@ladmedia.co" class="primary-button-cta group relative inline-flex items-center justify-center p-4 px-10 py-4 overflow-hidden font-extrabold text-xl rounded-full shadow-lg">
+                    <span class="absolute inset-0 flex items-center justify-center w-full h-full text-black duration-300 -translate-x-full group-hover:translate-x-0 ease">
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </span>
-                    <span class="absolute flex items-center justify-center w-full h-full text-dark-bg transition-all duration-300 transform group-hover:translate-x-full ease">
+                    <span class="absolute flex items-center justify-center w-full h-full text-black transition-all duration-300 transform group-hover:translate-x-full ease">
                         Launch Your Protocol
                     </span>
                     <span class="relative invisible group-hover:visible">Launch Your Protocol</span>
                 </a>
             </div>
 
-            <!-- Clutch Review Button (Secondary CTA) -->
+            <!-- Clutch Review Button (Secondary CTA - Gray Button, Black Text) -->
             <div class="mt-20 pt-10 border-t border-gray-800">
                 <h3 class="text-2xl font-semibold mb-6 text-gray-300">Trusted by the Community</h3>
                 <button 
                     id="clutchReviewButton"
-                    class="group relative inline-flex items-center justify-center p-4 px-8 py-3 font-extrabold text-dark-bg transition duration-300 ease-out rounded-full shadow-xl bg-clutch-yellow hover:bg-yellow-500 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-clutch-yellow focus:ring-opacity-50 uppercase tracking-wider"
+                    class="group relative inline-flex items-center justify-center p-4 px-8 py-3 font-extrabold text-black transition duration-300 ease-out rounded-full shadow-xl bg-clutch-bg hover:bg-gray-300 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-primary-highlight focus:ring-opacity-50 uppercase tracking-wider"
                 >
                     Submit Clutch Review
                 </button>
-                <p id="message" class="mt-6 text-center text-lg neon-text hidden">Thank you for helping us achieve our next 5-star rating!</p>
+                <p id="message" class="mt-6 text-center text-lg highlight-text hidden">Thank you for helping us achieve our next 5-star rating!</p>
             </div>
         </section>
 

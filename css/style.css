@@ -1,194 +1,77 @@
-/* =========================
-   Base Styles
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Universal Box Sizing for reliable layout */
+*, *::before, *::after { box-sizing: border-box; }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #000;
-  color: #fff;
-  line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    background-color: #050618; /* Ultra Deep Blue-Black */
+    color: #ffffff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-a {
-  color: #fff;
-  text-decoration: none;
+/* Custom Colors & Utilities (Used primarily for Tailwind class configuration or direct application) */
+.primary-highlight { color: #00FFFF; } /* Pure Cyan Neon */
+.card-bg { background-color: #10122A; } /* Darker card background */
+.dark-bg-section { background-color: #0A0A1A; } /* Slightly lighter section background */
+
+/* Neon Glow and Effects */
+.neon-text {
+    color: #00FFFF;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.6), 0 0 15px rgba(0, 255, 255, 0.4);
 }
 
-.container {
-  width: min(1100px, 90%);
-  margin: auto;
+.holographic-card {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3), inset 0 0 5px rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.holographic-card:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8), inset 0 0 10px rgba(0, 255, 255, 0.4);
+    transform: translateY(-5px);
+    background-color: #15173B;
 }
 
-/* =========================
-   Header
-========================= */
-.site-header {
-  border-bottom: 1px solid #222;
-  padding: 1rem 0;
+.neon-button-cta {
+    background: linear-gradient(90deg, #00FFFF 0%, #00CFFF 100%);
+    color: #050618;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+.neon-button-cta:hover {
+    box-shadow: 0 0 30px rgba(77, 210, 255, 1), 0 0 10px rgba(255, 255, 255, 0.8);
+    transform: scale(1.03);
 }
 
-.header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Subtle Data Grid Overlay */
+.data-grid-overlay {
+    background-image: radial-gradient(circle at center, rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+                      linear-gradient(to right, rgba(0, 255, 255, 0.02) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(0, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
 }
 
-.brand-logo {
-  height: 50px;
+/* Marquee Animation */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: marquee 30s linear infinite;
+}
+.marquee-content {
+    display: inline-block;
+    padding-right: 4rem;
 }
 
-.nav a {
-  margin-left: 1.5rem;
-  font-weight: bold;
+/* New: Web3 Network Pulse Animation */
+@keyframes networkPulse {
+    0% { transform: scale(1); opacity: 0.1; }
+    50% { transform: scale(1.02); opacity: 0.15; }
+    100% { transform: scale(1); opacity: 0.1; }
 }
-
-.nav a:hover {
-  text-decoration: underline;
-}
-
-/* =========================
-   Hero Section
-========================= */
-.hero {
-  text-align: center;
-  padding: 6rem 2rem;
-  border-bottom: 1px solid #222;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: #fff;
-  color: #000;
-  font-weight: bold;
-  border-radius: 4px;
-  transition: background 0.2s ease;
-}
-
-.btn:hover {
-  background: #e5e5e5;
-}
-
-/* =========================
-   Generic Sections
-========================= */
-section {
-  padding: 4rem 2rem;
-  border-bottom: 1px solid #222;
-}
-
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-/* =========================
-   Grid & Cards
-========================= */
-.grid {
-  display: grid;
-  gap: 2rem;
-}
-
-.services .grid,
-.case-studies .grid,
-.about .grid {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.card {
-  background: #111;
-  padding: 2rem;
-  border: 1px solid #222;
-  border-radius: 6px;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.card h3 {
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  border-color: #fff;
-}
-
-/* =========================
-   About Section
-========================= */
-.about h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1.5rem;
-}
-
-.about .intro {
-  max-width: 800px;
-  margin: 0 auto 3rem auto;
-  text-align: center;
-  color: #ccc;
-}
-
-/* =========================
-   Call To Action
-========================= */
-.cta {
-  text-align: center;
-}
-
-.cta h2 {
-  margin-bottom: 2rem;
-}
-
-/* =========================
-   Footer
-========================= */
-.site-footer {
-  text-align: center;
-  padding: 2rem;
-  border-top: 1px solid #222;
-  font-size: 0.9rem;
-  color: #aaa;
-}
-/* Partner Form Section — black background + white text */
-#partner-form {
-  background-color: #000;
-  color: #fff;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-#partner-form h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-#partner-form p {
-  font-size: 1rem;
-  margin-bottom: 30px;
-  color: #ccc;
-}
-
-#partner-form iframe {
-  border: none;
-  border-radius: 6px;
-  background: #fff;
+.network-graphic {
+    animation: networkPulse 15s ease-in-out infinite;
+    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.5));
 }

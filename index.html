@@ -89,7 +89,13 @@
             animation: networkPulse 15s ease-in-out infinite;
             filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
         }
-
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 20s linear infinite;
+        }
     </style>
     <script>
         tailwind.config = {
@@ -126,12 +132,12 @@
             <!-- Logo -->
             <a href="#hero" class="z-10">
                 <div class="text-3xl font-extrabold tracking-widest uppercase">
-                    <!-- Updated to use the Image Placeholder for LAD MEDIA LOGO.PNG -->
+                    <!-- Updated to use the requested image file lad-media-logo.png -->
                     <img 
-                        src="https://placehold.co/160x40/000000/FFFFFF?text=LAD+MEDIA" 
+                        src="./lad-media-logo.png" 
                         alt="LAD MEDIA"
                         class="h-8 sm:h-10 w-auto rounded-sm shadow-sm"
-                        onerror="this.onerror=null; this.src='https://placehold.co/160x40/1A1A1A/CCCCCC?text=LOGO+ERROR';"
+                        onerror="this.onerror=null; this.src='https://placehold.co/160x40/1A1A1A/CCCCCC?text=LAD+MEDIA+LOGO';"
                     >
                 </div>
             </a>
@@ -376,17 +382,6 @@
     </footer>
 
     <script>
-        // Inject a slow spin animation for the CSS Data Core
-        const style = document.createElement('style');
-        style.textContent = `@keyframes spin-slow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        .animate-spin-slow {
-            animation: spin-slow 20s linear infinite;
-        }`;
-        document.head.appendChild(style);
-
         // Clutch Review Button Logic
         document.getElementById('clutchReviewButton').addEventListener('click', function() {
             console.log('Clutch Review Button Clicked! Initiating external review process...');

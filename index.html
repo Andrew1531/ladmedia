@@ -1,99 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-79H0P4BJLQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-79H0P4BJLQ');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI-Driven Crypto Marketing Agency | LAD MEDIA</title>
-    <meta name="description" content="LAD MEDIA: Performance-driven crypto & growth marketing agency. AI-native execution for Web3 brands. Discover our multi-chain growth protocols.">
-    <link rel="canonical" href="https://ladmedia.co/" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>LAD Media | NJ & NYC Performance Marketing</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- React and ReactDOM -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Babel for JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
     <style>
-        *, *::before, *::after { box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: #000000; color: #ffffff; overflow-x: hidden; scroll-behavior: smooth; }
-        .primary-highlight { color: #CCCCCC; }
-        .card-bg { background-color: #1A1A1A; }
-        .highlight-text { color: #FFFFFF; text-shadow: 0 0 1px rgba(255, 255, 255, 0.8); }
-        .subtle-card { box-shadow: 0 0 5px rgba(255, 255, 255, 0.1), inset 0 0 3px rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.4s ease-out; }
-        .subtle-card:hover { box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); transform: translateY(-3px); background-color: #222222; }
-        .primary-button-cta { background: #FFFFFF; color: #000000; transition: all 0.3s ease; }
-        .primary-button-cta:hover { transform: scale(1.03); box-shadow: 0 0 20px rgba(255, 255, 255, 0.4); }
-        .data-grid-overlay { background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.03) 1px, transparent 1px); background-size: 40px 40px; }
-        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .marquee { white-space: nowrap; overflow: hidden; animation: marquee 30s linear infinite; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .selection-black::selection {
+            background: black;
+            color: white;
+        }
     </style>
 </head>
-<body class="antialiased bg-black data-grid-overlay">
-    <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html">
-                <img src="./lad-media-logo.png" alt="LAD MEDIA" class="h-8 sm:h-10 w-auto" onerror="this.src='https://placehold.co/160x40/000/CCC?text=LAD+MEDIA'">
-            </a>
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="services.html" class="text-sm font-medium text-gray-400 hover:text-white">Services</a>
-                <a href="work.html" class="text-sm font-medium text-gray-400 hover:text-white">Work</a>
-                <a href="about.html" class="text-sm font-medium text-gray-400 hover:text-white">About</a>
-                <a href="vision.html" class="text-sm font-medium text-gray-400 hover:text-white">Vision</a>
-                <a href="contact.html" class="text-sm font-medium primary-button-cta px-6 py-2 rounded-full">Contact</a>
-            </nav>
-        </div>
-    </header>
+<body class="selection-black">
+    <div id="root"></div>
 
-    <main>
-        <section class="container mx-auto px-4 py-32 md:py-48 text-left">
-            <p class="text-xl font-medium text-gray-500 uppercase tracking-[0.3em] mb-4">Decentralized Strategy</p>
-            <h1 class="text-6xl md:text-9xl font-black leading-tight tracking-tighter">
-                AI-Driven Results.<br>
-                <span class="highlight-text">Multi-Chain Growth.</span>
-            </h1>
-            <p class="mt-8 text-xl md:text-2xl text-gray-400 max-w-3xl">
-                We bridge the gap between complex Web3 protocols and high-performance marketing execution. No fluff. Just conversion.
-            </p>
-            <div class="mt-12 flex flex-wrap gap-4">
-                <a href="services.html" class="primary-button-cta px-10 py-4 rounded-full font-bold text-lg">Explore Capabilities</a>
-                <a href="work.html" class="border border-white/20 px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-black transition">View Our Work</a>
-            </div>
-        </section>
+    <script type="text/babel">
+        const { useState, useEffect } = React;
 
-        <section class="py-12 border-y border-white/10">
-            <div class="marquee">
-                <div class="inline-flex space-x-20 text-4xl font-black text-gray-800 uppercase">
-                    <span>POLAR POINT HVAC</span> <span>SPORTSBEEP</span> <span>MISPAR.CO</span> <span>SUPERIOR PACK GROUP</span> <span>DEFI PROTOCOL</span> <span>NFT COLLECTIVE</span>
-                    <span>POLAR POINT HVAC</span> <span>SPORTSBEEP</span> <span>MISPAR.CO</span> <span>SUPERIOR PACK GROUP</span> <span>DEFI PROTOCOL</span> <span>NFT COLLECTIVE</span>
-                </div>
-            </div>
-        </section>
+        // Custom Icon Component to bridge Lucide to React
+        const Icon = ({ name, size = 24, className = "" }) => {
+            const [iconContent, setIconContent] = useState('');
+            
+            useEffect(() => {
+                // Lucide icon replacement logic
+                if (window.lucide) {
+                    const icon = window.lucide.icons[name];
+                    if (icon) {
+                        // Create a temporary element to get the SVG string
+                        const div = document.createElement('div');
+                        const svg = icon.toSvg({ 
+                            width: size, 
+                            height: size, 
+                            class: className,
+                            'stroke-width': 2
+                        });
+                        setIconContent(svg);
+                    }
+                }
+            }, [name, size, className]);
 
-        <section class="container mx-auto px-4 py-24">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
-                <h2 class="text-5xl font-black">Core <span class="highlight-text">Protocols.</span></h2>
-                <a href="services.html" class="text-gray-400 hover:text-white border-b border-gray-700 pb-1 uppercase tracking-widest text-sm">View All Services →</a>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="subtle-card p-10 rounded-3xl bg-neutral-900/50">
-                    <h3 class="text-2xl font-bold mb-4">Paid Media</h3>
-                    <p class="text-gray-400">Precision-targeted SEM across the entire Web3 funnel.</p>
-                </div>
-                <div class="subtle-card p-10 rounded-3xl bg-neutral-900/50">
-                    <h3 class="text-2xl font-bold mb-4">AI Optimization</h3>
-                    <p class="text-gray-400">Leveraging neural networks to predict market shifts.</p>
-                </div>
-                <div class="subtle-card p-10 rounded-3xl bg-neutral-900/50">
-                    <h3 class="text-2xl font-bold mb-4">Web3 Interface</h3>
-                    <p class="text-gray-400">High-converting dApp UX and landing page design.</p>
-                </div>
-            </div>
-        </section>
-    </main>
+            return <span dangerouslySetInnerHTML={{ __html: iconContent }} />;
+        };
 
-    <footer class="border-t border-white/10 py-20 bg-black">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-gray-500">
-            <p>&copy; 2026 LAD MEDIA. All Rights Reserved.</p>
-            <div class="space-x-8 mt-4 md:mt-0">
-                <a href="mailto:andrew@ladmedia.co" class="hover:text-white">EMAIL</a>
-                <a href="tel:9734758314" class="hover:text-white">(973) 475-8314</a>
-            </div>
-        </div>
-    </footer>
+        const App = () => {
+            const [currentPage, setCurrentPage] = useState('home');
+            const [isMenuOpen, setIsMenuOpen] = useState(false);
+            const [scrolled, setScrolled] = useState(false);
+
+            useEffect(() => {
+                const handleScroll = () => setScrolled(window.scrollY > 50);
+                window.addEventListener('scroll', handleScroll);
+                return () => window.removeEventListener('scroll', handleScroll);
+            }, []);
+
+            const navigate = (page) => {
+                setCurrentPage(page);
+                setIsMenuOpen(false);
+                window.scrollTo(0, 0);
+            };
+
+            const Navbar = () => (
+                <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-sm py-3' : 'bg-transparent py-5'}`}>
+                    <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+                        <div 
+                            className="text-2xl font-black tracking-tighter cursor-pointer flex items-center gap-1"
+                            onClick={() => navigate('home')}
+                        >
+                            <div className={`p-1 px-2 rounded transition-colors ${scrolled ? 'bg-black text-white' : 'bg-white text-black'}`}>LAD</div>
+                            <span className={scrolled ? 'text-black' : 'text-white'}>MEDIA</span>
+                        </div>
+
+                        <div className="hidden md:flex items-center space-x-8">
+                            {['Services', 'Work', 'About', 'Vision', 'Contact'].map((item) => (
+                                <button
+                                    key={item}
+                                    onClick={() => navigate(item.toLowerCase())}
+                                    className={`text-xs font-bold uppercase tracking-widest hover:opacity-70 transition-opacity ${
+                                        currentPage === item.toLowerCase() 
+                                            ? (scrolled ? 'text-black border-b-2 border-black' : 'text-white border-b-2 border-white') 
+                                            : (scrolled ? 'text-slate-600' : 'text-slate-200')
+                                    }`}
+                                >
+                                    {item}
+                                </button>
+                            ))}
+                            <button 
+                                onClick={() => navigate('contact')}
+                                className={`px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest transition-all ${
+                                    scrolled ? 'bg-black text-white hover:bg-slate-800' : 'bg-white text-black hover:bg-slate-200'
+                                }`}
+                            >
+                                Connect
+                            </button>
+                        </div>
+
+                        <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                            {isMenuOpen ? <Icon name="X" className="text-black" /> : <Icon name="Menu" className={scrolled ? 'text-black' : 'text-white'} />}
+                        </button>
+                    </div>
+
+                    {isMenuOpen && (
+                        <div className="absolute top-0 left-0 w-full bg-white h-screen flex flex-col p-8 space-y-6 md:hidden animate-in fade-in duration-300">
+                            <div className="flex justify-between items-center mb-10">
+                                <span className="font-black text-2xl tracking-tighter">LAD MEDIA</span>
+                                <button onClick={() => setIsMenuOpen(false)}><Icon name="X" size={32} /></button>
+                            </div>
+                            {['Services', 'Work', 'About', 'Vision', 'Contact'].map((item) => (
+                                <button
+                                    key={item}
+                                    onClick={() => navigate(item.toLowerCase())}
+                                    className="text-left text-3xl font-black text-black border-b border-slate-100 pb-4 uppercase tracking-tighter"
+                                >
+                                    {item}
+                                </button>
+                            ))}
+                        </div>
+                    )}
+                </nav>
+            );
+
+            const Footer = () => (
+                <footer className="bg-black text-white pt-20 pb-10 border-t border-white/10">
+                    <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+                        <div className="col-span-1 md:col-span-1">
+                            <div className="text-2xl font-black mb-6 tracking-tighter italic">LAD MEDIA</div>
+                            <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
+                                Elevating brands through strategic digital marketing, high-performance PPC, and data-driven creative solutions.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 className="font-black text-xs uppercase tracking-widest mb-6 text-slate-500">Services</h4>
+                            <ul className="space-y-3 text-white text-sm font-medium">
+                                <li className="hover:text-slate-400 cursor-pointer" onClick={() => navigate('services')}>Paid Social</li>
+                                <li className="hover:text-slate-400 cursor-pointer" onClick={() => navigate('services')}>Google Ads / PPC</li>
+                                <li className="hover:text-slate-400 cursor-pointer" onClick={() => navigate('services')}>SEO Optimization</li>
+                                <li className="hover:text-slate-400 cursor-pointer" onClick={() => navigate('services')}>Graphic Design</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 className="font-black text-xs uppercase tracking-widest mb-6 text-slate-500">Company</h4>
+                            <ul className="space-y-3 text-white text-sm font-medium">
+                                <li className="hover:text-slate-400 cursor-pointer" onClick={() => navigate('about')}>About Us</li>
+                                <li className="hover:text-slate-400 cursor-pointer" onClick={() => navigate('vision')}>Our Vision</li>
+                                <li className="hover:text-slate-400 cursor-pointer" onClick={() => navigate('work')}>Case Studies</li>
+                                <li className="hover:text-slate-400 cursor-pointer" onClick={() => navigate('contact')}>Contact</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 className="font-black text-xs uppercase tracking-widest mb-6 text-slate-500">Connect</h4>
+                            <div className="flex space-x-4">
+                                <div className="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all cursor-pointer"><Icon name="Mail" size={18}/></div>
+                                <div className="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all cursor-pointer"><Icon name="Phone" size={18}/></div>
+                                <div className="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all cursor-pointer"><Icon name="Globe" size={18}/></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-white/5 text-center text-slate-600 text-[10px] uppercase tracking-widest font-bold">
+                        © 2026 LAD Media Co. Professional Digital Marketing • New Jersey • New York City
+                    </div>
+                </footer>
+            );
+
+            const Home = () => (
+                <div>
+                    <section className="relative h-screen flex items-center bg-black overflow-hidden">
+                        <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+                        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+                            <div className="max-w-4xl">
+                                <span className="text-white border border-white/30 px-3 py-1 rounded-full font-bold tracking-[0.2em] uppercase text-[10px] mb-8 inline-block">NJ & NYC Performance Agency</span>
+                                <h1 className="text-7xl md:text-[10rem] font-black text-white leading-[0.85] mb-8 tracking-tighter">
+                                    DRIVE <span className="text-slate-500">RESULTS.</span>
+                                </h1>
+                                <p className="text-slate-400 text-xl md:text-2xl mb-12 leading-relaxed max-w-2xl font-medium">
+                                    Precision-targeted PPC, SEO, and social media strategies designed for the New York Metropolitan market and beyond.
+                                </p>
+                                <div className="flex flex-col sm:flex-row gap-6">
+                                    <button 
+                                        onClick={() => navigate('contact')}
+                                        className="bg-white text-black px-10 py-5 rounded-full font-black text-lg flex items-center justify-center gap-3 hover:bg-slate-200 transition-all uppercase tracking-tighter group"
+                                    >
+                                        Get Started <Icon name="ArrowRight" className="group-hover:translate-x-1 transition-transform" />
+                                    </button>
+                                    <button 
+                                        onClick={() => navigate('work')}
+                                        className="border border-white/20 text-white px-10 py-5 rounded-full font-black text-lg hover:bg-white hover:text-black transition-all uppercase tracking-tighter"
+                                    >
+                                        View Case Studies
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className="py-24 bg-white border-y border-slate-100">
+                        <div className="max-w-7xl mx-auto px-6">
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+                                {[
+                                    { label: 'Keywords on Page 1', val: '500+' },
+                                    { label: 'Ad Campaigns', val: '100+' },
+                                    { label: 'Websites Built', val: '200+' },
+                                    { label: 'ROI Improvement', val: '45%' }
+                                ].map((stat, i) => (
+                                    <div key={i} className="text-left border-l-2 border-black pl-6">
+                                        <div className="text-5xl font-black text-black mb-1 tracking-tighter">{stat.val}</div>
+                                        <div className="text-slate-400 font-bold text-xs uppercase tracking-widest">{stat.label}</div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            );
+
+            const Services = () => (
+                <div className="pt-32 pb-20 bg-white">
+                    <div className="max-w-7xl mx-auto px-6">
+                        <div className="mb-20">
+                            <h2 className="text-6xl md:text-8xl font-black text-black mb-6 tracking-tighter">OUR SERVICES.</h2>
+                            <p className="text-slate-500 max-w-2xl text-xl font-medium">
+                                Bespoke digital solutions built on data and high-end creative execution for the tri-state area's most ambitious brands.
+                            </p>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 gap-10">
+                            {[
+                                { title: 'PPC ADVERTISING', icon: 'Target', desc: 'High-performance managed pay-per-click advertising across Google, Meta, and LinkedIn.', features: ['Google Search', 'Display & Remarketing', 'YouTube Video', 'Shopping Ads']},
+                                { title: 'SEO STRATEGY', icon: 'Search', desc: 'Authority-building search engine optimization that captures high-intent organic traffic.', features: ['Technical Audits', 'Content Marketing', 'Backlink Acquisition', 'Local Authority']},
+                                { title: 'SOCIAL MEDIA', icon: 'Users', desc: 'Strategic brand positioning and community growth across the modern social landscape.', features: ['Creative Direction', 'Community Management', 'Influencer Strategy', 'Paid Growth']},
+                                { title: 'DESIGN & BRAND', icon: 'Palette', desc: 'Minimalist, high-impact visuals that resonate with your target demographic.', features: ['Identity Design', 'UX/UI Design', 'Campaign Creative', 'Sales Collateral']}
+                            ].map((s, i) => (
+                                <div key={i} className="group p-12 bg-white border border-slate-100 hover:border-black transition-all duration-500 rounded-none relative overflow-hidden">
+                                    <div className="mb-10 text-black group-hover:scale-110 transition-transform duration-500 origin-left">
+                                        <Icon name={s.icon} size={40} />
+                                    </div>
+                                    <h3 className="text-3xl font-black mb-4 tracking-tighter uppercase italic">{s.title}</h3>
+                                    <p className="text-slate-500 text-lg mb-8 font-medium leading-relaxed">{s.desc}</p>
+                                    <ul className="space-y-3">
+                                        {s.features.map((f, j) => (
+                                            <li key={j} className="flex items-center gap-3 text-sm text-black font-bold uppercase tracking-wider">
+                                                <div className="w-1.5 h-1.5 bg-black rounded-full"></div> {f}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            );
+
+            const Work = () => (
+                <div className="pt-32 pb-20 bg-slate-50">
+                    <div className="max-w-7xl mx-auto px-6">
+                        <h2 className="text-6xl font-black text-black mb-16 tracking-tighter uppercase italic">Case Studies</h2>
+                        <div className="grid md:grid-cols-2 gap-1">
+                            {[1, 2, 3, 4].map((item) => (
+                                <div key={item} className="group relative aspect-video bg-white overflow-hidden cursor-pointer border border-slate-200">
+                                    <div className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-10 flex flex-col justify-center p-12 text-white">
+                                        <h4 className="font-black text-4xl mb-2 tracking-tighter italic">TRI-STATE PROJECT 00{item}</h4>
+                                        <p className="text-slate-400 font-bold uppercase tracking-widest text-sm mb-8">Performance Marketing • Strategy</p>
+                                        <div className="flex items-center gap-2 font-black uppercase text-xs tracking-[0.2em]">
+                                            View Full Project <Icon name="ArrowRight" size={16}/>
+                                        </div>
+                                    </div>
+                                    <div className="w-full h-full flex items-center justify-center text-slate-200 font-black text-9xl select-none">
+                                        {item}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            );
+
+            const About = () => (
+                <div className="pt-32 pb-20 bg-white">
+                    <div className="max-w-7xl mx-auto px-6">
+                        <div className="grid md:grid-cols-2 gap-24 items-center">
+                            <div className="bg-black aspect-square flex items-center justify-center text-white p-20">
+                                 <div className="border-8 border-white w-full h-full flex items-center justify-center">
+                                    <span className="font-black text-6xl italic tracking-tighter text-center">NJ/NYC.</span>
+                                 </div>
+                            </div>
+                            <div>
+                                <h2 className="text-6xl font-black mb-10 tracking-tighter uppercase">No Promises.<br/>Just Performance.</h2>
+                                <p className="text-slate-600 text-xl mb-8 font-medium leading-relaxed">
+                                    Serving the New Jersey and New York City markets, LAD Media operates with a simple, stark philosophy: your growth is our only metric for success. We remove the fluff and focus on the data.
+                                </p>
+                                <div className="space-y-10">
+                                    <div className="border-t border-slate-200 pt-8">
+                                        <h4 className="font-black text-black text-xl mb-2 uppercase italic tracking-tighter">01. Local Expertise</h4>
+                                        <p className="text-slate-500 font-medium">We understand the competitive landscape of the NY/NJ metropolitan area and how to cut through the noise.</p>
+                                    </div>
+                                    <div className="border-t border-slate-200 pt-8">
+                                        <h4 className="font-black text-black text-xl mb-2 uppercase italic tracking-tighter">02. Direct Accountability</h4>
+                                        <p className="text-slate-500 font-medium">Digital trends move fast. Our regional team is built for rapid deployment and real-time optimization.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+
+            const Vision = () => (
+                <div className="pt-32 pb-20 bg-black text-white">
+                    <div className="max-w-7xl mx-auto px-6">
+                        <div className="max-w-4xl">
+                            <h2 className="text-7xl md:text-9xl font-black mb-16 tracking-tighter leading-none italic uppercase">The Future Is<br/><span className="text-slate-600">Calculated.</span></h2>
+                            <div className="grid md:grid-cols-2 gap-16">
+                                <div className="space-y-4">
+                                    <Icon name="TrendingUp" size={32} className="text-white mb-4" />
+                                    <h3 className="text-2xl font-black uppercase italic tracking-tighter">Market Evolution</h3>
+                                    <p className="text-slate-400 text-lg leading-relaxed">Our vision is to redefine the standard of marketing ROI in the Northeast, moving away from vague "reach" and towards definitive, profitable conversions.</p>
+                                </div>
+                                <div className="space-y-4">
+                                    <Icon name="Eye" size={32} className="text-white mb-4" />
+                                    <h3 className="text-2xl font-black uppercase italic tracking-tighter">Absolute Transparency</h3>
+                                    <p className="text-slate-400 text-lg leading-relaxed">We envision a partnership model where clients have 100% visibility into every dollar spent and every lead generated across the tri-state area.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+
+            const Contact = () => (
+                <div className="pt-32 pb-20 bg-slate-50">
+                    <div className="max-w-7xl mx-auto px-6">
+                        <div className="grid md:grid-cols-2 gap-20">
+                            <div>
+                                <h2 className="text-6xl font-black text-black mb-8 tracking-tighter uppercase italic">Connect.</h2>
+                                <p className="text-slate-600 text-xl mb-12 font-medium">
+                                    Scale your digital footprint across NJ, NYC, and beyond.
+                                </p>
+                                <div className="space-y-8">
+                                    {[
+                                        { icon: <Icon name="Mail" />, label: 'Email', val: 'info@ladmedia.co' },
+                                        { icon: <Icon name="Phone" />, label: 'Phone', val: '(714) 905-4595' },
+                                        { icon: <Icon name="MapPin" />, label: 'Markets', val: 'New Jersey • New York City' }
+                                    ].map((item, i) => (
+                                        <div key={i} className="flex items-center gap-6 group">
+                                            <div className="w-14 h-14 bg-black text-white flex items-center justify-center rounded-full group-hover:scale-110 transition-transform">{item.icon}</div>
+                                            <div>
+                                                <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{item.label}</div>
+                                                <div className="font-black text-black text-lg uppercase tracking-tight">{item.val}</div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div className="bg-white p-12 border border-slate-200">
+                                <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
+                                    <div className="grid md:grid-cols-2 gap-8">
+                                        <div className="border-b-2 border-slate-100 focus-within:border-black transition-colors py-2">
+                                            <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Full Name</label>
+                                            <input type="text" className="w-full bg-transparent border-none p-0 focus:ring-0 outline-none font-bold text-black" placeholder="REQUIRED" />
+                                        </div>
+                                        <div className="border-b-2 border-slate-100 focus-within:border-black transition-colors py-2">
+                                            <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Email Address</label>
+                                            <input type="email" className="w-full bg-transparent border-none p-0 focus:ring-0 outline-none font-bold text-black" placeholder="REQUIRED" />
+                                        </div>
+                                    </div>
+                                    <div className="border-b-2 border-slate-100 focus-within:border-black transition-colors py-2">
+                                        <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Service</label>
+                                        <select className="w-full bg-transparent border-none p-0 focus:ring-0 outline-none font-bold text-black uppercase">
+                                            <option>PPC / Advertising</option>
+                                            <option>SEO Strategy</option>
+                                            <option>Social Media</option>
+                                            <option>Graphic Design</option>
+                                        </select>
+                                    </div>
+                                    <div className="border-b-2 border-slate-100 focus-within:border-black transition-colors py-2">
+                                        <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Project Brief</label>
+                                        <textarea className="w-full bg-transparent border-none p-0 focus:ring-0 outline-none font-bold text-black min-h-[100px]" placeholder="DESCRIBE YOUR OBJECTIVES"></textarea>
+                                    </div>
+                                    <button className="w-full bg-black text-white font-black py-5 hover:bg-slate-800 transition-all uppercase tracking-[0.3em] text-sm">
+                                        Initiate Contact
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+
+            return (
+                <div className="min-h-screen bg-white font-sans text-black selection:bg-black selection:text-white">
+                    <Navbar />
+                    <main>
+                        {currentPage === 'home' && <Home />}
+                        {currentPage === 'services' && <Services />}
+                        {currentPage === 'work' && <Work />}
+                        {currentPage === 'about' && <About />}
+                        {currentPage === 'vision' && <Vision />}
+                        {currentPage === 'contact' && <Contact />}
+                    </main>
+
+                    {currentPage !== 'contact' && (
+                        <section className="bg-black py-32 border-t border-white/5">
+                            <div className="max-w-7xl mx-auto px-6 text-center">
+                                <h2 className="text-5xl md:text-7xl font-black text-white mb-12 tracking-tighter uppercase italic">Scale Your Business.</h2>
+                                <button 
+                                    onClick={() => navigate('contact')}
+                                    className="bg-white text-black px-12 py-6 rounded-full font-black text-xl hover:bg-slate-200 transition-all uppercase tracking-widest"
+                                >
+                                    Start The Conversation
+                                </button>
+                            </div>
+                        </section>
+                    )}
+                    <Footer />
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
 </body>
 </html>

@@ -10,7 +10,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-    body { font-family: 'Inter', sans-serif; margin: 0; background-color: #000; }
+    body { font-family: 'Inter', sans-serif; margin: 0; background-color: #000; scroll-behavior: smooth; }
     #root { min-height: 100vh; }
     .nav-scrolled { background-color: white !important; box-shadow: 0 2px 6px rgba(0,0,0,0.1); padding-top: 0.75rem; padding-bottom: 0.75rem; }
   </style>
@@ -25,11 +25,11 @@
           <span class="text-white">MEDIA</span>
         </div>
         <div id="desktop-menu" class="hidden md:flex items-center space-x-8">
-          <button class="nav-btn text-xs font-bold uppercase tracking-widest text-slate-200">Services</button>
-          <button class="nav-btn text-xs font-bold uppercase tracking-widest text-slate-200">Work</button>
-          <button class="nav-btn text-xs font-bold uppercase tracking-widest text-slate-200">About</button>
-          <button class="nav-btn text-xs font-bold uppercase tracking-widest text-slate-200">Vision</button>
-          <button class="nav-btn text-xs font-bold uppercase tracking-widest text-slate-200">Contact</button>
+          <button class="nav-btn text-xs font-bold uppercase tracking-widest text-slate-200" data-target="services">Services</button>
+          <button class="nav-btn text-xs font-bold uppercase tracking-widest text-slate-200" data-target="work">Work</button>
+          <button class="nav-btn text-xs font-bold uppercase tracking-widest text-slate-200" data-target="about">About</button>
+          <button class="nav-btn text-xs font-bold uppercase tracking-widest text-slate-200" data-target="vision">Vision</button>
+          <button class="nav-btn text-xs font-bold uppercase tracking-widest text-slate-200" data-target="contact">Contact</button>
           <button class="px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest bg-white text-black hover:bg-slate-200 transition-all">Connect</button>
         </div>
         <button id="mobile-menu-btn" class="md:hidden text-white">
@@ -44,18 +44,18 @@
         <span class="font-black text-2xl tracking-tighter text-black">LAD MEDIA</span>
         <button id="mobile-menu-close"><i data-lucide="x" size="32"></i></button>
       </div>
-      <button class="mobile-nav-btn text-3xl font-black text-black border-b border-slate-100 pb-4 uppercase tracking-tighter">Home</button>
-      <button class="mobile-nav-btn text-3xl font-black text-black border-b border-slate-100 pb-4 uppercase tracking-tighter">Services</button>
-      <button class="mobile-nav-btn text-3xl font-black text-black border-b border-slate-100 pb-4 uppercase tracking-tighter">Work</button>
-      <button class="mobile-nav-btn text-3xl font-black text-black border-b border-slate-100 pb-4 uppercase tracking-tighter">About</button>
-      <button class="mobile-nav-btn text-3xl font-black text-black border-b border-slate-100 pb-4 uppercase tracking-tighter">Vision</button>
-      <button class="mobile-nav-btn text-3xl font-black text-black border-b border-slate-100 pb-4 uppercase tracking-tighter">Contact</button>
+      <button class="mobile-nav-btn text-3xl font-black text-black border-b border-slate-100 pb-4 uppercase tracking-tighter" data-target="home">Home</button>
+      <button class="mobile-nav-btn text-3xl font-black text-black border-b border-slate-100 pb-4 uppercase tracking-tighter" data-target="services">Services</button>
+      <button class="mobile-nav-btn text-3xl font-black text-black border-b border-slate-100 pb-4 uppercase tracking-tighter" data-target="work">Work</button>
+      <button class="mobile-nav-btn text-3xl font-black text-black border-b border-slate-100 pb-4 uppercase tracking-tighter" data-target="about">About</button>
+      <button class="mobile-nav-btn text-3xl font-black text-black border-b border-slate-100 pb-4 uppercase tracking-tighter" data-target="vision">Vision</button>
+      <button class="mobile-nav-btn text-3xl font-black text-black border-b border-slate-100 pb-4 uppercase tracking-tighter" data-target="contact">Contact</button>
     </div>
 
     <!-- Main Content -->
     <main>
       <!-- Hero Section -->
-      <section class="relative h-screen flex items-center bg-black overflow-hidden">
+      <section id="home" class="relative h-screen flex items-center bg-black overflow-hidden">
         <div class="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]"></div>
         <div class="max-w-7xl mx-auto px-6 relative z-10 w-full text-left">
           <div class="max-w-4xl">
@@ -67,29 +67,29 @@
               Precision-targeted PPC, SEO, and social media strategies designed for the New York Metropolitan market and beyond.
             </p>
             <div class="flex flex-col sm:flex-row gap-6">
-              <button class="bg-white text-black px-10 py-5 rounded-full font-black text-lg flex items-center justify-center gap-3 hover:bg-slate-200 transition-all uppercase tracking-tighter">
+              <!-- Get Started button now opens email -->
+              <a href="mailto:andrew@ladmedia.co" class="bg-white text-black px-10 py-5 rounded-full font-black text-lg flex items-center justify-center gap-3 hover:bg-slate-200 transition-all uppercase tracking-tighter">
                 Get Started <i data-lucide="arrow-right"></i>
-              </button>
-              <button class="border border-white/20 text-white px-10 py-5 rounded-full font-black text-lg hover:bg-white hover:text-black transition-all uppercase tracking-tighter">
-                View Case Studies
-              </button>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Services Section -->
-      <section class="pt-32 pb-20 bg-white min-h-screen text-left">
+      <section id="services" class="pt-32 pb-20 bg-white min-h-screen text-left">
         <div class="max-w-7xl mx-auto px-6">
           <div class="mb-20">
             <h2 class="text-6xl md:text-8xl font-black text-black mb-6 tracking-tighter uppercase">OUR SERVICES.</h2>
-            <p class="text-slate-500 max-w-2xl text-xl font-medium">Data-driven performance marketing for NJ/NYC brands.</p>
+            <p class="text-slate-500 max-w-3xl text-xl font-medium mb-12">
+              LAD MEDIA is one of the leading marketing firms for building and launching crypto tokens and blockchain projects. We combine a top-tier team of blockchain experts with high-performance digital marketing strategies to accelerate your project from concept to execution.
+            </p>
           </div>
           <div class="grid md:grid-cols-2 gap-10">
             <div class="p-12 border border-slate-100 hover:border-black transition-all">
               <i data-lucide="target" size="40" class="mb-8 block"></i>
               <h3 class="text-3xl font-black mb-4 tracking-tighter uppercase italic">PPC ADVERTISING</h3>
-              <p class="text-slate-500 text-lg mb-8">Managed pay-per-click across Google and Meta.</p>
+              <p class="text-slate-500 text-lg mb-8">Managed pay-per-click across Google and Meta for blockchain and traditional clients.</p>
               <ul class="space-y-3">
                 <li class="text-sm text-black font-bold uppercase tracking-wider flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black rounded-full"></span> Google Search</li>
                 <li class="text-sm text-black font-bold uppercase tracking-wider flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black rounded-full"></span> Display</li>
@@ -100,10 +100,10 @@
             <div class="p-12 border border-slate-100 hover:border-black transition-all">
               <i data-lucide="search" size="40" class="mb-8 block"></i>
               <h3 class="text-3xl font-black mb-4 tracking-tighter uppercase italic">SEO STRATEGY</h3>
-              <p class="text-slate-500 text-lg mb-8">Organic growth strategies for the tri-state area.</p>
+              <p class="text-slate-500 text-lg mb-8">Organic growth strategies for the tri-state area, crypto projects, and emerging tech brands.</p>
               <ul class="space-y-3">
                 <li class="text-sm text-black font-bold uppercase tracking-wider flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black rounded-full"></span> Technical Audits</li>
-                <li class="text-sm text-black font-bold uppercase tracking-wider flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black rounded-full"></span> Content</li>
+                <li class="text-sm text-black font-bold uppercase tracking-wider flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black rounded-full"></span> Content Strategy</li>
                 <li class="text-sm text-black font-bold uppercase tracking-wider flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black rounded-full"></span> Backlinks</li>
                 <li class="text-sm text-black font-bold uppercase tracking-wider flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black rounded-full"></span> Local SEO</li>
               </ul>
@@ -111,14 +111,64 @@
           </div>
         </div>
       </section>
-    </main>
 
-    <!-- Footer -->
-    <footer class="bg-black text-white pt-20 pb-10 border-t border-white/10">
-      <div class="max-w-7xl mx-auto px-6 text-center text-slate-600 text-[10px] uppercase tracking-widest font-bold">
-        © 2026 LAD Media Co. Professional Digital Marketing • New Jersey • New York City
-      </div>
-    </footer>
+      <!-- Work Section -->
+      <section id="work" class="pt-32 pb-20 bg-white min-h-screen text-left">
+        <div class="max-w-7xl mx-auto px-6">
+          <h2 class="text-6xl md:text-8xl font-black text-black mb-6 tracking-tighter uppercase">OUR WORK</h2>
+          <p class="text-xl text-slate-500 max-w-3xl mb-12 leading-relaxed">
+            We’ve partnered with a range of clients to deliver high-performance digital marketing solutions:
+          </p>
+          <ul class="space-y-4 text-lg font-medium">
+            <li><a href="https://mispar.co" target="_blank" class="text-black hover:text-slate-500 underline">Mispar.co</a></li>
+            <li><a href="https://polarpointhvac.com" target="_blank" class="text-black hover:text-slate-500 underline">Polar Point HVAC</a></li>
+            <li><a href="https://superiorpackgroup.com" target="_blank" class="text-black hover:text-slate-500 underline">Superior Pack Group</a></li>
+            <li><a href="https://SPORTSBEEP.com" target="_blank" class="text-black hover:text-slate-500 underline">SPORTSBEEP</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section id="about" class="pt-32 pb-20 bg-white min-h-screen text-left">
+        <div class="max-w-7xl mx-auto px-6">
+          <h2 class="text-6xl md:text-8xl font-black text-black mb-6 tracking-tighter uppercase">ABOUT US</h2>
+          <p class="text-xl text-slate-500 max-w-3xl leading-relaxed">
+            LAD MEDIA started in 2012 as an independent record label, collaborating with a diverse range of music groups to elevate their creative presence. In 2017, we pivoted into a full-stack marketing firm, bringing the same creative energy and innovative strategy to digital campaigns, performance marketing, and brand growth across multiple industries.
+          </p>
+        </div>
+      </section>
+
+      <!-- Vision Section -->
+      <section id="vision" class="pt-32 pb-20 bg-white min-h-screen text-left">
+        <div class="max-w-7xl mx-auto px-6">
+          <h2 class="text-6xl md:text-8xl font-black text-black mb-6 tracking-tighter uppercase">OUR VISION</h2>
+          <p class="text-xl text-slate-500 max-w-3xl leading-relaxed">
+            At LAD MEDIA, our vision is to combine creativity, strategy, and performance — a philosophy rooted in our beginnings as an independent record label in 2012. Just as we helped music groups amplify their voices and connect with audiences, today we help brands craft compelling stories, execute data-driven campaigns, and achieve measurable growth in the digital world. We aim to elevate every client with innovative marketing solutions that blend artistry and analytics, turning ideas into results.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="pt-32 pb-20 bg-white min-h-screen text-left">
+        <div class="max-w-7xl mx-auto px-6">
+          <h2 class="text-6xl md:text-8xl font-black text-black mb-6 tracking-tighter uppercase">CONTACT US</h2>
+          <p class="text-xl text-slate-500 max-w-3xl leading-relaxed mb-6">
+            Reach out directly via email or phone:
+          </p>
+          <ul class="space-y-3 text-xl">
+            <li>Email: <a href="mailto:andrew@ladmedia.co" class="text-black underline hover:text-slate-500">andrew@ladmedia.co</a></li>
+            <li>Phone: <a href="tel:+19734758314" class="text-black underline hover:text-slate-500">(973) 475-8314</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-black text-white pt-20 pb-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-600 text-[10px] uppercase tracking-widest font-bold">
+          © 2026 LAD Media Co. Professional Digital Marketing • New Jersey • New York City
+        </div>
+      </footer>
+    </main>
   </div>
 
   <!-- Scripts -->
@@ -150,6 +200,18 @@
     const mobileClose = document.getElementById('mobile-menu-close');
     mobileBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
     mobileClose.addEventListener('click', () => { mobileMenu.classList.add('hidden'); });
+
+    // Smooth scroll for nav buttons
+    document.querySelectorAll('.nav-btn, .mobile-nav-btn').forEach(btn => {
+      btn.addEventListener('click', e => {
+        const targetId = btn.getAttribute('data-target');
+        const section = document.getElementById(targetId);
+        if(section){
+          section.scrollIntoView({ behavior: 'smooth' });
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
   </script>
 </body>
 </html>

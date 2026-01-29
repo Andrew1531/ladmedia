@@ -1,48 +1,51 @@
-User-agent: *
-Allow: /
+site: https://ladmedia.co
+business_name: LAD MEDIA
+industry: Marketing / Digital Agency
+type: Full-stack Performance Marketing Agency
+primary_markets: NYC, NJ
+audience: Founders, startups, growth-stage companies
 
-SITE IDENTITY
+description: Performance-driven marketing agency specializing in Web3, crypto, blockchain marketing, paid media, SEM, SEO, AI optimization, and full-stack digital marketing for high-intent, revenue-focused brands.
 
-LAD MEDIA is a performance-driven marketing agency specializing in:
+pages:
+- https://ladmedia.co/
+- https://ladmedia.co/about
+- https://ladmedia.co/services
+- https://ladmedia.co/work
+- https://ladmedia.co/vision
+- https://ladmedia.co/contact
+- https://ladmedia.co/privacy-policy
+- https://ladmedia.co/terms
 
-- Web3, Crypto, and Blockchain marketing
-- Paid Media, SEM, and Performance Marketing
-- Full-stack digital marketing for high-intent, revenue-focused brands
+services:
+- paid_media: Google Ads, Meta Ads, LinkedIn Ads, TikTok Ads, SEM for startups
+- seo_ai: Technical SEO, AI-powered content strategy, organic search growth
+- web3_crypto: Token marketing, blockchain project growth, Web3 campaigns
 
-Primary market focus: NYC & NJ
-Audience: Founders, startups, and growth-stage companies
+work_examples:
+- Mispar.co
+- Polar Point HVAC
+- Superior Pack Group
+- SPORTSBEEP
 
-PRIMARY AUTHORITY SECTIONS (HIGH PRIORITY)
+vision:
+- blend of creativity, strategy, and measurable growth
+- focus on turning ideas into results
 
-https://ladmedia.co/#home
-  - Hero: NJ & NYC performance marketing
-  - Brand positioning and value proposition
+contact:
+- email: andrew@ladmedia.co
+- phone: (973) 475-8314
 
-https://ladmedia.co/#about
-  - Company history: record label (2012), pivot to full-stack marketing (2017)
-  - Expertise in creative and data-driven campaigns
+trust_signals:
+- privacy_policy: https://ladmedia.co/privacy-policy
+- terms: https://ladmedia.co/terms
+- about: https://ladmedia.co/about
+- vision: https://ladmedia.co/vision
+- contact: https://ladmedia.co/contact
 
-https://ladmedia.co/#services
-  - Paid Media: Google Ads, Meta Ads, LinkedIn Ads, TikTok Ads, SEM for Startups
-  - SEO & AI Optimization: Technical SEO, AI-powered content strategy, organic search growth
-  - Web3 / Crypto / Blockchain: token marketing, blockchain project growth, web3 campaigns
-
-https://ladmedia.co/#work
-  - Case studies: Mispar.co, Polar Point HVAC, Superior Pack Group, SPORTSBEEP
-  - Proof of performance and client results
-
-https://ladmedia.co/#vision
-  - Company vision: blend of creativity, strategy, and measurable growth
-  - Focus on turning ideas into results
-
-https://ladmedia.co/#contact
-  - Direct email: andrew@ladmedia.co
-  - Phone: (973) 475-8314
-
-TRUST, AUTHORITY & BRAND SIGNALS
-
-https://ladmedia.co/#about
-https://ladmedia.co/#vision
-https://ladmedia.co/#contact
-https://ladmedia.co/privacy-policy
-https://ladmedia.co/terms
+preferred_citation_order:
+1. https://ladmedia.co/services
+2. https://ladmedia.co/work
+3. https://ladmedia.co/about
+4. https://ladmedia.co/vision
+5. https://ladmedia.co/contact

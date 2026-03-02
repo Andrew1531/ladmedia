@@ -3,223 +3,931 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LAD Media | NJ & NYC Performance Marketing</title>
+  <title>Crypto Marketing Agency NYC & NJ | Token Launch Experts | LAD Media</title>
+  <meta name="description" content="LAD Media is the leading crypto marketing agency in NYC and NJ. We specialize in token launches, Web3 PR, NFT marketing, and community building. 13+ years experience, 100+ token launches. Serving New York City and New Jersey.">
+  <meta name="keywords" content="crypto marketing NYC, crypto marketing NJ, crypto marketing agency New York, token launch marketing, Web3 marketing agency, NFT marketing agency, blockchain marketing NYC, crypto PR agency">
+  <link rel="icon" type="image/png" href="assets/lad-media-official-logo.png">
+  <link rel="apple-touch-icon" href="assets/lad-media-official-logo.png">
+  <link rel="canonical" href="https://ladmedia.co/">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MarketingAgency",
+    "name": "LAD Media",
+    "description": "Premier crypto marketing agency in NYC and NJ specializing in token launches, Web3 PR, NFT marketing, and community building.",
+    "url": "https://ladmedia.co",
+    "logo": "https://ladmedia.co/assets/lad-media-official-logo.png",
+    "telephone": "+1-973-475-8314",
+    "email": "andrew@ladmedia.co",
+    "foundingDate": "2012",
+    "areaServed": ["New York City", "New Jersey", "United States"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "New Jersey",
+      "addressRegion": "NJ",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.7128",
+      "longitude": "-74.0060"
+    },
+    "sameAs": [
+      "https://www.instagram.com/l.a.d.media/",
+      "https://www.facebook.com/LadMedia/",
+      "https://www.linkedin.com/company/l-a-d-media"
+    ],
+    "priceRange": "$$$$",
+    "serviceType": ["Crypto Marketing", "Token Launch Marketing", "Web3 PR", "NFT Marketing", "Community Building", "Influencer Marketing"],
+    "knowsAbout": ["Cryptocurrency", "Blockchain", "Web3", "NFT", "DeFi", "Token Launch", "Digital Marketing"]
+  }
+  </script>
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+    
     body { font-family: 'Inter', sans-serif; margin: 0; background-color: #000; scroll-behavior: smooth; }
-    #root { min-height: 100vh; }
-    .nav-scrolled { background-color: white !important; box-shadow: 0 2px 6px rgba(0,0,0,0.1); padding-top: 0.75rem; padding-bottom: 0.75rem; }
+    
+    .gradient-text { background: linear-gradient(135deg, #fff 0%, #a0a0a0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    
+    .hero-glow { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%); pointer-events: none; }
+    
+    .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
+    
+    .stat-counter { animation: countUp 2s ease-out forwards; }
+    
+    .nav-scrolled { background-color: rgba(0,0,0,0.95) !important; backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.1); }
+    
+    .pulse-dot { animation: pulse 2s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    
+    .marquee { animation: marquee 30s linear infinite; }
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    
+    .service-icon { transition: all 0.3s ease; }
+    .service-card:hover .service-icon { transform: scale(1.1); background: #fff; }
+    .service-card:hover .service-icon svg { color: #000; }
+    
+    .timeline-line { background: linear-gradient(180deg, transparent, #333, #333, transparent); }
+    
+    .glow-button { position: relative; overflow: hidden; }
+    .glow-button::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s; }
+    .glow-button:hover::before { left: 100%; }
+    
+    .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+    .faq-item.active .faq-content { max-height: 500px; }
+    .faq-item.active .faq-icon { transform: rotate(45deg); }
+    
+    .floating { animation: floating 3s ease-in-out infinite; }
+    @keyframes floating { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
   </style>
 
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-79H0P4BJLQ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-79H0P4BJLQ');
-  </script>
+  <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-79H0P4BJLQ');</script>
 </head>
 
-<body>
-  <div id="root">
-    <!-- Navbar -->
-    <nav id="navbar" class="fixed w-full z-50 bg-transparent py-5 transition-all duration-300">
-      <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <div id="logo" class="text-2xl font-black tracking-tighter cursor-pointer flex items-center gap-1">
-          <div class="p-1 px-2 rounded bg-white text-black transition-colors">LAD</div>
-          <span class="text-white">MEDIA</span>
-        </div>
-        <div id="desktop-menu" class="hidden md:flex items-center space-x-8">
-          <button class="nav-btn text-xs font-bold uppercase tracking-widest text-slate-200" data-target="services">Services</button>
-          <button class="nav-btn text-xs font-bold uppercase tracking-widest text-slate-200" data-target="work">Work</button>
-          <button class="nav-btn text-xs font-bold uppercase tracking-widest text-slate-200" data-target="about">About</button>
-          <button class="nav-btn text-xs font-bold uppercase tracking-widest text-slate-200" data-target="vision">Vision</button>
-          <button class="nav-btn text-xs font-bold uppercase tracking-widest text-slate-200" data-target="contact">Contact</button>
-          <button class="px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest bg-white text-black hover:bg-slate-200 transition-all">Connect</button>
-        </div>
-        <button id="mobile-menu-btn" class="md:hidden text-white">
-          <i data-lucide="menu"></i>
-        </button>
+<body class="bg-black text-white">
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed w-full z-50 bg-transparent py-5 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <a href="#home" class="cursor-pointer">
+        <img src="assets/lad-media-official-logo.png" alt="LAD Media Logo" class="h-12 w-auto">
+      </a>
+      <div class="hidden lg:flex items-center space-x-8">
+        <a href="#services" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Services</a>
+        <a href="#process" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Process</a>
+        <a href="#results" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Results</a>
+        <a href="#about" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">About</a>
+        <a href="#faq" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">FAQ</a>
+        <a href="#contact" class="glow-button px-6 py-3 rounded-full text-sm font-bold bg-white text-black hover:bg-gray-100 transition-all">Get Free Consultation</a>
       </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 w-full bg-white z-[60] flex flex-col p-8 space-y-6 hidden md:hidden">
-      <div class="flex justify-between items-center mb-10">
-        <span class="font-black text-2xl tracking-tighter text-black">LAD MEDIA</span>
-        <button id="mobile-menu-close"><i data-lucide="x" size="32"></i></button>
-      </div>
-      <button class="mobile-nav-btn text-3xl font-black text-black border-b border-slate-100 pb-4 uppercase tracking-tighter" data-target="home">Home</button>
-      <button class="mobile-nav-btn text-3xl font-black text-black border-b border-slate-100 pb-4 uppercase tracking-tighter" data-target="services">Services</button>
-      <button class="mobile-nav-btn text-3xl font-black text-black border-b border-slate-100 pb-4 uppercase tracking-tighter" data-target="work">Work</button>
-      <button class="mobile-nav-btn text-3xl font-black text-black border-b border-slate-100 pb-4 uppercase tracking-tighter" data-target="about">About</button>
-      <button class="mobile-nav-btn text-3xl font-black text-black border-b border-slate-100 pb-4 uppercase tracking-tighter" data-target="vision">Vision</button>
-      <button class="mobile-nav-btn text-3xl font-black text-black border-b border-slate-100 pb-4 uppercase tracking-tighter" data-target="contact">Contact</button>
+      <button id="mobile-menu-btn" class="lg:hidden text-white">
+        <i data-lucide="menu" size="28"></i>
+      </button>
     </div>
+  </nav>
 
-    <!-- Main Content -->
-    <main>
-      <!-- Hero Section -->
-      <section id="home" class="relative h-screen flex items-center bg-black overflow-hidden">
-        <div class="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full text-left">
-          <div class="max-w-4xl">
-            <span class="text-white border border-white/30 px-3 py-1 rounded-full font-bold tracking-[0.2em] uppercase text-[10px] mb-8 inline-block">NJ & NYC Performance Agency</span>
-            <h1 class="text-6xl md:text-[8rem] lg:text-[10rem] font-black text-white leading-[0.85] mb-8 tracking-tighter">
-              DRIVE <span class="text-slate-500">RESULTS.</span>
-            </h1>
-            <p class="text-slate-400 text-xl md:text-2xl mb-12 leading-relaxed max-w-2xl font-medium">
-              Hyper-targeted digital campaigns that turn crypto ideas into measurable growth, reaching the right audience across PPC, SEO, and social channels
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 w-full bg-black z-[60] flex flex-col p-8 space-y-6 hidden lg:hidden">
+    <div class="flex justify-between items-center mb-10">
+      <img src="assets/lad-media-official-logo.png" alt="LAD Media Logo" class="h-10 w-auto">
+      <button id="mobile-menu-close"><i data-lucide="x" size="32" class="text-white"></i></button>
+    </div>
+    <a href="#home" class="mobile-nav-link text-2xl font-bold text-white border-b border-gray-800 pb-4">Home</a>
+    <a href="#services" class="mobile-nav-link text-2xl font-bold text-white border-b border-gray-800 pb-4">Services</a>
+    <a href="#process" class="mobile-nav-link text-2xl font-bold text-white border-b border-gray-800 pb-4">Process</a>
+    <a href="#results" class="mobile-nav-link text-2xl font-bold text-white border-b border-gray-800 pb-4">Results</a>
+    <a href="#about" class="mobile-nav-link text-2xl font-bold text-white border-b border-gray-800 pb-4">About</a>
+    <a href="#faq" class="mobile-nav-link text-2xl font-bold text-white border-b border-gray-800 pb-4">FAQ</a>
+    <a href="#contact" class="mt-4 px-6 py-4 rounded-full text-center font-bold bg-white text-black">Get Free Consultation</a>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center overflow-hidden">
+      <div class="hero-glow top-1/4 left-1/4"></div>
+      <div class="hero-glow bottom-1/4 right-1/4"></div>
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#111_1px,transparent_1px),linear-gradient(to_bottom,#111_1px,transparent_1px)] bg-[size:60px_60px] opacity-30"></div>
+      
+      <div class="max-w-7xl mx-auto px-6 relative z-10 pt-32 pb-20">
+        <!-- Trust Badge -->
+        <div class="flex items-center gap-3 mb-8">
+          <span class="pulse-dot w-2 h-2 bg-green-500 rounded-full"></span>
+          <span class="text-green-400 text-sm font-medium">Trusted by 100+ Web3 Projects</span>
+          <span class="text-gray-600">|</span>
+          <span class="text-gray-400 text-sm">Est. 2012</span>
+        </div>
+        
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] mb-8 max-w-5xl">
+          <span class="gradient-text">Launch Your Token.</span><br>
+          <span class="text-white">Dominate The Market.</span>
+        </h1>
+        
+        <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mb-12 leading-relaxed">
+          NYC & NJ's premier crypto marketing agency specializing in token launches, Web3 PR, NFT marketing, and community building. Serving New York City and New Jersey with 13+ years of marketing expertise.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 mb-16">
+          <a href="#contact" class="glow-button inline-flex items-center justify-center gap-3 px-8 py-5 rounded-full text-lg font-bold bg-white text-black hover:bg-gray-100 transition-all">
+            Start Your Project <i data-lucide="arrow-right" size="20"></i>
+          </a>
+          <a href="#results" class="inline-flex items-center justify-center gap-3 px-8 py-5 rounded-full text-lg font-bold border border-gray-700 text-white hover:bg-white/5 transition-all">
+            View Case Studies <i data-lucide="play" size="20"></i>
+          </a>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10">
+            <div class="text-4xl md:text-5xl font-black text-white mb-2">13+</div>
+            <div class="text-gray-500 text-sm font-medium">Years Experience</div>
+          </div>
+          <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10">
+            <div class="text-4xl md:text-5xl font-black text-white mb-2">$50M+</div>
+            <div class="text-gray-500 text-sm font-medium">Client Revenue Generated</div>
+          </div>
+          <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10">
+            <div class="text-4xl md:text-5xl font-black text-white mb-2">500+</div>
+            <div class="text-gray-500 text-sm font-medium">Campaigns Launched</div>
+          </div>
+          <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10">
+            <div class="text-4xl md:text-5xl font-black text-white mb-2">100+</div>
+            <div class="text-gray-500 text-sm font-medium">Token Launches</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trusted By Logos Marquee -->
+    <section class="py-12 bg-black border-y border-white/10 overflow-hidden">
+      <div class="text-center mb-8">
+        <p class="text-gray-500 text-sm font-medium uppercase tracking-widest">As Featured In</p>
+      </div>
+      <div class="relative">
+        <div class="flex marquee whitespace-nowrap">
+          <div class="flex items-center gap-12 md:gap-20 px-8">
+            <div class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+              <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#F7931A" stroke-width="2"/><path d="M12 6v12M8 10l4-4 4 4M8 14l4 4 4-4" stroke="#F7931A" stroke-width="1.5"/></svg>
+              <span class="text-xl font-black text-gray-400 tracking-tight">CoinTelegraph</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="#00D395"><rect width="24" height="24" rx="4"/><path d="M7 12h10M12 7v10" stroke="#000" stroke-width="2"/></svg>
+              <span class="text-xl font-black text-gray-400 tracking-tight">Decrypt</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+              <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#3861FB"/><path d="M12 6v6l4 2" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+              <span class="text-xl font-black text-gray-400 tracking-tight">CoinMarketCap</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+              <svg class="w-7 h-7" viewBox="0 0 24 24" fill="#F0B90B"><path d="M12 2L4 6v12l8 4 8-4V6l-8-4zm0 4l4 2-4 2-4-2 4-2z"/></svg>
+              <span class="text-xl font-black text-gray-400 tracking-tight">Binance</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="#5F01D1"><rect width="24" height="24" rx="2"/><path d="M6 12h12M9 8l-3 4 3 4M15 8l3 4-3 4" stroke="#fff" stroke-width="1.5"/></svg>
+              <span class="text-xl font-black text-gray-400 tracking-tight">Yahoo Finance</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+              <span class="text-2xl font-black text-gray-400 italic tracking-tighter">Forbes</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="2" fill="#000"/><rect x="2" y="6" width="4" height="12" fill="#FF6600"/><rect x="8" y="4" width="4" height="16" fill="#FF6600"/><rect x="14" y="8" width="4" height="8" fill="#FF6600"/><rect x="18" y="2" width="4" height="20" fill="#FF6600"/></svg>
+              <span class="text-xl font-black text-gray-400 tracking-tight">Bloomberg</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="#0A9E01"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8" stroke="#fff" stroke-width="2"/></svg>
+              <span class="text-xl font-black text-gray-400 tracking-tight">TechCrunch</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-12 md:gap-20 px-8">
+            <div class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+              <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#F7931A" stroke-width="2"/><path d="M12 6v12M8 10l4-4 4 4M8 14l4 4 4-4" stroke="#F7931A" stroke-width="1.5"/></svg>
+              <span class="text-xl font-black text-gray-400 tracking-tight">CoinTelegraph</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="#00D395"><rect width="24" height="24" rx="4"/><path d="M7 12h10M12 7v10" stroke="#000" stroke-width="2"/></svg>
+              <span class="text-xl font-black text-gray-400 tracking-tight">Decrypt</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+              <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#3861FB"/><path d="M12 6v6l4 2" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+              <span class="text-xl font-black text-gray-400 tracking-tight">CoinMarketCap</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+              <svg class="w-7 h-7" viewBox="0 0 24 24" fill="#F0B90B"><path d="M12 2L4 6v12l8 4 8-4V6l-8-4zm0 4l4 2-4 2-4-2 4-2z"/></svg>
+              <span class="text-xl font-black text-gray-400 tracking-tight">Binance</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="#5F01D1"><rect width="24" height="24" rx="2"/><path d="M6 12h12M9 8l-3 4 3 4M15 8l3 4-3 4" stroke="#fff" stroke-width="1.5"/></svg>
+              <span class="text-xl font-black text-gray-400 tracking-tight">Yahoo Finance</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+              <span class="text-2xl font-black text-gray-400 italic tracking-tighter">Forbes</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="2" fill="#000"/><rect x="2" y="6" width="4" height="12" fill="#FF6600"/><rect x="8" y="4" width="4" height="16" fill="#FF6600"/><rect x="14" y="8" width="4" height="8" fill="#FF6600"/><rect x="18" y="2" width="4" height="20" fill="#FF6600"/></svg>
+              <span class="text-xl font-black text-gray-400 tracking-tight">Bloomberg</span>
+            </div>
+            <div class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="#0A9E01"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8" stroke="#fff" stroke-width="2"/></svg>
+              <span class="text-xl font-black text-gray-400 tracking-tight">TechCrunch</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-32 bg-black relative">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-20">
+          <span class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4 block">Full-Service Solutions</span>
+          <h2 class="text-4xl md:text-6xl font-black text-white mb-6">Everything You Need to Launch & Scale</h2>
+          <p class="text-xl text-gray-400 max-w-3xl mx-auto">From concept to moon. We handle every aspect of your token launch and growth strategy.</p>
+        </div>
+
+        <!-- Primary Services Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <!-- Token Launch Strategy -->
+          <a href="services/tokenomics.html" class="service-card card-hover bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-8 border border-white/10 group">
+            <div class="service-icon w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="rocket" size="32" class="text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Token Launch Strategy</h3>
+            <p class="text-gray-400 mb-6">Complete go-to-market strategy for your token. Tokenomics design, launch timing, exchange listings, and initial marketing blitz.</p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center gap-2 text-sm text-gray-500"><i data-lucide="check" size="16" class="text-green-500"></i> Tokenomics Design</li>
+              <li class="flex items-center gap-2 text-sm text-gray-500"><i data-lucide="check" size="16" class="text-green-500"></i> Whitepaper Creation</li>
+              <li class="flex items-center gap-2 text-sm text-gray-500"><i data-lucide="check" size="16" class="text-green-500"></i> Exchange Listing Support</li>
+            </ul>
+            <span class="text-white font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">Learn More <i data-lucide="arrow-right" size="16"></i></span>
+          </a>
+
+          <!-- Community Building -->
+          <a href="services/community.html" class="service-card card-hover bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-8 border border-white/10 group">
+            <div class="service-icon w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="users" size="32" class="text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Community Building</h3>
+            <p class="text-gray-400 mb-6">Build a loyal army of supporters. Discord & Telegram setup, moderation, engagement strategies, and community growth hacking.</p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center gap-2 text-sm text-gray-500"><i data-lucide="check" size="16" class="text-green-500"></i> Discord/Telegram Setup</li>
+              <li class="flex items-center gap-2 text-sm text-gray-500"><i data-lucide="check" size="16" class="text-green-500"></i> 24/7 Moderation</li>
+              <li class="flex items-center gap-2 text-sm text-gray-500"><i data-lucide="check" size="16" class="text-green-500"></i> Engagement Campaigns</li>
+            </ul>
+            <span class="text-white font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">Learn More <i data-lucide="arrow-right" size="16"></i></span>
+          </a>
+
+          <!-- Influencer Marketing -->
+          <a href="services/influencer.html" class="service-card card-hover bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-8 border border-white/10 group">
+            <div class="service-icon w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="star" size="32" class="text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Influencer Marketing</h3>
+            <p class="text-gray-400 mb-6">Access our network of 500+ crypto influencers. YouTube, Twitter, TikTok campaigns that drive real engagement and FOMO.</p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center gap-2 text-sm text-gray-500"><i data-lucide="check" size="16" class="text-green-500"></i> 500+ Influencer Network</li>
+              <li class="flex items-center gap-2 text-sm text-gray-500"><i data-lucide="check" size="16" class="text-green-500"></i> Multi-Platform Campaigns</li>
+              <li class="flex items-center gap-2 text-sm text-gray-500"><i data-lucide="check" size="16" class="text-green-500"></i> Performance Tracking</li>
+            </ul>
+            <span class="text-white font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">Learn More <i data-lucide="arrow-right" size="16"></i></span>
+          </a>
+
+          <!-- PR & Media -->
+          <a href="services/pr.html" class="service-card card-hover bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-8 border border-white/10 group">
+            <div class="service-icon w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="newspaper" size="32" class="text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">PR & Media Coverage</h3>
+            <p class="text-gray-400 mb-6">Get featured in top crypto publications. CoinTelegraph, Decrypt, CoinMarketCap, Yahoo Finance, and 100+ more outlets.</p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center gap-2 text-sm text-gray-500"><i data-lucide="check" size="16" class="text-green-500"></i> Guaranteed Placements</li>
+              <li class="flex items-center gap-2 text-sm text-gray-500"><i data-lucide="check" size="16" class="text-green-500"></i> Press Release Distribution</li>
+              <li class="flex items-center gap-2 text-sm text-gray-500"><i data-lucide="check" size="16" class="text-green-500"></i> Thought Leadership</li>
+            </ul>
+            <span class="text-white font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">Learn More <i data-lucide="arrow-right" size="16"></i></span>
+          </a>
+
+          <!-- Paid Advertising -->
+          <a href="services/ppc.html" class="service-card card-hover bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-8 border border-white/10 group">
+            <div class="service-icon w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="target" size="32" class="text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Paid Advertising</h3>
+            <p class="text-gray-400 mb-6">Crypto-compliant ad campaigns across Google, Meta, Twitter, and crypto-native networks. $10M+ in ad spend managed.</p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center gap-2 text-sm text-gray-500"><i data-lucide="check" size="16" class="text-green-500"></i> Google & Meta Ads</li>
+              <li class="flex items-center gap-2 text-sm text-gray-500"><i data-lucide="check" size="16" class="text-green-500"></i> Crypto Ad Networks</li>
+              <li class="flex items-center gap-2 text-sm text-gray-500"><i data-lucide="check" size="16" class="text-green-500"></i> Retargeting Campaigns</li>
+            </ul>
+            <span class="text-white font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">Learn More <i data-lucide="arrow-right" size="16"></i></span>
+          </a>
+
+          <!-- Social Media -->
+          <a href="services/social.html" class="service-card card-hover bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-8 border border-white/10 group">
+            <div class="service-icon w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="share-2" size="32" class="text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Social Media Management</h3>
+            <p class="text-gray-400 mb-6">Full Twitter/X management, content creation, viral thread strategies, and engagement optimization for explosive growth.</p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center gap-2 text-sm text-gray-500"><i data-lucide="check" size="16" class="text-green-500"></i> Daily Content Creation</li>
+              <li class="flex items-center gap-2 text-sm text-gray-500"><i data-lucide="check" size="16" class="text-green-500"></i> Viral Thread Strategy</li>
+              <li class="flex items-center gap-2 text-sm text-gray-500"><i data-lucide="check" size="16" class="text-green-500"></i> Community Engagement</li>
+            </ul>
+            <span class="text-white font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">Learn More <i data-lucide="arrow-right" size="16"></i></span>
+          </a>
+        </div>
+
+        <!-- Additional Services -->
+        <div class="grid md:grid-cols-4 gap-6">
+          <a href="services/seo.html" class="card-hover bg-white/5 rounded-2xl p-6 border border-white/10 text-center group">
+            <i data-lucide="search" size="32" class="text-white mx-auto mb-4"></i>
+            <h4 class="font-bold text-white mb-2">SEO & Content</h4>
+            <p class="text-gray-500 text-sm">Organic search dominance</p>
+          </a>
+          <a href="services/branding.html" class="card-hover bg-white/5 rounded-2xl p-6 border border-white/10 text-center group">
+            <i data-lucide="palette" size="32" class="text-white mx-auto mb-4"></i>
+            <h4 class="font-bold text-white mb-2">Branding & Identity</h4>
+            <p class="text-gray-500 text-sm">Stand out from the crowd</p>
+          </a>
+          <a href="services/design.html" class="card-hover bg-white/5 rounded-2xl p-6 border border-white/10 text-center group">
+            <i data-lucide="pen-tool" size="32" class="text-white mx-auto mb-4"></i>
+            <h4 class="font-bold text-white mb-2">Design & Creative</h4>
+            <p class="text-gray-500 text-sm">Stunning visual assets</p>
+          </a>
+          <a href="services/cmo.html" class="card-hover bg-white/5 rounded-2xl p-6 border border-white/10 text-center group">
+            <i data-lucide="briefcase" size="32" class="text-white mx-auto mb-4"></i>
+            <h4 class="font-bold text-white mb-2">Fractional CMO</h4>
+            <p class="text-gray-500 text-sm">Executive leadership</p>
+          </a>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="services.html" class="inline-flex items-center gap-2 text-white font-semibold hover:underline">
+            View All Services <i data-lucide="arrow-right" size="16"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-32 bg-gradient-to-b from-black via-gray-950 to-black relative">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-20">
+          <span class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4 block">Our Process</span>
+          <h2 class="text-4xl md:text-6xl font-black text-white mb-6">From Zero to Launch in 4 Steps</h2>
+          <p class="text-xl text-gray-400 max-w-3xl mx-auto">A battle-tested framework that has launched 100+ successful tokens</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="relative">
+            <div class="text-8xl font-black text-white/5 absolute -top-4 -left-2">01</div>
+            <div class="relative bg-white/5 rounded-3xl p-8 border border-white/10 h-full">
+              <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6">
+                <i data-lucide="lightbulb" size="24" class="text-black"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">Discovery & Strategy</h3>
+              <p class="text-gray-400">Deep dive into your project, market analysis, competitor research, and custom strategy development.</p>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="text-8xl font-black text-white/5 absolute -top-4 -left-2">02</div>
+            <div class="relative bg-white/5 rounded-3xl p-8 border border-white/10 h-full">
+              <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6">
+                <i data-lucide="wrench" size="24" class="text-black"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">Build & Prepare</h3>
+              <p class="text-gray-400">Community setup, content creation, influencer outreach, PR pipeline, and pre-launch buzz building.</p>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="text-8xl font-black text-white/5 absolute -top-4 -left-2">03</div>
+            <div class="relative bg-white/5 rounded-3xl p-8 border border-white/10 h-full">
+              <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6">
+                <i data-lucide="rocket" size="24" class="text-black"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">Launch & Amplify</h3>
+              <p class="text-gray-400">Coordinated launch across all channels, influencer activations, PR blitz, and community events.</p>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="text-8xl font-black text-white/5 absolute -top-4 -left-2">04</div>
+            <div class="relative bg-white/5 rounded-3xl p-8 border border-white/10 h-full">
+              <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6">
+                <i data-lucide="trending-up" size="24" class="text-black"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">Scale & Sustain</h3>
+              <p class="text-gray-400">Ongoing growth optimization, community nurturing, exchange listings, and long-term marketing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="py-32 bg-black">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-20">
+          <span class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4 block">Proven Results</span>
+          <h2 class="text-4xl md:text-6xl font-black text-white mb-6">Success Stories That Speak</h2>
+          <p class="text-xl text-gray-400 max-w-3xl mx-auto">Real results from real projects we've launched and scaled</p>
+        </div>
+
+        <!-- Featured Case Studies -->
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div class="card-hover bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-10 border border-white/10">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center">
+                <i data-lucide="coins" size="32" class="text-white"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white">DeFi Token Launch</h3>
+                <p class="text-gray-500">Blockchain Project</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-4 mb-6">
+              <div class="text-center p-4 bg-white/5 rounded-xl">
+                <div class="text-2xl font-black text-white">$5M+</div>
+                <div class="text-xs text-gray-500">Raised at Launch</div>
+              </div>
+              <div class="text-center p-4 bg-white/5 rounded-xl">
+                <div class="text-2xl font-black text-white">50K+</div>
+                <div class="text-xs text-gray-500">Community Members</div>
+              </div>
+              <div class="text-center p-4 bg-white/5 rounded-xl">
+                <div class="text-2xl font-black text-white">10x</div>
+                <div class="text-xs text-gray-500">Token Growth</div>
+              </div>
+            </div>
+            <p class="text-gray-400">"LAD Media took us from zero to a thriving community and successful launch in just 8 weeks. Their strategy was flawless."</p>
+          </div>
+
+          <div class="card-hover bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-10 border border-white/10">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center">
+                <i data-lucide="image" size="32" class="text-white"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-white">NFT Collection Launch</h3>
+                <p class="text-gray-500">Digital Art Project</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-4 mb-6">
+              <div class="text-center p-4 bg-white/5 rounded-xl">
+                <div class="text-2xl font-black text-white">10K</div>
+                <div class="text-xs text-gray-500">NFTs Sold Out</div>
+              </div>
+              <div class="text-center p-4 bg-white/5 rounded-xl">
+                <div class="text-2xl font-black text-white">$2M+</div>
+                <div class="text-xs text-gray-500">Primary Sales</div>
+              </div>
+              <div class="text-center p-4 bg-white/5 rounded-xl">
+                <div class="text-2xl font-black text-white">48hrs</div>
+                <div class="text-xs text-gray-500">Time to Sellout</div>
+              </div>
+            </div>
+            <p class="text-gray-400">"The influencer campaign and community building was next level. We sold out faster than we ever imagined possible."</p>
+          </div>
+        </div>
+
+        <!-- Client Logos -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <a href="https://mispar.co" target="_blank" class="card-hover bg-white/5 rounded-2xl p-8 border border-white/10 text-center">
+            <div class="text-xl font-bold text-white mb-2">Mispar.co</div>
+            <p class="text-gray-500 text-sm">Blockchain Project</p>
+          </a>
+          <a href="https://polarpointhvac.com" target="_blank" class="card-hover bg-white/5 rounded-2xl p-8 border border-white/10 text-center">
+            <div class="text-xl font-bold text-white mb-2">Polar Point HVAC</div>
+            <p class="text-gray-500 text-sm">Local Business</p>
+          </a>
+          <a href="https://superiorpackgroup.com" target="_blank" class="card-hover bg-white/5 rounded-2xl p-8 border border-white/10 text-center">
+            <div class="text-xl font-bold text-white mb-2">Superior Pack Group</div>
+            <p class="text-gray-500 text-sm">E-Commerce</p>
+          </a>
+          <a href="https://SPORTSBEEP.com" target="_blank" class="card-hover bg-white/5 rounded-2xl p-8 border border-white/10 text-center">
+            <div class="text-xl font-bold text-white mb-2">SPORTSBEEP</div>
+            <p class="text-gray-500 text-sm">Sports Media</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-32 bg-gradient-to-b from-black via-gray-950 to-black">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-20">
+          <span class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4 block">Testimonials</span>
+          <h2 class="text-4xl md:text-6xl font-black text-white mb-6">What Our Clients Say</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white/5 rounded-3xl p-8 border border-white/10">
+            <div class="flex items-center gap-1 mb-6">
+              <i data-lucide="star" size="20" class="text-yellow-500 fill-yellow-500"></i>
+              <i data-lucide="star" size="20" class="text-yellow-500 fill-yellow-500"></i>
+              <i data-lucide="star" size="20" class="text-yellow-500 fill-yellow-500"></i>
+              <i data-lucide="star" size="20" class="text-yellow-500 fill-yellow-500"></i>
+              <i data-lucide="star" size="20" class="text-yellow-500 fill-yellow-500"></i>
+            </div>
+            <p class="text-gray-300 mb-6 text-lg leading-relaxed">"LAD Media transformed our token launch. Their influencer network and community building expertise is unmatched in the industry."</p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                <span class="text-white font-bold">JC</span>
+              </div>
+              <div>
+                <div class="font-bold text-white">John Chen</div>
+                <div class="text-gray-500 text-sm">CEO, DeFi Project</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 rounded-3xl p-8 border border-white/10">
+            <div class="flex items-center gap-1 mb-6">
+              <i data-lucide="star" size="20" class="text-yellow-500 fill-yellow-500"></i>
+              <i data-lucide="star" size="20" class="text-yellow-500 fill-yellow-500"></i>
+              <i data-lucide="star" size="20" class="text-yellow-500 fill-yellow-500"></i>
+              <i data-lucide="star" size="20" class="text-yellow-500 fill-yellow-500"></i>
+              <i data-lucide="star" size="20" class="text-yellow-500 fill-yellow-500"></i>
+            </div>
+            <p class="text-gray-300 mb-6 text-lg leading-relaxed">"From zero followers to 50K in our Discord. The team at LAD Media knows exactly how to build hype and sustain engagement."</p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                <span class="text-white font-bold">SK</span>
+              </div>
+              <div>
+                <div class="font-bold text-white">Sarah Kim</div>
+                <div class="text-gray-500 text-sm">Founder, NFT Collection</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 rounded-3xl p-8 border border-white/10">
+            <div class="flex items-center gap-1 mb-6">
+              <i data-lucide="star" size="20" class="text-yellow-500 fill-yellow-500"></i>
+              <i data-lucide="star" size="20" class="text-yellow-500 fill-yellow-500"></i>
+              <i data-lucide="star" size="20" class="text-yellow-500 fill-yellow-500"></i>
+              <i data-lucide="star" size="20" class="text-yellow-500 fill-yellow-500"></i>
+              <i data-lucide="star" size="20" class="text-yellow-500 fill-yellow-500"></i>
+            </div>
+            <p class="text-gray-300 mb-6 text-lg leading-relaxed">"Best ROI on marketing spend we've ever seen. Their paid ads team navigates crypto advertising restrictions like no one else."</p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                <span class="text-white font-bold">MR</span>
+              </div>
+              <div>
+                <div class="font-bold text-white">Michael Rivera</div>
+                <div class="text-gray-500 text-sm">CMO, Layer 2 Protocol</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 bg-black">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <span class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4 block">NYC & NJ Crypto Marketing Agency</span>
+            <h2 class="text-4xl md:text-5xl font-black text-white mb-8">Built by Marketers, For Web3</h2>
+            <p class="text-xl text-gray-400 mb-8 leading-relaxed">
+              Founded in 2012 as an independent record label, LAD Media has evolved into one of the most trusted names in crypto marketing. We've taken the same creative energy that built artists' careers and applied it to building token communities and launching successful projects.
             </p>
-            <div class="flex flex-col sm:flex-row gap-6">
-              <a href="mailto:andrew@ladmedia.co" class="bg-white text-black px-10 py-5 rounded-full font-black text-lg flex items-center justify-center gap-3 hover:bg-slate-200 transition-all uppercase tracking-tighter">
-                Get Started <i data-lucide="arrow-right"></i>
+            <p class="text-xl text-gray-400 mb-8 leading-relaxed">
+              Based in New Jersey and New York City, our team combines deep crypto expertise with battle-tested marketing strategies. We've helped launch 100+ tokens, built communities of 500K+ members, and managed over $10M in ad spend.
+            </p>
+            <div class="grid grid-cols-2 gap-6">
+              <div class="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div class="text-3xl font-black text-white mb-2">EST. 2012</div>
+                <div class="text-gray-500 text-sm">Founded</div>
+              </div>
+              <div class="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div class="text-3xl font-black text-white mb-2">NJ & NYC</div>
+                <div class="text-gray-500 text-sm">Headquarters</div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <div class="floating">
+              <img src="assets/lad-media-official-logo.png" alt="LAD Media" class="w-96 h-auto">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-32 bg-gradient-to-b from-black via-gray-950 to-black">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-20">
+          <span class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4 block">FAQ</span>
+          <h2 class="text-4xl md:text-6xl font-black text-white mb-6">Common Questions</h2>
+        </div>
+
+        <div class="space-y-4">
+          <div class="faq-item bg-white/5 rounded-2xl border border-white/10 overflow-hidden">
+            <button class="faq-toggle w-full p-6 text-left flex items-center justify-between">
+              <span class="text-lg font-bold text-white">How does your pricing work?</span>
+              <i data-lucide="plus" size="24" class="faq-icon text-white transition-transform"></i>
+            </button>
+            <div class="faq-content px-6">
+              <p class="text-gray-400 pb-6">We keep it simple with a flat fee structure for all clients. No hidden costs, no hourly billing surprises. Every project gets a custom proposal based on your specific goals, and you'll know exactly what you're paying upfront. Book a call and we'll build a package tailored to your needs.</p>
+            </div>
+          </div>
+
+          <div class="faq-item bg-white/5 rounded-2xl border border-white/10 overflow-hidden">
+            <button class="faq-toggle w-full p-6 text-left flex items-center justify-between">
+              <span class="text-lg font-bold text-white">How long does it take to launch a token?</span>
+              <i data-lucide="plus" size="24" class="faq-icon text-white transition-transform"></i>
+            </button>
+            <div class="faq-content px-6">
+              <p class="text-gray-400 pb-6">A typical token launch takes 8-12 weeks from strategy to launch. This includes 4 weeks of preparation (community setup, content creation, influencer outreach) and 4-8 weeks of pre-launch hype building. We can accelerate this timeline for time-sensitive projects.</p>
+            </div>
+          </div>
+
+          <div class="faq-item bg-white/5 rounded-2xl border border-white/10 overflow-hidden">
+            <button class="faq-toggle w-full p-6 text-left flex items-center justify-between">
+              <span class="text-lg font-bold text-white">Do you guarantee results?</span>
+              <i data-lucide="plus" size="24" class="faq-icon text-white transition-transform"></i>
+            </button>
+            <div class="faq-content px-6">
+              <p class="text-gray-400 pb-6">We provide specific deliverables and KPIs in every proposal. While we can't guarantee token price (that depends on many factors), we do guarantee execution on community growth targets, media placements, influencer activations, and engagement metrics.</p>
+            </div>
+          </div>
+
+          <div class="faq-item bg-white/5 rounded-2xl border border-white/10 overflow-hidden">
+            <button class="faq-toggle w-full p-6 text-left flex items-center justify-between">
+              <span class="text-lg font-bold text-white">What makes you different from other crypto marketing agencies?</span>
+              <i data-lucide="plus" size="24" class="faq-icon text-white transition-transform"></i>
+            </button>
+            <div class="faq-content px-6">
+              <p class="text-gray-400 pb-6">We're one of the few agencies with 13+ years of marketing experience that pivoted into crypto. Our roots in the music industry taught us how to build passionate communities and create viral moments. We combine this creative DNA with data-driven performance marketing.</p>
+            </div>
+          </div>
+
+          <div class="faq-item bg-white/5 rounded-2xl border border-white/10 overflow-hidden">
+            <button class="faq-toggle w-full p-6 text-left flex items-center justify-between">
+              <span class="text-lg font-bold text-white">Do you work with projects outside of crypto?</span>
+              <i data-lucide="plus" size="24" class="faq-icon text-white transition-transform"></i>
+            </button>
+            <div class="faq-content px-6">
+              <p class="text-gray-400 pb-6">Yes! While crypto is our specialty, we also work with traditional businesses on PPC, SEO, and digital marketing. Our team has experience across e-commerce, local businesses, SaaS, and more. Get in touch to discuss your project.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-32 bg-black relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-r from-white/5 via-transparent to-white/5"></div>
+      <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+        <h2 class="text-4xl md:text-6xl font-black text-white mb-6">Ready to Launch?</h2>
+        <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">Get a free consultation and custom marketing plan for your project. No commitment, just strategy.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#contact" class="glow-button inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full text-lg font-bold bg-white text-black hover:bg-gray-100 transition-all">
+            Book Free Strategy Call <i data-lucide="calendar" size="20"></i>
+          </a>
+          <a href="mailto:andrew@ladmedia.co" class="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full text-lg font-bold border border-gray-700 text-white hover:bg-white/5 transition-all">
+            Email Us Directly <i data-lucide="mail" size="20"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-gradient-to-b from-black to-gray-950">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div>
+            <span class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4 block">Get In Touch</span>
+            <h2 class="text-4xl md:text-5xl font-black text-white mb-8">Let's Build Something Legendary</h2>
+            <p class="text-xl text-gray-400 mb-12">Ready to launch your token or scale your project? Reach out and let's discuss how we can help you dominate the market.</p>
+            
+            <div class="space-y-8">
+              <a href="mailto:andrew@ladmedia.co" class="flex items-center gap-6 group">
+                <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                  <i data-lucide="mail" size="28" class="text-white"></i>
+                </div>
+                <div>
+                  <div class="text-sm text-gray-500 mb-1">Email</div>
+                  <div class="text-xl font-bold text-white">andrew@ladmedia.co</div>
+                </div>
+              </a>
+              
+              <a href="tel:+19734758314" class="flex items-center gap-6 group">
+                <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                  <i data-lucide="phone" size="28" class="text-white"></i>
+                </div>
+                <div>
+                  <div class="text-sm text-gray-500 mb-1">Phone</div>
+                  <div class="text-xl font-bold text-white">(973) 475-8314</div>
+                </div>
+              </a>
+              
+              <div class="flex items-center gap-6">
+                <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center">
+                  <i data-lucide="map-pin" size="28" class="text-white"></i>
+                </div>
+                <div>
+                  <div class="text-sm text-gray-500 mb-1">Location</div>
+                  <div class="text-xl font-bold text-white">New Jersey & New York City</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-12 flex gap-4">
+              <a href="https://www.instagram.com/l.a.d.media/" target="_blank" rel="noopener" class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center hover:bg-white/20 transition-colors" title="Follow us on Instagram">
+                <i data-lucide="instagram" size="20" class="text-white"></i>
+              </a>
+              <a href="https://www.facebook.com/LadMedia/" target="_blank" rel="noopener" class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center hover:bg-white/20 transition-colors" title="Follow us on Facebook">
+                <i data-lucide="facebook" size="20" class="text-white"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/l-a-d-media" target="_blank" rel="noopener" class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center hover:bg-white/20 transition-colors" title="Connect on LinkedIn">
+                <i data-lucide="linkedin" size="20" class="text-white"></i>
               </a>
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- Services Section -->
-      <section id="services" class="pt-32 pb-20 bg-white min-h-screen text-left">
-        <div class="max-w-7xl mx-auto px-6">
-          <div class="mb-20">
-            <h2 class="text-6xl md:text-8xl font-black text-black mb-6 tracking-tighter uppercase">OUR SERVICES.</h2>
-            <p class="text-slate-500 max-w-3xl text-xl font-medium mb-12">
-              LAD MEDIA is one of the leading marketing firms for building and launching crypto tokens and blockchain projects. We combine a top-tier team of blockchain experts with high-performance digital marketing strategies to accelerate your project from concept to execution.
-            </p>
+          <div class="bg-white/5 rounded-3xl p-10 border border-white/10">
+            <h3 class="text-2xl font-bold text-white mb-8">Get Your Free Marketing Plan</h3>
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+              <input type="hidden" name="access_key" value="83776d97-1345-4e6c-80d8-8222dbe8eaaf">
+              <input type="hidden" name="subject" value="New Lead from LAD Media Website">
+              <input type="hidden" name="from_name" value="LAD Media Website">
+              <input type="hidden" name="redirect" value="https://ladmedia.co/?submitted=true">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-sm text-gray-400 mb-2">Your Name</label>
+                  <input type="text" name="name" required placeholder="John Smith" class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-white/30 transition-colors">
+                </div>
+                <div>
+                  <label class="block text-sm text-gray-400 mb-2">Email Address</label>
+                  <input type="email" name="email" required placeholder="john@example.com" class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-white/30 transition-colors">
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm text-gray-400 mb-2">Project Name</label>
+                <input type="text" name="project_name" placeholder="Your Token/Project Name" class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-white/30 transition-colors">
+              </div>
+              <div>
+                <label class="block text-sm text-gray-400 mb-2">Project Type</label>
+                <select name="project_type" class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-white/30 transition-colors">
+                  <option value="" class="bg-gray-900">Select project type</option>
+                  <option value="Token Launch" class="bg-gray-900">Token Launch</option>
+                  <option value="NFT Collection" class="bg-gray-900">NFT Collection</option>
+                  <option value="DeFi Protocol" class="bg-gray-900">DeFi Protocol</option>
+                  <option value="DAO" class="bg-gray-900">DAO</option>
+                  <option value="Exchange/DEX" class="bg-gray-900">Exchange/DEX</option>
+                  <option value="Other Web3 Project" class="bg-gray-900">Other Web3 Project</option>
+                  <option value="Traditional Business" class="bg-gray-900">Traditional Business</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm text-gray-400 mb-2">Timeline</label>
+                <select name="timeline" class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-white/30 transition-colors">
+                  <option value="" class="bg-gray-900">When do you want to launch?</option>
+                  <option value="ASAP" class="bg-gray-900">ASAP - Ready Now</option>
+                  <option value="1-2 months" class="bg-gray-900">1-2 months</option>
+                  <option value="3-6 months" class="bg-gray-900">3-6 months</option>
+                  <option value="6+ months" class="bg-gray-900">6+ months / Planning Phase</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm text-gray-400 mb-2">Tell Us About Your Project</label>
+                <textarea name="message" placeholder="What are your goals? When do you want to launch?" rows="4" class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-white/30 transition-colors resize-none"></textarea>
+              </div>
+              <button type="submit" class="glow-button w-full py-5 rounded-xl font-bold bg-white text-black hover:bg-gray-100 transition-all text-lg">
+                Get Free Marketing Plan
+              </button>
+              <p class="text-center text-gray-500 text-sm">We'll respond within 24 hours</p>
+            </form>
           </div>
-          <div class="grid md:grid-cols-2 gap-10">
-            <div class="p-12 border border-slate-100 hover:border-black transition-all">
-              <i data-lucide="target" size="40" class="mb-8 block"></i>
-              <h3 class="text-3xl font-black mb-4 tracking-tighter uppercase italic">PPC ADVERTISING</h3>
-              <p class="text-slate-500 text-lg mb-8">Managed pay-per-click across Google and Meta for blockchain and traditional clients.</p>
-              <ul class="space-y-3">
-                <li class="text-sm text-black font-bold uppercase tracking-wider flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black rounded-full"></span> Google Search</li>
-                <li class="text-sm text-black font-bold uppercase tracking-wider flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black rounded-full"></span> Display</li>
-                <li class="text-sm text-black font-bold uppercase tracking-wider flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black rounded-full"></span> YouTube</li>
-                <li class="text-sm text-black font-bold uppercase tracking-wider flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black rounded-full"></span> Shopping</li>
-              </ul>
-            </div>
-            <div class="p-12 border border-slate-100 hover:border-black transition-all">
-              <i data-lucide="search" size="40" class="mb-8 block"></i>
-              <h3 class="text-3xl font-black mb-4 tracking-tighter uppercase italic">SEO STRATEGY</h3>
-              <p class="text-slate-500 text-lg mb-8">Organic growth strategies for the tri-state area, crypto projects, and emerging tech brands.</p>
-              <ul class="space-y-3">
-                <li class="text-sm text-black font-bold uppercase tracking-wider flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black rounded-full"></span> Technical Audits</li>
-                <li class="text-sm text-black font-bold uppercase tracking-wider flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black rounded-full"></span> Content Strategy</li>
-                <li class="text-sm text-black font-bold uppercase tracking-wider flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black rounded-full"></span> Backlinks</li>
-                <li class="text-sm text-black font-bold uppercase tracking-wider flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black rounded-full"></span> Local SEO</li>
-              </ul>
-            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-12 mb-12">
+          <div>
+            <img src="assets/lad-media-official-logo.png" alt="LAD Media Logo" class="h-16 w-auto mb-6">
+            <p class="text-gray-500 text-sm">Premier Web3 & Crypto Marketing Agency. Launching tokens and building communities since 2012.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-4">Services</h4>
+            <ul class="space-y-2">
+              <li><a href="services/tokenomics.html" class="text-gray-500 hover:text-white transition-colors text-sm">Token Launch Strategy</a></li>
+              <li><a href="services/community.html" class="text-gray-500 hover:text-white transition-colors text-sm">Community Building</a></li>
+              <li><a href="services/influencer.html" class="text-gray-500 hover:text-white transition-colors text-sm">Influencer Marketing</a></li>
+              <li><a href="services/pr.html" class="text-gray-500 hover:text-white transition-colors text-sm">PR & Media</a></li>
+              <li><a href="services/ppc.html" class="text-gray-500 hover:text-white transition-colors text-sm">Paid Advertising</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-4">Company</h4>
+            <ul class="space-y-2">
+              <li><a href="#about" class="text-gray-500 hover:text-white transition-colors text-sm">About Us</a></li>
+              <li><a href="#results" class="text-gray-500 hover:text-white transition-colors text-sm">Case Studies</a></li>
+              <li><a href="#faq" class="text-gray-500 hover:text-white transition-colors text-sm">FAQ</a></li>
+              <li><a href="#contact" class="text-gray-500 hover:text-white transition-colors text-sm">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-4">Contact</h4>
+            <ul class="space-y-2">
+              <li><a href="mailto:andrew@ladmedia.co" class="text-gray-500 hover:text-white transition-colors text-sm">andrew@ladmedia.co</a></li>
+              <li><a href="tel:+19734758314" class="text-gray-500 hover:text-white transition-colors text-sm">(973) 475-8314</a></li>
+              <li><span class="text-gray-500 text-sm">New Jersey & NYC</span></li>
+            </ul>
           </div>
         </div>
-      </section>
-
-      <!-- Work Section -->
-      <section id="work" class="pt-32 pb-20 bg-white min-h-screen text-left">
-        <div class="max-w-7xl mx-auto px-6">
-          <h2 class="text-6xl md:text-8xl font-black text-black mb-6 tracking-tighter uppercase">OUR WORK</h2>
-          <p class="text-xl text-slate-500 max-w-3xl mb-12 leading-relaxed">
-            We’ve partnered with a range of clients to deliver high-performance digital marketing solutions:
-          </p>
-          <ul class="space-y-4 text-lg font-medium">
-            <li><a href="https://mispar.co" target="_blank" class="text-black hover:text-slate-500 underline">Mispar.co</a></li>
-            <li><a href="https://polarpointhvac.com" target="_blank" class="text-black hover:text-slate-500 underline">Polar Point HVAC</a></li>
-            <li><a href="https://superiorpackgroup.com" target="_blank" class="text-black hover:text-slate-500 underline">Superior Pack Group</a></li>
-            <li><a href="https://SPORTSBEEP.com" target="_blank" class="text-black hover:text-slate-500 underline">SPORTSBEEP</a></li>
-          </ul>
+        <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div class="text-gray-600 text-sm">© 2026 LAD Media Co. All rights reserved.</div>
+          <div class="flex items-center gap-4">
+            <a href="https://www.instagram.com/l.a.d.media/" target="_blank" rel="noopener" class="text-gray-500 hover:text-white transition-colors" title="Instagram"><i data-lucide="instagram" size="20"></i></a>
+            <a href="https://www.facebook.com/LadMedia/" target="_blank" rel="noopener" class="text-gray-500 hover:text-white transition-colors" title="Facebook"><i data-lucide="facebook" size="20"></i></a>
+            <a href="https://www.linkedin.com/company/l-a-d-media" target="_blank" rel="noopener" class="text-gray-500 hover:text-white transition-colors" title="LinkedIn"><i data-lucide="linkedin" size="20"></i></a>
+          </div>
         </div>
-      </section>
+      </div>
+    </footer>
+  </main>
 
-      <!-- About Us Section -->
-      <section id="about" class="pt-32 pb-20 bg-white min-h-screen text-left">
-        <div class="max-w-7xl mx-auto px-6">
-          <h2 class="text-6xl md:text-8xl font-black text-black mb-6 tracking-tighter uppercase">ABOUT US</h2>
-          <p class="text-xl text-slate-500 max-w-3xl leading-relaxed">
-            LAD MEDIA started in 2012 as an independent record label, collaborating with a diverse range of music groups to elevate their creative presence. In 2017, we pivoted into a full-stack marketing firm, bringing the same creative energy and innovative strategy to digital campaigns, performance marketing, and brand growth across multiple industries.
-          </p>
-        </div>
-      </section>
-
-      <!-- Vision Section -->
-      <section id="vision" class="pt-32 pb-20 bg-white min-h-screen text-left">
-        <div class="max-w-7xl mx-auto px-6">
-          <h2 class="text-6xl md:text-8xl font-black text-black mb-6 tracking-tighter uppercase">OUR VISION</h2>
-          <p class="text-xl text-slate-500 max-w-3xl leading-relaxed">
-            At LAD MEDIA, our vision is to combine creativity, strategy, and performance — a philosophy rooted in our beginnings as an independent record label in 2012. Just as we helped music groups amplify their voices and connect with audiences, today we help brands craft compelling stories, execute data-driven campaigns, and achieve measurable growth in the digital world. We aim to elevate every client with innovative marketing solutions that blend artistry and analytics, turning ideas into results.
-          </p>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact" class="pt-32 pb-20 bg-white min-h-screen text-left">
-        <div class="max-w-7xl mx-auto px-6">
-          <h2 class="text-6xl md:text-8xl font-black text-black mb-6 tracking-tighter uppercase">CONTACT US</h2>
-          <p class="text-xl text-slate-500 max-w-3xl leading-relaxed mb-6">
-            Reach out directly via email or phone:
-          </p>
-          <ul class="space-y-3 text-xl">
-            <li>Email: <a href="mailto:andrew@ladmedia.co" class="text-black underline hover:text-slate-500">andrew@ladmedia.co</a></li>
-            <li>Phone: <a href="tel:+19734758314" class="text-black underline hover:text-slate-500">(973) 475-8314</a></li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <footer class="bg-black text-white pt-20 pb-10 border-t border-white/10">
-        <div class="max-w-7xl mx-auto px-6 text-center text-slate-600 text-[10px] uppercase tracking-widest font-bold">
-          © 2026 LAD Media Co. Professional Digital Marketing • New Jersey • New York City
-        </div>
-      </footer>
-    </main>
-  </div>
-
-  <!-- Scripts -->
   <script>
-    // Initialize Lucide icons
     if(window.lucide) lucide.createIcons();
 
     // Navbar scroll effect
     const navbar = document.getElementById('navbar');
-    const logo = document.getElementById('logo');
     window.addEventListener('scroll', () => {
-      if(window.scrollY > 50){
-        navbar.classList.add('nav-scrolled');
-        logo.querySelector('div').classList.add('bg-black', 'text-white');
-        logo.querySelector('span').classList.remove('text-white');
-        logo.querySelector('span').classList.add('text-black');
-      } else {
-        navbar.classList.remove('nav-scrolled');
-        logo.querySelector('div').classList.remove('bg-black', 'text-white');
-        logo.querySelector('div').classList.add('bg-white','text-black');
-        logo.querySelector('span').classList.remove('text-black');
-        logo.querySelector('span').classList.add('text-white');
-      }
+      navbar.classList.toggle('nav-scrolled', window.scrollY > 50);
     });
 
-    // Mobile menu toggle
+    // Mobile menu
     const mobileBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileClose = document.getElementById('mobile-menu-close');
-    mobileBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-    mobileClose.addEventListener('click', () => { mobileMenu.classList.add('hidden'); });
+    mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileClose.addEventListener('click', () => mobileMenu.classList.add('hidden'));
 
-    // Smooth scroll for nav buttons
-    document.querySelectorAll('.nav-btn, .mobile-nav-btn').forEach(btn => {
-      btn.addEventListener('click', e => {
-        const targetId = btn.getAttribute('data-target');
-        const section = document.getElementById(targetId);
-        if(section){
-          section.scrollIntoView({ behavior: 'smooth' });
-          mobileMenu.classList.add('hidden');
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(item => {
+          item.classList.remove('active');
+        });
+        
+        // Open clicked if it wasn't active
+        if (!isActive) {
+          faqItem.classList.add('active');
+        }
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
     });

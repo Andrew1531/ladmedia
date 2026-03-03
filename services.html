@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing Services | LAD Media</title>
+  <meta name="description" content="Full-service Web3 and crypto marketing services. Token launches, community building, influencer marketing, PR, and more.">
+
+  <link rel="icon" type="image/png" href="assets/lad-media-official-logo.png">
+  <link rel="apple-touch-icon" href="assets/lad-media-official-logo.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+    body { font-family: 'Inter', sans-serif; margin: 0; background-color: #000; scroll-behavior: smooth; }
+    .nav-scrolled { background-color: rgba(0,0,0,0.95) !important; backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
+    .service-icon { transition: all 0.3s ease; }
+    .service-card:hover .service-icon { transform: scale(1.1); background: #fff; }
+    .service-card:hover .service-icon svg { color: #000; }
+    .glow-button { position: relative; overflow: hidden; }
+    .glow-button::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s; }
+    .glow-button:hover::before { left: 100%; }
+  </style>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-79H0P4BJLQ"></script>
+  <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-79H0P4BJLQ');</script>
+</head>
+
+<body class="bg-black text-white">
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed w-full z-50 bg-transparent py-5 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <a href="index.html" class="cursor-pointer">
+        <img src="assets/lad-media-official-logo.png" alt="LAD Media Logo" class="h-12 w-auto">
+      </a>
+      <div class="hidden lg:flex items-center space-x-8">
+        <a href="services.html" class="text-sm font-medium text-white">Services</a>
+        <a href="index.html#process" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Process</a>
+        <a href="index.html#results" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Results</a>
+        <a href="index.html#about" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">About</a>
+        <a href="index.html#faq" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">FAQ</a>
+        <a href="index.html#contact" class="glow-button px-6 py-3 rounded-full text-sm font-bold bg-white text-black hover:bg-gray-100 transition-all">Get Free Consultation</a>
+      </div>
+      <button id="mobile-menu-btn" class="lg:hidden text-white">
+        <i data-lucide="menu" size="28"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 w-full bg-black z-[60] flex flex-col p-8 space-y-6 hidden lg:hidden">
+    <div class="flex justify-between items-center mb-10">
+      <img src="assets/lad-media-official-logo.png" alt="LAD Media Logo" class="h-10 w-auto">
+      <button id="mobile-menu-close"><i data-lucide="x" size="32" class="text-white"></i></button>
+    </div>
+    <a href="index.html" class="mobile-nav-link text-2xl font-bold text-white border-b border-gray-800 pb-4">Home</a>
+    <a href="services.html" class="mobile-nav-link text-2xl font-bold text-white border-b border-gray-800 pb-4">Services</a>
+    <a href="index.html#about" class="mobile-nav-link text-2xl font-bold text-white border-b border-gray-800 pb-4">About</a>
+    <a href="index.html#results" class="mobile-nav-link text-2xl font-bold text-white border-b border-gray-800 pb-4">Case Studies</a>
+    <a href="index.html#contact" class="mobile-nav-link text-2xl font-bold text-white border-b border-gray-800 pb-4">Contact</a>
+    <a href="index.html#contact" class="mt-4 px-6 py-4 rounded-full text-center font-bold bg-white text-black">Get Free Consultation</a>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 relative overflow-hidden">
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#111_1px,transparent_1px),linear-gradient(to_bottom,#111_1px,transparent_1px)] bg-[size:60px_60px] opacity-30"></div>
+      <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+        <span class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4 block">Full-Service Solutions</span>
+        <h1 class="text-5xl md:text-7xl font-black text-white mb-6">Marketing Services</h1>
+        <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+          A complete suite of marketing agency services for Web3 and crypto companies. Everything you need to launch, grow, and dominate.
+        </p>
+        <a href="index.html#contact" class="glow-button inline-flex items-center gap-3 px-8 py-4 rounded-full text-lg font-bold bg-white text-black hover:bg-gray-100 transition-all">
+          Get a Free Proposal <i data-lucide="arrow-right" size="20"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Marketing Services Grid -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-black text-white mb-4 text-center">Core Marketing Services</h2>
+        <p class="text-gray-500 text-center mb-16 max-w-2xl mx-auto">Everything you need to launch and scale your token or Web3 project</p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Token Launch -->
+          <a href="services/tokenomics.html" class="service-card card-hover bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-8 border border-white/10 group block">
+            <div class="service-icon w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="rocket" size="32" class="text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Token Launch Strategy</h3>
+            <p class="text-gray-400 mb-6">Complete go-to-market strategy. Tokenomics, whitepaper, launch timing, and initial marketing blitz.</p>
+            <span class="text-white font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">Explore <i data-lucide="arrow-right" size="16"></i></span>
+          </a>
+
+          <!-- PPC -->
+          <a href="services/ppc.html" class="service-card card-hover bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-8 border border-white/10 group block">
+            <div class="service-icon w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="target" size="32" class="text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">PPC & Paid Advertising</h3>
+            <p class="text-gray-400 mb-6">Crypto-compliant campaigns across Google, Meta, Twitter, and crypto-native networks.</p>
+            <span class="text-white font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">Explore <i data-lucide="arrow-right" size="16"></i></span>
+          </a>
+
+          <!-- SEO -->
+          <a href="services/seo.html" class="service-card card-hover bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-8 border border-white/10 group block">
+            <div class="service-icon w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="search" size="32" class="text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">SEO Strategy</h3>
+            <p class="text-gray-400 mb-6">Organic growth strategies. Technical audits, content strategy, and link building.</p>
+            <span class="text-white font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">Explore <i data-lucide="arrow-right" size="16"></i></span>
+          </a>
+
+          <!-- Influencer -->
+          <a href="services/influencer.html" class="service-card card-hover bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-8 border border-white/10 group block">
+            <div class="service-icon w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="star" size="32" class="text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Influencer Marketing</h3>
+            <p class="text-gray-400 mb-6">Access our network of 500+ crypto influencers across YouTube, Twitter, and TikTok.</p>
+            <span class="text-white font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">Explore <i data-lucide="arrow-right" size="16"></i></span>
+          </a>
+
+          <!-- Community -->
+          <a href="services/community.html" class="service-card card-hover bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-8 border border-white/10 group block">
+            <div class="service-icon w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="users" size="32" class="text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Community Management</h3>
+            <p class="text-gray-400 mb-6">Build vibrant Discord and Telegram communities with 24/7 moderation and engagement.</p>
+            <span class="text-white font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">Explore <i data-lucide="arrow-right" size="16"></i></span>
+          </a>
+
+          <!-- PR -->
+          <a href="services/pr.html" class="service-card card-hover bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-8 border border-white/10 group block">
+            <div class="service-icon w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="newspaper" size="32" class="text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Public Relations</h3>
+            <p class="text-gray-400 mb-6">Get featured in top crypto publications like CoinTelegraph, Decrypt, and more.</p>
+            <span class="text-white font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">Explore <i data-lucide="arrow-right" size="16"></i></span>
+          </a>
+
+          <!-- Social Media -->
+          <a href="services/social.html" class="service-card card-hover bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-8 border border-white/10 group block">
+            <div class="service-icon w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="share-2" size="32" class="text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Social Media Marketing</h3>
+            <p class="text-gray-400 mb-6">Full Twitter/X management, content creation, and viral thread strategies.</p>
+            <span class="text-white font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">Explore <i data-lucide="arrow-right" size="16"></i></span>
+          </a>
+
+          <!-- Branding -->
+          <a href="services/branding.html" class="service-card card-hover bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-8 border border-white/10 group block">
+            <div class="service-icon w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="palette" size="32" class="text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Branding</h3>
+            <p class="text-gray-400 mb-6">Build unique Web3 brands. Logo, identity, and complete brand strategy.</p>
+            <span class="text-white font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">Explore <i data-lucide="arrow-right" size="16"></i></span>
+          </a>
+
+          <!-- Design -->
+          <a href="services/design.html" class="service-card card-hover bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-8 border border-white/10 group block">
+            <div class="service-icon w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="pen-tool" size="32" class="text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Design</h3>
+            <p class="text-gray-400 mb-6">Web3-inspired designs and visual assets that capture attention.</p>
+            <span class="text-white font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">Explore <i data-lucide="arrow-right" size="16"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advisory Services -->
+    <section class="py-24 bg-gradient-to-b from-black via-gray-950 to-black">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-black text-white mb-4 text-center">Advisory Services</h2>
+        <p class="text-gray-500 text-center mb-16 max-w-2xl mx-auto">Executive-level guidance for your Web3 marketing strategy</p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Fractional CMO -->
+          <a href="services/cmo.html" class="service-card card-hover bg-white/5 rounded-3xl p-8 border border-white/10 group block">
+            <div class="service-icon w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="briefcase" size="32" class="text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Fractional CMO</h3>
+            <p class="text-gray-400 mb-6">Hire an experienced Web3 marketing executive to lead your marketing efforts.</p>
+            <span class="text-white font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">Hire a CMO <i data-lucide="arrow-right" size="16"></i></span>
+          </a>
+
+          <!-- Consulting -->
+          <a href="services/consulting.html" class="service-card card-hover bg-white/5 rounded-3xl p-8 border border-white/10 group block">
+            <div class="service-icon w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="lightbulb" size="32" class="text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Marketing Consulting</h3>
+            <p class="text-gray-400 mb-6">Strategic advice from marketers who've launched 100+ crypto projects.</p>
+            <span class="text-white font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">Get Consulting <i data-lucide="arrow-right" size="16"></i></span>
+          </a>
+
+          <!-- Free Plan -->
+          <a href="index.html#contact" class="service-card card-hover bg-white/5 rounded-3xl p-8 border border-white/10 group block">
+            <div class="service-icon w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+              <i data-lucide="file-text" size="32" class="text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Free Marketing Plan</h3>
+            <p class="text-gray-400 mb-6">Get a custom, data-backed marketing plan based on 500+ successful campaigns.</p>
+            <span class="text-white font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">Start Free <i data-lucide="arrow-right" size="16"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-r from-white/5 via-transparent to-white/5"></div>
+      <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+        <h2 class="text-4xl md:text-5xl font-black text-white mb-6">Ready to Launch?</h2>
+        <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">Get a free consultation and custom marketing plan for your project. No commitment, just strategy.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="index.html#contact" class="glow-button inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full text-lg font-bold bg-white text-black hover:bg-gray-100 transition-all">
+            Get Free Consultation <i data-lucide="arrow-right" size="20"></i>
+          </a>
+          <a href="index.html#results" class="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full text-lg font-bold border border-gray-700 text-white hover:bg-white/5 transition-all">
+            View Case Studies
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-12 mb-12">
+          <div>
+            <img src="assets/lad-media-official-logo.png" alt="LAD Media Logo" class="h-16 w-auto mb-6">
+            <p class="text-gray-500 text-sm">Premier Web3 & Crypto Marketing Agency since 2012.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-4">Services</h4>
+            <ul class="space-y-2">
+              <li><a href="services/tokenomics.html" class="text-gray-500 hover:text-white transition-colors text-sm">Token Launch</a></li>
+              <li><a href="services/community.html" class="text-gray-500 hover:text-white transition-colors text-sm">Community</a></li>
+              <li><a href="services/influencer.html" class="text-gray-500 hover:text-white transition-colors text-sm">Influencers</a></li>
+              <li><a href="services/pr.html" class="text-gray-500 hover:text-white transition-colors text-sm">PR & Media</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-4">Company</h4>
+            <ul class="space-y-2">
+              <li><a href="index.html#about" class="text-gray-500 hover:text-white transition-colors text-sm">About</a></li>
+              <li><a href="index.html#results" class="text-gray-500 hover:text-white transition-colors text-sm">Case Studies</a></li>
+              <li><a href="index.html#faq" class="text-gray-500 hover:text-white transition-colors text-sm">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-4">Contact</h4>
+            <ul class="space-y-2">
+              <li><a href="mailto:andrew@ladmedia.co" class="text-gray-500 hover:text-white transition-colors text-sm">andrew@ladmedia.co</a></li>
+              <li><a href="tel:+19734758314" class="text-gray-500 hover:text-white transition-colors text-sm">(973) 475-8314</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-white/10 pt-8 text-center text-gray-600 text-sm">
+          © 2026 LAD Media Co. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    if(window.lucide) lucide.createIcons();
+
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('nav-scrolled', window.scrollY > 50);
+    });
+
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileClose = document.getElementById('mobile-menu-close');
+    mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileClose.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+  </script>
+</body>
+</html>

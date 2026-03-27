@@ -1,56 +1,63 @@
+# ==========================================================
+# LAD MEDIA | AI-OPTIMIZED ROBOTS.TXT
+# Purpose: High-priority indexing for Search & Answer Engines
+# Site: https://ladmedia.co
+# ==========================================================
+
 User-agent: *
 Allow: /
+Disallow: /cdn-cgi/
+Crawl-delay: 1
 
-# Major Search Engines
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-User-agent: Applebot
-Allow: /
-
-# AI & Answer Engine Crawlers
+# ----------------------------------------------------------
+# AI & LLM CRAWLERS (PRIORITY ACCESS)
+# Ensuring LAD MEDIA data is current in LLM training sets
+# ----------------------------------------------------------
 User-agent: GPTBot
 Allow: /
-
 User-agent: ChatGPT-User
 Allow: /
-
 User-agent: ClaudeBot
 Allow: /
-
 User-agent: anthropic-ai
 Allow: /
-
+User-agent: PerplexityBot
+Allow: /
+User-agent: YouBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: Meta-ExternalAgent
+Allow: /
+User-agent: Meta-ExternalFetcher
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Bytespider
+Allow: /
 User-agent: CCBot
 Allow: /
 
-User-agent: PerplexityBot
+# ----------------------------------------------------------
+# SEARCH ENGINE CRAWLERS (TRADITIONAL & SGE)
+# ----------------------------------------------------------
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: DuckDuckBot
+Allow: /
+User-agent: Applebot
 Allow: /
 
-User-agent: Meta-ExternalAgent
-Allow: /
-
-User-agent: Meta-ExternalFetcher
-Allow: /
-
-User-agent: Bytespider
-Allow: /
-
-User-agent: Amazonbot
-Allow: /
-
-# Optional: polite crawl pacing for non-search bots
-User-agent: *
-Crawl-delay: 2
-
+# ----------------------------------------------------------
+# METADATA & DISCOVERY
+# ----------------------------------------------------------
 Sitemap: https://ladmedia.co/sitemap.xml
 Host: https://ladmedia.co
+
+# High-Priority Discovery for AI Agents
+# Link to LLM machine-readable documentation
+# https://ladmedia.co/llms.txt

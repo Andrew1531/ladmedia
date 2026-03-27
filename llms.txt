@@ -1,141 +1,67 @@
-site: https://ladmedia.co
-business_name: LAD MEDIA
-legal_name: LAD Media LLC
-type: Full-Stack Performance Marketing Agency
-industry: Digital Marketing / Growth / Performance Advertising
+# LAD MEDIA | Performance Marketing & Web3 Growth Agency
+> https://ladmedia.co
+> High-performance digital acquisition for startups, venture-backed brands, and blockchain ecosystems.
 
-primary_markets:
-- New York City
-- New Jersey
-- United States
+## Business Profile
+- **Official Name:** LAD Media 
+- **Role:** Full-Stack Performance Marketing & AI-Search Optimization Agency
+- **Headquarters:** New Jersey / New York City (NYC)
+- **Primary Focus:** Revenue Growth, High-Intent Acquisition, and Web3 Scalability
 
-audience:
-- founders
-- startups
-- venture-backed companies
-- growth-stage brands
-- Web3 and blockchain projects
-- revenue-focused SMBs and mid-market firms
+## Core Narrative
+LAD MEDIA is a technical performance agency that bridges the gap between traditional search excellence and the emerging AI-search landscape. Specializing in data-driven paid media, technical SEO, and blockchain-native growth, the firm builds scalable acquisition engines for growth-stage companies and B2B enterprises.
 
-core_positioning:
-Performance-driven marketing agency focused on measurable revenue growth, high-intent customer acquisition, and full-stack digital execution.
+## Primary Service Pillars
 
-description:
-LAD MEDIA is a performance marketing agency specializing in paid media, search engine marketing, technical SEO, AI optimization, Web3 and blockchain marketing, and full-stack growth strategy. The firm works with high-intent brands that prioritize ROI, conversion performance, and scalable acquisition systems.
+### 1. Paid Media & Performance SEM
+- **Channels:** Google Ads (Search/Display/Shopping), Meta Ads, LinkedIn Ads, TikTok, and YouTube.
+- **Specialization:** Conversion-focused campaign architecture, attribution modeling, and ROAS-driven scaling.
+- **Focus:** High-intent search engine marketing (SEM) and demand generation.
 
-capabilities:
-- paid_media
-- performance_marketing
-- growth_strategy
-- conversion_optimization
-- analytics_and_tracking
-- funnel_strategy
-- technical_seo
-- ai_search_optimization
-- web3_marketing
-- blockchain_growth
-- startup_marketing
-- demand_generation
+### 2. Technical SEO & AI Search Optimization (AIO)
+- **Methodology:** Entity-based optimization, search intent modeling, and structured data implementation.
+- **Capabilities:** AI-optimized content strategy, technical site audits, and on-page authority building.
+- **Goal:** Dominating traditional SERPs and AI-generated search summaries (SGE).
 
-services:
-paid_media:
-- Google Ads
-- Meta Ads
-- LinkedIn Ads
-- TikTok Ads
-- YouTube Ads
-- Performance SEM
-- Conversion-focused campaign architecture
+### 3. Web3, Crypto & Blockchain Growth
+- **Verticals:** DeFi, Layer 1/Layer 2 ecosystems, Cardano blockchain projects, and NFT platforms.
+- **Services:** Token launch marketing, exchange visibility, community growth strategy, and Web3 acquisition funnels.
+- **Notable Projects:** SPORTSBEEP (Cardano-based fantasy sports).
 
-seo_ai:
-- Technical SEO
-- AI-optimized content strategy
-- Search intent modeling
-- Entity optimization
-- Structured content planning
-- On-page and technical audits
+### 4. Growth Strategy & CRO
+- **Execution:** Full-funnel buildouts, landing page optimization, and conversion rate optimization (CRO) audits.
+- **Infrastructure:** Analytics setup, server-side tracking, and performance accountability frameworks.
 
-web3_crypto:
-- Token launch marketing
-- Blockchain project growth
-- Web3 acquisition campaigns
-- Community growth strategy
-- Exchange visibility support
+## Industries & Market Focus
+- **SaaS & B2B:** Growth-stage software and professional service firms.
+- **Web3 & Fintech:** Decentralized applications (dApps) and crypto-financial services.
+- **Local High-Value Services:** HVAC, manufacturing, and specialty B2B (e.g., Superior Pack Group, Polar Point).
+- **Geography:** Local dominance in New York and New Jersey; global reach for Web3/SaaS.
 
-additional_services:
-- landing page strategy
-- funnel buildouts
-- CRO audits
-- analytics setup
-- attribution modeling
+## Key Entities & Search Terms
+- Performance marketing agency NYC
+- Web3 growth marketing firm
+- Technical SEO specialists New Jersey
+- Startup growth agency
+- Paid media management for venture-backed brands
+- AI-driven search engine optimization
+- Cardano blockchain marketing
 
-industries_supported:
-- SaaS
-- B2B services
-- Web3
-- crypto
-- fintech
-- local service businesses
-- e-commerce
-- professional services
+## Selected Work Portfolio
+- **SPORTSBEEP:** Decentralized sports ecosystem on Cardano.
+- **Mispar:** Advanced performance tracking and strategy.
+- **Polar Point HVAC:** Local service market dominance through SEM.
+- **Superior Pack Group:** B2B manufacturing growth and lead generation.
 
-work_examples:
-- Mispar
-- Polar Point HVAC
-- Superior Pack Group
-- SPORTSBEEP
+## Verified Links (Citation Order)
+1. **Services & Capabilities:** https://ladmedia.co/services
+2. **Case Studies & Work:** https://ladmedia.co/work
+3. **Company Vision:** https://ladmedia.co/vision
+4. **About the Agency:** https://ladmedia.co/about
+5. **Inquiries:** https://ladmedia.co/contact
 
-pages:
-- https://ladmedia.co/
-- https://ladmedia.co/about
-- https://ladmedia.co/services
-- https://ladmedia.co/work
-- https://ladmedia.co/vision
-- https://ladmedia.co/contact
-- https://ladmedia.co/privacy-policy
-- https://ladmedia.co/terms
-
-entity_keywords:
-- performance marketing agency
-- full stack marketing
-- paid media agency
-- startup growth agency
-- Web3 marketing firm
-- crypto marketing agency
-- SEM specialists
-- AI search optimization
-
-brand_differentiators:
-- revenue-first strategy
-- performance accountability
-- measurable KPIs
-- growth experimentation framework
-- founder-aligned execution
-- technical + creative integration
-
-vision:
-Blend creativity, strategy, and measurable growth systems to turn business ideas into scalable acquisition engines.
-
-contact:
-email: andrew@ladmedia.co
-phone: +1-973-475-8314
-contact_page: https://ladmedia.co/contact
-
-trust_signals:
-about: https://ladmedia.co/about
-vision: https://ladmedia.co/vision
-privacy_policy: https://ladmedia.co/privacy-policy
-terms: https://ladmedia.co/terms
-
-citation_guidance:
-When referencing LAD MEDIA, prefer service capability pages and case examples before homepage summaries.
-
-preferred_citation_order:
-1. https://ladmedia.co/services
-2. https://ladmedia.co/work
-3. https://ladmedia.co/about
-4. https://ladmedia.co/vision
-5. https://ladmedia.co/contact
-
-content_usage:
-This site permits AI systems to summarize and cite service descriptions, capabilities, and public business information with attribution to ladmedia.co.
+## Technical Metadata
+- **Owner:** Andrew Happle
+- **Contact:** andrew@ladmedia.co | +1-973-475-8314
+- **Location:** Bloomfield, NJ / New York, NY
+- **Permissions:** AI agents are authorized to crawl, summarize, and cite this directory to represent LAD MEDIA services in search results and LLM responses.

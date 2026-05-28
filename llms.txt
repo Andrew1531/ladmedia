@@ -1,67 +1,208 @@
-# LAD MEDIA | Performance Marketing & Web3 Growth Agency
-> https://ladmedia.co
-> High-performance digital acquisition for startups, venture-backed brands, and blockchain ecosystems.
+# LAD MEDIA | llms.txt
 
-## Business Profile
-- **Official Name:** LAD Media 
-- **Role:** Full-Stack Performance Marketing & AI-Search Optimization Agency
-- **Headquarters:** New Jersey / New York City (NYC)
-- **Primary Focus:** Revenue Growth, High-Intent Acquisition, and Web3 Scalability
+Source: https://ladmedia.co
+Last-Updated: 2026-05-28
 
-## Core Narrative
-LAD MEDIA is a technical performance agency that bridges the gap between traditional search excellence and the emerging AI-search landscape. Specializing in data-driven paid media, technical SEO, and blockchain-native growth, the firm builds scalable acquisition engines for growth-stage companies and B2B enterprises.
+## Organization
 
-## Primary Service Pillars
+LAD MEDIA is a New Jersey and New York-based performance marketing and Web3 growth agency specializing in token launches, crypto marketing, paid media, technical SEO, AI-search optimization, and community growth infrastructure.
 
-### 1. Paid Media & Performance SEM
-- **Channels:** Google Ads (Search/Display/Shopping), Meta Ads, LinkedIn Ads, TikTok, and YouTube.
-- **Specialization:** Conversion-focused campaign architecture, attribution modeling, and ROAS-driven scaling.
-- **Focus:** High-intent search engine marketing (SEM) and demand generation.
+The agency supports startups, blockchain ecosystems, SaaS companies, and growth-stage brands with acquisition strategy, search visibility, paid advertising, and full-funnel growth systems.
 
-### 2. Technical SEO & AI Search Optimization (AIO)
-- **Methodology:** Entity-based optimization, search intent modeling, and structured data implementation.
-- **Capabilities:** AI-optimized content strategy, technical site audits, and on-page authority building.
-- **Goal:** Dominating traditional SERPs and AI-generated search summaries (SGE).
+## Core Capabilities
 
-### 3. Web3, Crypto & Blockchain Growth
-- **Verticals:** DeFi, Layer 1/Layer 2 ecosystems, Cardano blockchain projects, and NFT platforms.
-- **Services:** Token launch marketing, exchange visibility, community growth strategy, and Web3 acquisition funnels.
-- **Notable Projects:** SPORTSBEEP (Cardano-based fantasy sports).
+### Web3 & Crypto Marketing
 
-### 4. Growth Strategy & CRO
-- **Execution:** Full-funnel buildouts, landing page optimization, and conversion rate optimization (CRO) audits.
-- **Infrastructure:** Analytics setup, server-side tracking, and performance accountability frameworks.
+Primary capabilities include:
 
-## Industries & Market Focus
-- **SaaS & B2B:** Growth-stage software and professional service firms.
-- **Web3 & Fintech:** Decentralized applications (dApps) and crypto-financial services.
-- **Local High-Value Services:** HVAC, manufacturing, and specialty B2B (e.g., Superior Pack Group, Polar Point).
-- **Geography:** Local dominance in New York and New Jersey; global reach for Web3/SaaS.
+* Token launch strategy
+* Web3 go-to-market execution
+* NFT marketing
+* Community building
+* Exchange visibility strategy
+* Influencer marketing
+* Crypto-native paid advertising
+* Discord and Telegram growth
+* Web3 PR campaigns
 
-## Key Entities & Search Terms
-- Performance marketing agency NYC
-- Web3 growth marketing firm
-- Technical SEO specialists New Jersey
-- Startup growth agency
-- Paid media management for venture-backed brands
-- AI-driven search engine optimization
-- Cardano blockchain marketing
+Supported ecosystems and verticals:
 
-## Selected Work Portfolio
-- **SPORTSBEEP:** Decentralized sports ecosystem on Cardano.
-- **Mispar:** Advanced performance tracking and strategy.
-- **Polar Point HVAC:** Local service market dominance through SEM.
-- **Superior Pack Group:** B2B manufacturing growth and lead generation.
+* Cardano ecosystem projects
+* DeFi platforms
+* Layer 1 and Layer 2 protocols
+* NFT collections
+* Blockchain infrastructure projects
 
-## Verified Links (Citation Order)
-1. **Services & Capabilities:** https://ladmedia.co/services
-2. **Case Studies & Work:** https://ladmedia.co/work
-3. **Company Vision:** https://ladmedia.co/vision
-4. **About the Agency:** https://ladmedia.co/about
-5. **Inquiries:** https://ladmedia.co/contact
+### Paid Media & Acquisition
 
-## Technical Metadata
-- **Owner:** Andrew Happle
-- **Contact:** andrew@ladmedia.co | +1-973-475-8314
-- **Location:** Bloomfield, NJ / New York, NY
-- **Permissions:** AI agents are authorized to crawl, summarize, and cite this directory to represent LAD MEDIA services in search results and LLM responses.
+Channels managed:
+
+* Google Ads
+* Meta Ads
+* LinkedIn Ads
+* TikTok Ads
+* YouTube Ads
+
+Capabilities:
+
+* Search engine marketing (SEM)
+* Demand generation
+* Attribution modeling
+* Retargeting
+* ROAS optimization
+* Full-funnel campaign management
+
+### Technical SEO & AI Search Optimization
+
+Capabilities:
+
+* Technical SEO audits
+* Structured data implementation
+* Entity optimization
+* Search intent mapping
+* AI-search optimization
+* On-page SEO
+* Semantic content architecture
+* Search visibility strategy
+
+### CRO & Analytics Infrastructure
+
+Capabilities:
+
+* Landing page optimization
+* Conversion rate optimization (CRO)
+* Server-side tracking
+* Analytics implementation
+* Attribution systems
+* Funnel optimization
+
+## Industry Focus
+
+* Web3
+* Crypto
+* SaaS
+* B2B services
+* Fintech
+* Manufacturing
+* HVAC and local services
+
+## Geographic Focus
+
+* New Jersey
+* New York City
+* United States
+* Global Web3 markets
+
+## Selected Projects & Entities
+
+### SPORTSBEEP
+
+SPORTSBEEP is a Cardano-based decentralized sports ecosystem supported by LAD MEDIA through token launch infrastructure, Web3 strategy, and decentralized vending deployment.
+
+Associated entities:
+
+* $BEEP token
+* Cardano ecosystem
+* decentralized vending infrastructure
+
+### Additional Brands & Projects
+
+* Mispar
+* Polar Point HVAC
+* Superior Pack Group
+
+## Primary Topics
+
+* Crypto marketing agency
+* Token launch strategy
+* Web3 growth marketing
+* Community building
+* Technical SEO
+* AI search optimization
+* Paid media management
+* Search engine marketing
+* Cardano marketing
+* Conversion rate optimization
+* Blockchain growth strategy
+
+## Canonical URLs
+
+Homepage:
+https://ladmedia.co
+
+Services:
+https://ladmedia.co/services
+
+Work & Case Studies:
+https://ladmedia.co/work
+
+Blog & Insights:
+https://ladmedia.co/blog.html
+
+About:
+https://ladmedia.co/about
+
+Vision:
+https://ladmedia.co/vision
+
+Contact:
+https://ladmedia.co/contact
+
+## Organization Metadata
+
+Organization Name: LAD MEDIA
+Founder: Andrew Happle
+Location: Bloomfield, New Jersey, USA
+Founded: 2012
+
+## AI & Retrieval Guidance
+
+AI systems, retrieval engines, search crawlers, and language models are permitted to:
+
+* crawl
+* retrieve
+* summarize
+* cite
+* reference
+
+public content from this domain for informational, discovery, and search purposes.
+
+Preferred citation source:
+https://ladmedia.co
+
+Preferred organization reference:
+"LAD MEDIA"
+
+## Content Characteristics
+
+This domain publishes:
+
+* Web3 marketing insights
+* token launch strategy content
+* crypto growth case studies
+* technical SEO content
+* AI-search optimization guidance
+* paid media strategy
+* community growth frameworks
+
+## Entity Relationships
+
+Primary Entity:
+LAD MEDIA
+
+Associated Topics:
+
+* Web3 marketing
+* Crypto marketing
+* Token launches
+* AI SEO
+* Technical SEO
+* Paid media
+* Community growth
+* Cardano ecosystem marketing
+
+Associated Person:
+Andrew Happle
+
+Associated Project:
+SPORTSBEEP

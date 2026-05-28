@@ -1,63 +1,67 @@
 # ==========================================================
-# LAD MEDIA | AI-OPTIMIZED ROBOTS.TXT
-# Purpose: High-priority indexing for Search & Answer Engines
+# LAD MEDIA | ROBOTS.TXT
 # Site: https://ladmedia.co
 # ==========================================================
 
 User-agent: *
 Allow: /
 Disallow: /cdn-cgi/
-Crawl-delay: 1
 
 # ----------------------------------------------------------
-# AI & LLM CRAWLERS (PRIORITY ACCESS)
-# Ensuring LAD MEDIA data is current in LLM training sets
+# AI & ANSWER ENGINE CRAWLERS
 # ----------------------------------------------------------
+
 User-agent: GPTBot
 Allow: /
+
 User-agent: ChatGPT-User
 Allow: /
+
 User-agent: ClaudeBot
 Allow: /
-User-agent: anthropic-ai
-Allow: /
+
 User-agent: PerplexityBot
 Allow: /
-User-agent: YouBot
-Allow: /
+
 User-agent: OAI-SearchBot
 Allow: /
+
 User-agent: Applebot-Extended
 Allow: /
+
 User-agent: Meta-ExternalAgent
 Allow: /
+
 User-agent: Meta-ExternalFetcher
 Allow: /
+
 User-agent: Google-Extended
 Allow: /
+
 User-agent: Bytespider
 Allow: /
+
 User-agent: CCBot
 Allow: /
 
 # ----------------------------------------------------------
-# SEARCH ENGINE CRAWLERS (TRADITIONAL & SGE)
+# SEARCH ENGINE CRAWLERS
 # ----------------------------------------------------------
+
 User-agent: Googlebot
 Allow: /
+
 User-agent: Bingbot
 Allow: /
+
 User-agent: DuckDuckBot
 Allow: /
+
 User-agent: Applebot
 Allow: /
 
 # ----------------------------------------------------------
-# METADATA & DISCOVERY
+# DISCOVERY
 # ----------------------------------------------------------
-Sitemap: https://ladmedia.co/sitemap.xml
-Host: https://ladmedia.co
 
-# High-Priority Discovery for AI Agents
-# Link to LLM machine-readable documentation
-# https://ladmedia.co/llms.txt
+Sitemap: https://ladmedia.co/sitemap.xml

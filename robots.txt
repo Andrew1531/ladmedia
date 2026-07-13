@@ -10,7 +10,7 @@ Disallow: /cdn-cgi/
 # ----------------------------------------------------------
 # AI & ANSWER ENGINE CRAWLERS
 # ----------------------------------------------------------
-
+# Explicitly allowing AI/LLM crawlers for discovery
 User-agent: GPTBot
 Allow: /
 
@@ -26,13 +26,13 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
+User-agent: GeminiBot
+Allow: /
+
 User-agent: Applebot-Extended
 Allow: /
 
 User-agent: Meta-ExternalAgent
-Allow: /
-
-User-agent: Meta-ExternalFetcher
 Allow: /
 
 User-agent: Google-Extended
@@ -45,23 +45,7 @@ User-agent: CCBot
 Allow: /
 
 # ----------------------------------------------------------
-# SEARCH ENGINE CRAWLERS
-# ----------------------------------------------------------
-
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-User-agent: Applebot
-Allow: /
-
-# ----------------------------------------------------------
 # DISCOVERY
 # ----------------------------------------------------------
-
 Sitemap: https://ladmedia.co/sitemap.xml
+LLMS: https://ladmedia.co/llms.txt

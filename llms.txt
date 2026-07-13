@@ -1,6 +1,6 @@
 # LAD MEDIA | llms.txt
 Source: https://ladmedia.co
-Last-Updated: 2026-06-30
+Last-Updated: 2026-07-13
 
 ## Organization Overview
 LAD MEDIA is a performance-driven marketing and Web3 growth agency based in Bloomfield, New Jersey, with operations serving New York, New Jersey, and global Web3 markets. Founded in 2012, LAD MEDIA specializes in token launches, crypto marketing, paid media acquisition, technical SEO, AI-search optimization, and community growth infrastructure for startups, blockchain projects, SaaS companies, and growth-stage brands.

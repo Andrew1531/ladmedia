@@ -2,32 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ladmedia.co/</loc>
-    <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ladmedia.co/services/</loc>
-    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-    <url><loc>https://ladmedia.co/services/token-launch/</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ladmedia.co/services/community/</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ladmedia.co/services/influencer/</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ladmedia.co/services/pr/</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ladmedia.co/services/ppc/</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ladmedia.co/services/social/</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ladmedia.co/services/seo/</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ladmedia.co/services/branding/</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ladmedia.co/services/design/</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ladmedia.co/services/cmo/</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ladmedia.co/services/consulting/</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ladmedia.co/new-jersey-crypto-marketing-agency/</loc><lastmod>2026-09-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ladmedia.co/services/crypto-event-marketing/</loc><lastmod>2026-09-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ladmedia.co/case-studies/</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ladmedia.co/case-studies/polar-point-hvac-website/</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://ladmedia.co/case-studies/superior-pack-group-website/</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://ladmedia.co/case-studies/verifed-global-website/</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://ladmedia.co/case-studies/maat-institute-ai-website/</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://ladmedia.co/services/token-launch/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ladmedia.co/services/community/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ladmedia.co/services/influencer/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ladmedia.co/services/pr/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ladmedia.co/services/ppc/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ladmedia.co/services/social/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ladmedia.co/services/seo/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ladmedia.co/services/branding/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ladmedia.co/services/design/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ladmedia.co/services/cmo/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ladmedia.co/services/consulting/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ladmedia.co/new-jersey-crypto-marketing-agency/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ladmedia.co/services/crypto-event-marketing/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ladmedia.co/case-studies/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://ladmedia.co/case-studies/polar-point-hvac-website/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ladmedia.co/case-studies/superior-pack-group-website/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ladmedia.co/case-studies/verifed-global-website/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ladmedia.co/case-studies/maat-institute-ai-website/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

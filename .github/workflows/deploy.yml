@@ -1,0 +1,74 @@
+name: Build and deploy ladmedia.co
+
+# The `source` branch holds the website source code.
+# The `main` branch holds the built site that GitHub Pages serves at ladmedia.co.
+# Every push to `source` builds the site, runs the SEO checks, and only if
+# everything passes copies the built files onto `main`.
+
+on:
+  push:
+    branches: [source]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-ladmedia
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          ref: source
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --filter "@workspace/ladmedia..."
+
+      - name: Build site and run SEO validation
+        run: pnpm --filter @workspace/ladmedia run build
+        env:
+          PORT: "3000"
+          BASE_PATH: "/"
+          NODE_ENV: production
+
+      - name: Run SEO tests
+        run: node --test artifacts/ladmedia/scripts/validate-static-pages.test.mjs
+
+      - name: Check out live site (main)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: _site
+
+      - name: Copy build onto main
+        run: |
+          test -f artifacts/ladmedia/dist/public/index.html
+          test -f artifacts/ladmedia/dist/public/CNAME
+          rsync -a --delete --exclude .git artifacts/ladmedia/dist/public/ _site/
+
+      - name: Publish
+        working-directory: _site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to publish."
+          else
+            git commit -m "Deploy site from source@${GITHUB_SHA::7}"
+            git push origin main
+          fi

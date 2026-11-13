@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "LAD Media"
+description = "LAD Media marketing agency website — a crypto/Web3 performance marketing agency based in NJ & NYC. Full port of the existing static HTML site to React, including the home page with all sections (hero, services, process, results, testimonials, about, FAQ, contact) and individual service sub-pages."
+version = "1.0.0"
+id = "artifacts/ladmedia"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25136
+
+[services.development]
+run = "pnpm --filter @workspace/ladmedia run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ladmedia", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/ladmedia/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25136"
+BASE_PATH = "/"

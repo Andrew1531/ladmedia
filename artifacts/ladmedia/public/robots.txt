@@ -1,0 +1,5 @@
+# LAD Media allows all public pages and information files to be crawled.
+User-agent: *
+Allow: /
+
+Sitemap: https://ladmedia.co/sitemap.xml

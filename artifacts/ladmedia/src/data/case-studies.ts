@@ -102,36 +102,36 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "verifed-global-website",
     client: "VerifED Global",
-    category: "EdTech and Web3",
+    category: "Education and career guidance",
     title: "VerifED Global Website Case Study",
     summary:
-      "Explore LAD Media's VerifED Global website case study: a responsive product website, clear page hierarchy, and a public presentation for its Web3 platform.",
+      "Explore LAD Media's VerifED Global website case study: a responsive site that guides people with foreign degrees towards their next career step in the U.S.",
     challenge:
-      "VerifED Global needed a public website capable of introducing an education technology product in a Web3 context without losing clarity for visitors.",
+      "VerifED Global needed a public website that explains U.S. career guidance for people educated abroad without overwhelming visitors who are new to the process.",
     story: [
       {
-        heading: "Making a technical product understandable",
-        text: "An education technology product in a Web3 setting has more than one thing to explain. Visitors need to understand the organization and the product story without having to decode the technology category first. That was the communication challenge behind VerifED Global’s public website. The documented brief concerned how the platform was introduced online. It was not an assessment of the underlying product, the accuracy of its verification process, or the status of any credentials. Keeping the website assignment separate from those product claims is important when describing the work.",
+        heading: "Making a complicated process understandable",
+        text: "People who earned a degree outside the United States often face several questions at once: how to present that degree to U.S. employers, whether an official credential evaluation is needed, and which licensing requirements apply to their field. Visitors need to find the question that matches their situation without reading everything first. That was the communication challenge behind VerifED Global’s public website. The documented brief concerned how the guidance is introduced and organized online. It was not an assessment of the guidance itself, of any credential evaluation, or of a visitor’s eligibility for a job or license. Keeping the website assignment separate from those matters is important when describing the work.",
       },
       {
         heading: "Building the public presentation",
-        text: "LAD Media created a responsive marketing website and organized the product story into a clear page hierarchy. The technology-focused visual direction supports the platform’s positioning, while the page structure gives the public-facing information an order. Platform calls to action are part of the delivered website. This is the distinction between explaining a product and proving every claim about it: the site can introduce the offer and direct a visitor toward the next step, but the website design itself does not validate the product’s capabilities, security, or institutional acceptance.",
+        text: "LAD Media created a responsive website and organized the guidance into a clear page hierarchy. The homepage states who the site is for, then asks visitors to pick the question they are facing. Each area explains what a visitor can do there, what to have ready, and where the guidance stops. Navigation covers About, How It Works, and Guides, with English and Spanish language options and a call to action to start a profile. This is the distinction between explaining a service and proving every claim about it: the site can introduce the offer and direct a visitor toward the next step, but the website design itself does not validate outcomes for any individual.",
       },
       {
         heading: "The scope of the result",
-        text: "The documented result is a completed product website with a public address, a branded presentation, and a captured project screenshot. These materials support the claim that a website was delivered and show how its public-facing story was presented. They do not show a measured increase in signups, completed verifications, qualified inquiries, or organic traffic. No such performance outcome is claimed here. Readers can review the live site alongside the screenshot, bearing in mind that later changes to a public website may differ from the delivered view recorded in this case study.",
+        text: "The documented result is a completed website with a public address, a branded presentation, and a captured project screenshot. These materials support the claim that a website was delivered and show how its public-facing story is presented. They do not show a measured increase in profiles started, qualified inquiries, or organic traffic. No such performance outcome is claimed here. Readers can review the live site alongside the screenshot, bearing in mind that later changes to a public website may differ from the delivered view recorded in this case study.",
       },
     ],
     workCompleted: [
-      "Created a responsive marketing website for VerifED Global.",
-      "Organized the public-facing product story into a clear page hierarchy.",
-      "Used a technology-focused visual direction consistent with the platform’s positioning.",
+      "Created a responsive website for VerifED Global.",
+      "Organized career guidance for internationally educated job seekers into a clear page hierarchy.",
+      "Used a clean, approachable visual direction suited to visitors who are new to the process.",
     ],
     deliverables: [
-      "Responsive product website",
-      "Product-story page structure",
-      "Platform calls to action",
-      "Technology-focused visual presentation",
+      "Responsive guidance website",
+      "Question-led page structure",
+      "Profile calls to action",
+      "English and Spanish language options",
     ],
     evidence: [
       "The completed website is publicly available at verifed.co.",

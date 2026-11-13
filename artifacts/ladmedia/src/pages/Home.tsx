@@ -41,7 +41,7 @@ const projects = [
   { name: "Polar Point HVAC", category: "Local Business", url: "https://polarpointhvac.com", file: "polarpoint.png", tag: "Local SEO & PPC" },
   { name: "Superior Pack Group", category: "E-Commerce", url: "https://superiorpackgroup.com", file: "superiorpack.png", tag: "E-Commerce & Brand" },
   { name: "SPORTSBEEP", category: "Sports Media / Web3", url: "https://sportsbeep.com", file: "sportsbeep.png", tag: "Token Launch" },
-  { name: "VerifED Global", category: "EdTech / Web3", url: "https://verifed.co", file: "verifed.png", tag: "EdTech Platform" },
+  { name: "VerifED Global", category: "Education / Careers", url: "https://verifed.co", file: "verifed.png", tag: "Career Guidance" },
   { name: "William C. Roach", category: "Personal Brand", url: "https://williamcroach.com", file: "williamcroach.png", tag: "Content & Brand" },
   { name: "Ma'at Institute of AI", category: "AI Consulting", url: "https://maatiai.org", file: "maatiai.png", tag: "AI / Consulting" },
   { name: "State Nationalist Reform", category: "Political / Advocacy", url: "https://statenationalistreform.info", file: "statenationalistreform.png", tag: "Strategic Ops" },
@@ -135,7 +135,7 @@ export default function Home() {
 
           <div className="rise relative mx-auto aspect-[5/6] w-full max-w-md lg:col-span-5 lg:max-w-none" style={{ animationDelay: "400ms" }}>
             {[
-              { name: "VerifED Global", tag: "EdTech / Web3", url: "https://verifed.co", file: "verifed.png", pos: "left-0 top-0 w-[72%] -rotate-3" },
+              { name: "VerifED Global", tag: "Education / Careers", url: "https://verifed.co", file: "verifed.png", pos: "left-0 top-0 w-[72%] -rotate-3" },
               { name: "Polar Point HVAC", tag: "Local Business", url: "https://polarpointhvac.com", file: "polarpoint.png", pos: "right-0 top-[30%] w-[72%] rotate-2" },
               { name: "Ma'at Institute of AI", tag: "AI / Consulting", url: "https://maatiai.org", file: "maatiai.png", pos: "left-[6%] bottom-0 w-[72%] -rotate-1" },
             ].map((p, i) => (

@@ -242,3 +242,17 @@ test('changed crawlable landing FAQ answer identifies its route even when schema
   await writeFile(file, html.replace('<p>We make a plan.</p>', '<p>We skip planning.</p>'));
   await expectFailure(validate, landing.path, /crawlable FAQ 1 question or answer does not match/);
 });
+
+test('every page title is between 30 and 60 characters', () => {
+  const titles = [
+    ['home', HOME_TITLE],
+    ['services', 'Marketing Services for Crypto & Beyond | LAD Media'],
+    ['case studies', 'Website Design Case Studies | LAD Media'],
+    ...servicesData.map(item => [item.id, `${item.title} for Crypto & Web3 | LAD Media`]),
+    ...caseStudies.map(item => [item.slug, `${item.client} Website Case Study | LAD Media`]),
+    ...landingPages.map(item => [item.path, item.title]),
+  ];
+  for (const [page, title] of titles) {
+    assert.ok(title.length >= 30 && title.length <= 60, `${page}: title is ${title.length} characters; keep it between 30 and 60`);
+  }
+});

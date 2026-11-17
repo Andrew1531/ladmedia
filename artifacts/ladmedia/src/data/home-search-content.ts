@@ -1,4 +1,4 @@
-export const HOME_TITLE = 'Digital Marketing Agency in Newark, NJ | Crypto & Web3 | LAD Media';
+export const HOME_TITLE = 'Digital Marketing Agency in Newark, NJ | LAD Media';
 export const HOME_DESCRIPTION = 'LAD Media is a digital marketing agency based in Newark, NJ, delivering SEO, content, social media, PPC, branding, web design, and Web3 marketing services.';
 export const HOME_INTRO = 'LAD Media is a digital marketing agency based in Newark, NJ. We offer SEO, content, social media, paid ads, and web design. Our specialty is crypto and Web3, but we also work with businesses beyond crypto.';
 

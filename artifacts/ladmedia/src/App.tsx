@@ -20,6 +20,9 @@ import ServiceDetail from './pages/ServiceDetail';
 import CaseStudies from './pages/CaseStudies';
 import CaseStudyDetail from './pages/CaseStudyDetail';
 import MarketingLandingPage from './pages/MarketingLandingPage';
+import NewJerseyMarketing from './pages/NewJerseyMarketing';
+import Guides from './pages/Guides';
+import GuideDetail from './pages/GuideDetail';
 
 const queryClient = new QueryClient();
 
@@ -32,6 +35,9 @@ function Router() {
         <RoutedErrorBoundary>
           <Switch>
             <Route path="/" component={Home} />
+            <Route path="/new-jersey-marketing-agency" component={NewJerseyMarketing} />
+            <Route path="/guides" component={Guides} />
+            <Route path="/guides/:slug" component={GuideDetail} />
             <Route path="/new-jersey-crypto-marketing-agency">
               <MarketingLandingPage path="/new-jersey-crypto-marketing-agency/" />
             </Route>

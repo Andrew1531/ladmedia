@@ -10,6 +10,7 @@ import { caseStudies } from '../src/data/case-studies.ts';
 import { HOME_TITLE, HOME_DESCRIPTION, homeSearchContent, homeSearchFaqs } from '../src/data/home-search-content.ts';
 import { SERVICES_DESCRIPTION } from '../src/data/site-descriptions.ts';
 import { legacyRedirects } from './legacy-redirects.mjs';
+import { guides } from '../src/data/guides.ts';
 import { readdir } from 'node:fs/promises';
 
 async function listHtmlFiles(directory, base = directory) {
@@ -405,6 +406,16 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
     if (!html.includes(`<h1>${escapeHtml(study.title)}</h1>`) || !html.includes(escapeHtml(study.challenge))) {
       errors.push(`${route}: missing crawlable case-study content`);
     }
+  }
+  for (const route of ['/guides/', ...guides.map((guide) => `/guides/${guide.slug}/`)]) {
+    const file = resolve(defaultOutputDir, route.slice(1), 'index.html');
+    if (!(await fileExists(file))) {
+      errors.push(`${route}: missing generated guide page`);
+      continue;
+    }
+    const html = await readFile(file, 'utf8');
+    if ((html.match(/<h1>/g) || []).length !== 1) errors.push(`${route}: expected exactly one crawlable H1`);
+    if (!sitemap.includes(`<loc>${siteUrl}${route}</loc>`)) errors.push(`${route}: missing sitemap entry`);
   }
   if (errors.length) {
     console.error(`SEO validation failed with ${errors.length} error(s):`);

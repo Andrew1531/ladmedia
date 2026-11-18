@@ -60,7 +60,9 @@ export default function Footer() {
               <li><a href={base + "#process"} className={linkCls}>Process</a></li>
               <li><a href={base + "#faq"} className={linkCls}>FAQ</a></li>
               <li><a href={base + "#contact"} className={linkCls}>Contact</a></li>
-              <li><Link href="/new-jersey-crypto-marketing-agency/" className={linkCls}>New Jersey marketing</Link></li>
+              <li><Link href="/new-jersey-marketing-agency/" className={linkCls}>New Jersey marketing</Link></li>
+              <li><Link href="/guides/" className={linkCls}>Guides for NJ businesses</Link></li>
+              <li><Link href="/new-jersey-crypto-marketing-agency/" className={linkCls}>NJ crypto marketing</Link></li>
             </ul>
           </nav>
 

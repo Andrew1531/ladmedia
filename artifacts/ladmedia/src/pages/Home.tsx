@@ -404,6 +404,33 @@ export default function Home() {
         </div>
       </section>
 
+      {/* New Jersey */}
+      <section id="new-jersey" aria-labelledby="new-jersey-heading" className="bg-ink py-24 text-white md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid items-end gap-10 lg:grid-cols-12">
+            <Reveal className="lg:col-span-7">
+              <Eyebrow dark>Marketing across New Jersey</Eyebrow>
+              <h2 id="new-jersey-heading" className="font-display text-5xl font-black uppercase leading-[0.92] text-white md:text-7xl">Based in Newark. Working across NJ.</h2>
+            </Reveal>
+            <Reveal delay={120} className="lg:col-span-5">
+              <p className="mb-8 text-lg leading-relaxed text-white/80">Home service companies, restaurants and shops, professional practices, and startups. See how we help New Jersey businesses get found, or read our weekly guides.</p>
+              <div className="flex flex-wrap gap-4">
+                <Link href="/new-jersey-marketing-agency/" className="btn-ember">NJ marketing services <ArrowRight className="h-5 w-5" /></Link>
+                <Link href="/guides/" className="btn-ghost on-dark text-white">Read the guides</Link>
+              </div>
+            </Reveal>
+          </div>
+          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {["Home services", "Restaurants & retail", "Professional services", "Startups & Web3"].map((name, i) => (
+              <Link key={name} href="/new-jersey-marketing-agency/" className="card-hover rounded-2xl border border-bone/20 p-6 hover:border-bone/60">
+                <span className="font-mono text-xs text-white/60">{String(i + 1).padStart(2, "0")}</span>
+                <h3 className="mt-3 font-display text-3xl font-extrabold uppercase leading-none">{name}</h3>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section id="faq" className="bg-paper-deep py-24 md:py-32">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-12">

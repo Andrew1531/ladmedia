@@ -1,6 +1,7 @@
 import { servicesData } from '../src/data/services.ts';
 import { caseStudies } from '../src/data/case-studies.ts';
 import { HOME_INTRO, homeSearchContent, homeSearchFaqs } from '../src/data/home-search-content.ts';
+import { guides, formatGuideDate } from '../src/data/guides.ts';
 
 const escapeHtml = (value) => String(value)
   .replaceAll('&', '&amp;')
@@ -30,6 +31,9 @@ export function renderHomeContent() {
     section('Marketing beyond crypto',
       paragraph('Our digital work also supports service businesses, technology platforms, and professional organizations. Explore our strategy, SEO, content, paid media, and website services.') +
       `<ul>${servicesData.map(service => `<li>${link(`/services/${service.id}/`, service.title)}</li>`).join('')}</ul>`),
+    section('Based in Newark. Working across NJ.',
+      paragraph('Home service companies, restaurants and shops, professional practices, and startups. See how we help New Jersey businesses get found, or read our weekly guides.') +
+      `<ul><li>${link('/new-jersey-marketing-agency/', 'NJ marketing services')}</li><li>${link('/guides/', 'Marketing guides for New Jersey businesses')}</li></ul>`),
     section('Marketing for New Jersey teams',
       paragraph('Learn how we approach positioning and outreach for New Jersey founders and blockchain businesses.') +
       `<p>${link('/new-jersey-crypto-marketing-agency/', 'Explore New Jersey crypto marketing')}</p>`),
@@ -57,6 +61,7 @@ export function renderServicesContent() {
     `<ul>${servicesData.map(service => `<li><h2>${link(`/services/${service.id}/`, service.title)}</h2>${paragraph(service.description)}</li>`).join('')}</ul>` +
     section('Specialized marketing', `<ul>
       <li>${link('/services/crypto-event-marketing/', 'Crypto and Web3 event marketing')}</li>
+      <li>${link('/new-jersey-marketing-agency/', 'Marketing for New Jersey businesses')}</li>
       <li>${link('/new-jersey-crypto-marketing-agency/', 'Crypto marketing in New Jersey')}</li>
     </ul>`));
 }
@@ -104,4 +109,28 @@ export function renderCaseStudyContent(study) {
     `<p>${link(study.liveUrl, `Visit the ${study.client} website`)}</p>` +
     `<p>${link('/case-studies/', 'See all case studies')}</p>` +
     `<p>${link('/services/design/', 'Explore website design services')}</p>`);
+}
+const guideCard = (guide) =>
+  `<li><h2>${link(`/guides/${guide.slug}/`, guide.title)}</h2>${paragraph(guide.description)}<p>${escapeHtml(guide.category)} · ${escapeHtml(formatGuideDate(guide.published))} · ${guide.readMinutes} min read</p></li>`;
+
+export function renderGuidesContent() {
+  return wrap('Marketing guides for NJ businesses',
+    paragraph('Practical answers to the questions New Jersey business owners ask about Google, ads, websites and social media. A new guide every week.') +
+    `<ul>${guides.map(guideCard).join('')}</ul>` +
+    section('Want this done for your business?',
+      paragraph('LAD Media is a digital marketing agency based in Newark, NJ.') +
+      `<p>${link('/new-jersey-marketing-agency/', 'See NJ marketing services')}</p>`));
+}
+
+export function renderGuideContent(guide) {
+  const body = guide.sections.map((item) => `<section id="${escapeHtml(item.id)}"><h2>${escapeHtml(item.heading)}</h2>` +
+    (item.intro ? paragraph(item.intro) : '') +
+    (item.paragraphs ?? []).map(paragraph).join('') +
+    (item.items ? `<ol>${item.items.map((entry) => `<li><h3>${escapeHtml(entry.title)}</h3>${paragraph(entry.text)}</li>`).join('')}</ol>` : '') +
+    '</section>').join('');
+  return wrap(guide.title,
+    `<p>${escapeHtml(guide.category)} · ${escapeHtml(formatGuideDate(guide.published))} · ${guide.readMinutes} min read · By Andrew, LAD Media, Newark, NJ</p>` +
+    paragraph(guide.intro) + body +
+    section('Want us to review your profile?', paragraph(guide.closing) + `<p>${link('/#contact', 'Book a call with LAD Media')}</p>`) +
+    section('Related', `<ul>${guide.related.map((item) => `<li>${link(item.path, item.label)}</li>`).join('')}<li>${link('/guides/', 'All guides for New Jersey businesses')}</li></ul>`));
 }

@@ -14,7 +14,10 @@ import {
   renderServiceContent,
   renderCaseStudiesContent,
   renderCaseStudyContent,
+  renderGuidesContent,
+  renderGuideContent,
 } from './render-static-content.mjs';
+import { guides, GUIDES_TITLE, GUIDES_DESCRIPTION } from '../src/data/guides.ts';
 import { legacyRedirects, renderRedirectPage } from './legacy-redirects.mjs';
 
 const projectDir = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -36,6 +39,7 @@ const staticContentStyle = `<style>
 const siteUrl = 'https://ladmedia.co';
 const sitemapMarker = '<!-- SERVICE_URLS -->';
 const caseStudySitemapMarker = '<!-- CASE_STUDY_URLS -->';
+const guideSitemapMarker = '<!-- GUIDE_URLS -->';
 const servicePageContent = {
   ...serviceContentGrowth,
   ...serviceContentPerformance,
@@ -67,6 +71,18 @@ const pages = [
     title: `${caseStudy.client} Website Case Study | LAD Media`,
     description: caseStudy.summary,
     caseStudy,
+  })),
+  {
+    path: '/guides/',
+    title: GUIDES_TITLE,
+    description: GUIDES_DESCRIPTION,
+    guidesIndex: true,
+  },
+  ...guides.map((guide) => ({
+    path: `/guides/${guide.slug}/`,
+    title: guide.pageTitle,
+    description: guide.description,
+    guide,
   })),
   ...landingPages.map((landing) => ({
     path: landing.path,
@@ -172,6 +188,31 @@ function renderPage(page) {
     );
   }
 
+  if (page.guide) {
+    const guide = page.guide;
+    const articleSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: guide.title,
+      description: guide.description,
+      datePublished: guide.published,
+      dateModified: guide.published,
+      mainEntityOfPage: canonical,
+      author: { '@type': 'Person', name: 'Andrew', worksFor: { '@type': 'Organization', name: 'LAD Media', url: siteUrl } },
+      publisher: { '@type': 'Organization', name: 'LAD Media', url: siteUrl, logo: { '@type': 'ImageObject', url: `${siteUrl}/assets/lad-media-official-logo.png` } },
+    };
+    const breadcrumb = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
+        { '@type': 'ListItem', position: 2, name: 'Guides', item: `${siteUrl}/guides/` },
+        { '@type': 'ListItem', position: 3, name: guide.title, item: canonical },
+      ],
+    };
+    html = html.replace('</head>', `${[articleSchema, breadcrumb].map(schema => `    <script type="application/ld+json">${JSON.stringify(schema)}</script>`).join('\n')}\n  </head>`);
+  }
+
   if (page.landing) {
     const landing = page.landing;
     const serviceSchema = {
@@ -214,11 +255,14 @@ function renderPage(page) {
       <h2>${escapeHtml(landing.contextHeading)}</h2>
       ${landing.context.map(text => `<p>${escapeHtml(text)}</p>`).join('')}
       <h2>Who this is for</h2>${renderList(landing.audience)}
+      ${landing.segments ? `<h2>Who we work with</h2>${landing.segments.map(({ title, description, items, href, linkLabel }) => `<section><h3>${escapeHtml(title)}</h3><p>${escapeHtml(description)}</p>${renderList(items)}<p><a href="${href}">${escapeHtml(linkLabel)}</a></p></section>`).join('')}` : ''}
       <h2>Services and deliverables</h2>
-      ${landing.deliverables.map(({ title, description }) => `<section><h3>${escapeHtml(title)}</h3><p>${escapeHtml(description)}</p></section>`).join('')}
+      ${landing.deliverables.map(({ title, description, href }) => `<section><h3>${escapeHtml(title)}</h3><p>${escapeHtml(description)}</p>${href ? `<p><a href="${href}">Learn more about ${escapeHtml(title.toLowerCase())}</a></p>` : ''}</section>`).join('')}
       <h2>How we work</h2>
       ${landing.phases.map(({ title, description }) => `<section><h3>${escapeHtml(title)}</h3><p>${escapeHtml(description)}</p></section>`).join('')}
       <h2>What a useful engagement should produce</h2>${renderList(landing.outcomes)}
+      ${landing.segments ? `<h2>Documented work</h2><ul>${caseStudies.slice(0, 3).map(study => `<li><a href="/case-studies/${study.slug}/">${escapeHtml(study.client)} website case study</a></li>`).join('')}</ul>
+      <h2>Latest NJ guides</h2><ul>${guides.slice(0, 3).map(guide => `<li><a href="/guides/${guide.slug}/">${escapeHtml(guide.title)}</a></li>`).join('')}</ul>` : ''}
       <h2>Frequently asked questions</h2>
       ${landing.faqs.map(({ question, answer }) => `<section><h3>${escapeHtml(question)}</h3><p>${escapeHtml(answer)}</p></section>`).join('')}
       <h2>Explore related services</h2>
@@ -234,6 +278,8 @@ function renderPage(page) {
     else if (page.caseStudy) content = renderCaseStudyContent(page.caseStudy);
     else if (page.path === '/services/') content = renderServicesContent();
     else if (page.path === '/case-studies/') content = renderCaseStudiesContent();
+    else if (page.guidesIndex) content = renderGuidesContent();
+    else if (page.guide) content = renderGuideContent(page.guide);
     if (!content) throw new Error(`Missing static content for ${page.path}`);
     html = html.replace('<div id="root"></div>', `<div id="root">${content}</div>`);
   }
@@ -263,9 +309,18 @@ if (sitemapTemplate.split(caseStudySitemapMarker).length !== 2) {
 const caseStudyEntries = caseStudies.map((study) =>
   `  <url><loc>${escapeHtml(`${siteUrl}/case-studies/${study.slug}/`)}</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>`,
 ).join('\n');
+if (sitemapTemplate.split(guideSitemapMarker).length !== 2) {
+  throw new Error(`Expected exactly one ${guideSitemapMarker} marker in public/sitemap.xml`);
+}
+const guideEntries = [
+  `  <url><loc>${siteUrl}/guides/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`,
+  ...guides.map((guide) =>
+    `  <url><loc>${escapeHtml(`${siteUrl}/guides/${guide.slug}/`)}</loc><lastmod>${guide.published}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`),
+].join('\n');
 await writeFile(sitemapPath, sitemapTemplate
   .replace(sitemapMarker, serviceEntries)
-  .replace(caseStudySitemapMarker, caseStudyEntries));
+  .replace(caseStudySitemapMarker, caseStudyEntries)
+  .replace(guideSitemapMarker, guideEntries));
 
 // 404 page: served by GitHub Pages for every unknown URL. It must not claim to
 // be the homepage, so it has its own title, no canonical, and is not indexable.

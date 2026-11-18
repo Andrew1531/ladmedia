@@ -3,6 +3,7 @@ import { useLocation } from 'wouter';
 import { servicesData } from '../data/services';
 import { getCaseStudy } from '../data/case-studies';
 import { getLandingPage } from '../data/landing-pages';
+import { getGuide, GUIDES_TITLE, GUIDES_DESCRIPTION } from '../data/guides';
 import { HOME_TITLE, HOME_DESCRIPTION } from '../data/home-search-content';
 import { SERVICES_DESCRIPTION, CASE_STUDIES_DESCRIPTION } from '../data/site-descriptions';
 
@@ -42,6 +43,8 @@ export default function Seo() {
     const caseStudySlug = cleanPath.match(/^\/case-studies\/([^/]+)\/$/)?.[1];
     const caseStudy = getCaseStudy(caseStudySlug);
     const landingPage = getLandingPage(cleanPath);
+    const guideSlug = cleanPath.match(/^\/guides\/([^/]+)\/$/)?.[1];
+    const guide = getGuide(guideSlug);
 
     let title = HOME_TITLE;
     let description = HOME_DESCRIPTION;
@@ -61,6 +64,12 @@ export default function Seo() {
     } else if (cleanPath === '/case-studies/') {
       title = 'Website Design Case Studies | LAD Media';
       description = CASE_STUDIES_DESCRIPTION;
+    } else if (cleanPath === '/guides/') {
+      title = GUIDES_TITLE;
+      description = GUIDES_DESCRIPTION;
+    } else if (guide) {
+      title = guide.pageTitle;
+      description = guide.description;
     } else if (caseStudy) {
       title = `${caseStudy.client} Website Case Study | LAD Media`;
       description = caseStudy.summary;

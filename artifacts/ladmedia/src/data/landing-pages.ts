@@ -8,15 +8,74 @@ export type LandingPage = {
   contextHeading: string;
   context: string[];
   audience: string[];
-  deliverables: { title: string; description: string }[];
+  deliverables: { title: string; description: string; href?: string }[];
   phases: { title: string; description: string }[];
   outcomes: string[];
   faqs: { question: string; answer: string }[];
   related: { path: string; label: string }[];
   schemaType: 'local' | 'event' | 'city';
+  /** Business types served, shown as cards on the New Jersey marketing page. */
+  segments?: { title: string; description: string; items: string[]; href: string; linkLabel: string }[];
 };
 
 export const landingPages: LandingPage[] = [
+  {
+    path: '/new-jersey-marketing-agency/',
+    title: 'Marketing Agency in New Jersey | LAD Media',
+    description: 'LAD Media is a Newark-based marketing agency helping New Jersey businesses get found on Google with local SEO, Google Business Profile, ads and web design.',
+    heading: 'Marketing for New Jersey businesses',
+    eyebrow: 'New Jersey · Digital marketing',
+    intro: 'LAD Media is a digital marketing agency based in Newark, NJ. We help businesses across New Jersey get found on Google, explain what they offer, and turn website visits into inquiries.',
+    contextHeading: 'Four kinds of New Jersey business',
+    context: [
+      'Each one is found differently on Google. We plan around how your customers search, not a one-size package.',
+    ],
+    audience: [
+      'Home service businesses such as HVAC, plumbing, roofing, cleaning and landscaping',
+      'Restaurants, cafes, shops and salons',
+      'Law firms, accountants, real estate offices and medical or dental practices',
+      'Startups, technology teams and Web3 projects',
+    ],
+    segments: [
+      { title: 'Home services', description: 'HVAC, plumbing, roofing, cleaning, landscaping', items: ['Google Business Profile and map results', 'Service-area pages for the towns you cover', 'Search ads limited to your area'], href: '/guides/google-business-profile-checklist-nj-home-services/', linkLabel: 'Read the guide' },
+      { title: 'Restaurants & retail', description: 'Restaurants, cafes, shops and salons', items: ['Accurate hours, menus and photos on Google', 'Review requests built into your routine', 'Social posts that show what is new'], href: '/services/social/', linkLabel: 'Social media services' },
+      { title: 'Professional services', description: 'Law firms, accountants, real estate, practices', items: ['Clear service pages people can trust', 'Search content that answers real questions', 'Ads planned around your profession\u2019s rules'], href: '/services/design/', linkLabel: 'Website design services' },
+      { title: 'Startups & Web3', description: 'Founders, tech and crypto teams', items: ['Positioning and launch planning', 'Community, creators and PR', 'Websites that explain a technical product'], href: '/new-jersey-crypto-marketing-agency/', linkLabel: 'NJ crypto marketing' },
+    ],
+    deliverables: [
+      { title: 'Local SEO & Google Business Profile', description: 'Profile setup, categories, posts and reviews; service and location pages; technical fixes so Google can read your site.', href: '/services/seo/' },
+      { title: 'Paid advertising', description: 'Search and social campaigns limited to the New Jersey areas you serve, with tracking agreed before any budget is spent.', href: '/services/ppc/' },
+      { title: 'Website design', description: 'Mobile-first pages that say what you do, show real work, and make it easy to call, book, or send a message.', href: '/services/design/' },
+      { title: 'Social media & content', description: 'Posts, guides and updates with a clear purpose, planned around what your customers ask.', href: '/services/social/' },
+    ],
+    phases: [
+      { title: 'Review where you stand', description: 'Website, Google Business Profile, and the searches your customers use.' },
+      { title: 'Fix the foundations', description: 'Correct business details, clear service pages, working tracking.' },
+      { title: 'Build visibility', description: 'Useful content, an active profile, ads where they make sense.' },
+      { title: 'Measure and adjust', description: 'Monthly review of calls, form submissions and search visits.' },
+    ],
+    outcomes: [
+      'A complete and consistent presence on Google Search and Maps',
+      'Service pages that match what New Jersey customers search for',
+      'A website that works well on phones and makes contact simple',
+      'Monthly reporting on visits and inquiries',
+    ],
+    faqs: [
+      { question: 'Is LAD Media based in New Jersey?', answer: 'Yes. LAD Media is based in Newark, NJ, and works with businesses across the state, plus remote teams elsewhere.' },
+      { question: 'Which New Jersey businesses do you work with?', answer: 'Home service companies, restaurants and shops, professional practices, and startups and Web3 teams.' },
+      { question: 'How long does local SEO take to show results?', answer: 'It depends on your market and starting point. We agree on what to measure first and report monthly. No agency can guarantee rankings.' },
+      { question: 'How do we get started?', answer: 'Book a call or use the contact form. Tell us what you do, where your customers are, and what you want to improve.' },
+    ],
+    related: [
+      { path: '/services/seo/', label: 'SEO and content' },
+      { path: '/services/ppc/', label: 'Paid advertising' },
+      { path: '/services/design/', label: 'Design and creative' },
+      { path: '/services/social/', label: 'Social media management' },
+      { path: '/guides/', label: 'Guides for New Jersey businesses' },
+      { path: '/case-studies/', label: 'Website case studies' },
+    ],
+    schemaType: 'local',
+  },
   {
     path: '/new-jersey-crypto-marketing-agency/',
     title: 'Crypto Marketing Agency New Jersey | LAD Media',

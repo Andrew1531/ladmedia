@@ -10,6 +10,7 @@ import { SERVICES_DESCRIPTION, CASE_STUDIES_DESCRIPTION } from '../src/data/site
 import { servicesData } from '../src/data/services.ts';
 import { caseStudies } from '../src/data/case-studies.ts';
 import { landingPages } from '../src/data/landing-pages.ts';
+import { guides, GUIDES_TITLE, GUIDES_DESCRIPTION } from '../src/data/guides.ts';
 
 test('every page has a complete 155-character description without truncation', () => {
   const descriptions = [
@@ -19,6 +20,8 @@ test('every page has a complete 155-character description without truncation', (
     ...servicesData.map(item => [item.id, item.description]),
     ...caseStudies.map(item => [item.slug, item.summary]),
     ...landingPages.map(item => [item.path, item.description]),
+    ['guides', GUIDES_DESCRIPTION],
+    ...guides.map(item => [item.slug, item.description]),
   ];
   for (const [page, description] of descriptions) {
     assert.equal(description.length, 155, `${page}: description must be 155 characters`);
@@ -251,6 +254,8 @@ test('every page title is between 30 and 60 characters', () => {
     ...servicesData.map(item => [item.id, `${item.title} for Crypto & Web3 | LAD Media`]),
     ...caseStudies.map(item => [item.slug, `${item.client} Website Case Study | LAD Media`]),
     ...landingPages.map(item => [item.path, item.title]),
+    ['guides', GUIDES_TITLE],
+    ...guides.map(item => [item.slug, item.pageTitle]),
   ];
   for (const [page, title] of titles) {
     assert.ok(title.length >= 30 && title.length <= 60, `${page}: title is ${title.length} characters; keep it between 30 and 60`);

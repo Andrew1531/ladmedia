@@ -407,6 +407,14 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       errors.push(`${route}: missing crawlable case-study content`);
     }
   }
+  const llms = await readFile(resolve(defaultOutputDir, 'llms.txt'), 'utf8');
+  if (llms.includes('GUIDE_LINKS')) errors.push('llms.txt: guide list marker was not replaced');
+  for (const guide of guides) {
+    if (!llms.includes(`${siteUrl}/guides/${guide.slug}/`)) errors.push(`llms.txt: missing guide ${guide.slug}`);
+  }
+  const robots = await readFile(resolve(defaultOutputDir, 'robots.txt'), 'utf8');
+  if (!robots.includes(`Sitemap: ${siteUrl}/sitemap.xml`)) errors.push('robots.txt: missing sitemap line');
+  if (/^Disallow:\s*\/\s*$/m.test(robots)) errors.push('robots.txt: must not block the whole site');
   for (const route of ['/guides/', ...guides.map((guide) => `/guides/${guide.slug}/`)]) {
     const file = resolve(defaultOutputDir, route.slice(1), 'index.html');
     if (!(await fileExists(file))) {

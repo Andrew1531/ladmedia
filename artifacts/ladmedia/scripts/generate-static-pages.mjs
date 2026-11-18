@@ -313,7 +313,7 @@ if (sitemapTemplate.split(guideSitemapMarker).length !== 2) {
   throw new Error(`Expected exactly one ${guideSitemapMarker} marker in public/sitemap.xml`);
 }
 const guideEntries = [
-  `  <url><loc>${siteUrl}/guides/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`,
+  `  <url><loc>${siteUrl}/guides/</loc><lastmod>${guides.map((guide) => guide.published).sort().at(-1)}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>`,
   ...guides.map((guide) =>
     `  <url><loc>${escapeHtml(`${siteUrl}/guides/${guide.slug}/`)}</loc><lastmod>${guide.published}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`),
 ].join('\n');
@@ -347,6 +347,16 @@ const notFoundHtml = shell
   .replace(/<meta name="twitter:description" content=".*?" \/>/, `<meta name="twitter:description" content="${escapeHtml(notFoundDescription)}" />`)
   .replace('<div id="root"></div>', `<div id="root">${notFoundFallback}</div>`);
 await writeFile(resolve(outputDir, '404.html'), notFoundHtml);
+
+// llms.txt: list every published guide so AI systems can find new ones.
+const llmsMarker = '<!-- GUIDE_LINKS -->';
+const llmsTemplate = await readFile(resolve(projectDir, 'public/llms.txt'), 'utf8');
+if (llmsTemplate.split(llmsMarker).length !== 2) {
+  throw new Error(`Expected exactly one ${llmsMarker} marker in public/llms.txt`);
+}
+await writeFile(resolve(outputDir, 'llms.txt'), llmsTemplate.replace(llmsMarker, guides
+  .map((guide) => `- [${guide.title}](${siteUrl}/guides/${guide.slug}/) — ${guide.description}`)
+  .join('\n')));
 
 // Redirect pages for URLs from the previous static site.
 for (const { from, to } of legacyRedirects) {

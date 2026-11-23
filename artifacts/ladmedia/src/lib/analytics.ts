@@ -2,7 +2,7 @@ export const BOOKING_URL = 'https://calendar.app.google/FPUDRXb8M71c1psD7';
 
 type Params = Record<string, string | number | undefined>;
 
-/** Sends a GA4 event when gtag is loaded; does nothing otherwise. */
+/** Sends a GA4 event through the dataLayer; the Google tag in GTM forwards it to GA4. */
 export function trackEvent(name: string, params: Params = {}) {
   const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
   if (typeof gtag !== 'function') return;
@@ -21,7 +21,10 @@ function linkLocation(el: Element) {
 
 let started = false;
 
-/** Tracks booking-link and email clicks anywhere on the site. */
+/**
+ * Tracks booking-link clicks anywhere on the site. Email (mailto:) clicks are
+ * tracked by the email_click tag in Google Tag Manager, so they are not sent here.
+ */
 export function initClickTracking() {
   if (started || typeof document === 'undefined') return;
   started = true;
@@ -33,8 +36,6 @@ export function initClickTracking() {
       const href = link.getAttribute('href') ?? '';
       if (href.startsWith('https://calendar.app.google')) {
         trackEvent('book_call_click', { link_location: linkLocation(link), link_url: href });
-      } else if (href.startsWith('mailto:')) {
-        trackEvent('email_click', { link_location: linkLocation(link) });
       }
     },
     { capture: true },

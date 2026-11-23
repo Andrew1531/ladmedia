@@ -131,6 +131,6 @@ export function renderGuideContent(guide) {
   return wrap(guide.title,
     `<p>${escapeHtml(guide.category)} · ${escapeHtml(formatGuideDate(guide.published))} · ${guide.readMinutes} min read · By Andrew, LAD Media, Newark, NJ</p>` +
     paragraph(guide.intro) + body +
-    section('Want us to review your profile?', paragraph(guide.closing) + `<p>${link('/#contact', 'Book a call with LAD Media')}</p>`) +
+    section('Want help putting this in place?', paragraph(guide.closing) + `<p><a href="https://calendar.app.google/FPUDRXb8M71c1psD7">Book a call with LAD Media</a> or email <a href="mailto:andrew@ladmedia.co">andrew@ladmedia.co</a></p>`) +
     section('Related', `<ul>${guide.related.map((item) => `<li>${link(item.path, item.label)}</li>`).join('')}<li>${link('/guides/', 'All guides for New Jersey businesses')}</li></ul>`));
 }

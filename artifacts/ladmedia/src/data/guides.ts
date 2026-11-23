@@ -116,7 +116,7 @@ export const guides: Guide[] = [
         ],
       },
     ],
-    closing: 'We can look at your Google Business Profile and website and tell you what to fix first.',
+    closing: 'LAD Media sets up and manages Google Business Profiles and websites for New Jersey businesses. Tell us about yours and we will explain how we can help and what it would involve.',
     related: [
       { path: '/new-jersey-marketing-agency/', label: 'Marketing for New Jersey businesses' },
       { path: '/services/seo/', label: 'SEO and content services' },

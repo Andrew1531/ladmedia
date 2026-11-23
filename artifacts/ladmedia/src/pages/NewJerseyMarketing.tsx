@@ -6,6 +6,7 @@ import { caseStudies } from '../data/case-studies';
 import { guides, formatGuideDate } from '../data/guides';
 import Eyebrow from '../components/Eyebrow';
 import Reveal from '../components/Reveal';
+import PageContact from '../components/PageContact';
 
 const PATH = '/new-jersey-marketing-agency/';
 const base = import.meta.env.BASE_URL;
@@ -30,7 +31,7 @@ export default function NewJerseyMarketing() {
           <h1 className="mb-8 max-w-5xl font-display text-6xl font-black uppercase leading-[0.9] md:text-8xl">{page.heading}</h1>
           <p className="mb-10 max-w-3xl text-xl leading-relaxed text-ink/75">{page.intro}</p>
           <div className="flex flex-wrap gap-4">
-            <a href={base + '#contact'} className="btn-ink text-lg">Start your project <ArrowRight className="h-5 w-5" /></a>
+            <a href="#get-in-touch" className="btn-ink text-lg">Start your project <ArrowRight className="h-5 w-5" /></a>
             <Link href="/guides/" className="btn-ghost text-lg">Read our NJ guides</Link>
           </div>
         </div>
@@ -181,6 +182,8 @@ export default function NewJerseyMarketing() {
           </div>
         </div>
       </section>
+
+      <PageContact location="nj_page" heading="Tell us about your NJ business." />
     </div>
   );
 }

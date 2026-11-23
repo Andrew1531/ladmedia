@@ -1,5 +1,6 @@
 import { useRef, useState, type FormEvent } from "react";
 import { AlertCircle, ArrowRight, Check, ChevronDown, Loader2 } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 
 type Status = "idle" | "loading" | "success" | "error";
 type Errors = Partial<Record<"name" | "email" | "message", string>>;
@@ -80,6 +81,7 @@ export default function ContactForm() {
         }),
       }).catch(() => {});
 
+      trackEvent("generate_lead", { form_id: "contact", project_type: String(formData.get("project_type") ?? "") });
       form.reset();
       setStatus("success");
       window.requestAnimationFrame(() => successRef.current?.focus());

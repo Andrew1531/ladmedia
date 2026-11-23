@@ -5,6 +5,8 @@ import { servicePageContent } from "../data/service-content";
 import * as Icons from "lucide-react";
 import NotFound from "./not-found";
 import { caseStudies } from "../data/case-studies";
+import { BOOKING_URL } from "@/lib/analytics";
+import PageContact from "../components/PageContact";
 
 const getIcon = (name: string, props: any = {}) => {
   const IconComponent = (Icons as any)[name] || Icons.Lightbulb;
@@ -26,7 +28,7 @@ export default function ServiceDetail() {
   const relatedCaseStudies = caseStudies.filter((item) => item.relatedServiceIds.includes(service.id));
 
   return (
-    <div className="w-full bg-black text-white selection:bg-white selection:text-black pt-32 pb-20">
+    <div className="w-full bg-black text-white selection:bg-white selection:text-black pt-32">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Breadcrumb */}
@@ -48,6 +50,13 @@ export default function ServiceDetail() {
           <p className="text-xl md:text-2xl text-white/60 max-w-3xl leading-relaxed">
             {service.description}
           </p>
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/85">
+            <span className="font-bold text-white">Best for:</span> {content.idealFor[0]}.
+          </p>
+          <div data-cta-location="service_hero" className="mt-8 flex flex-wrap gap-4">
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-ember text-lg">Book a call <ArrowRight className="h-5 w-5" /></a>
+            <a href="#get-in-touch" className="btn-ghost on-dark text-lg">Send a message</a>
+          </div>
         </div>
 
         {/* Overview and fit */}
@@ -193,20 +202,12 @@ export default function ServiceDetail() {
           </div>
         </section>
 
-        {/* CTA */}
-        <div className="bg-gradient-to-br from-white/10 to-white/5 border border-white/10 rounded-3xl p-12 text-center relative overflow-hidden">
-          <div className="relative z-10">
-            <h2 className="text-4xl font-black mb-6">Ready to scale your {service.title.toLowerCase()}?</h2>
-            <p className="text-xl text-white/60 mb-10 max-w-2xl mx-auto">
-              Book a call with our team today and we'll build a custom strategy to help you dominate your market.
-            </p>
-            <a href={`${import.meta.env.BASE_URL}#contact`} className="inline-flex items-center gap-2 bg-white text-black px-10 py-5 rounded-full font-bold text-lg glow-button hover:bg-gray-200 transition-colors">
-              Get a Free Proposal <ArrowRight className="w-5 h-5" />
-            </a>
-          </div>
-        </div>
-
       </div>
+      <PageContact
+        location="service_page"
+        heading="Talk to us about your project."
+        text="Tell us about your project, your audience and your timeline. We'll reply by email with how we can help and what it would involve."
+      />
     </div>
   );
 }

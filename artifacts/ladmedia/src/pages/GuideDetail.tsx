@@ -3,6 +3,8 @@ import { ArrowRight } from 'lucide-react';
 import { getGuide, guides, formatGuideDate } from '../data/guides';
 import { caseStudies } from '../data/case-studies';
 import NotFound from './not-found';
+import PageContact from '../components/PageContact';
+import { BOOKING_URL } from '@/lib/analytics';
 
 const base = import.meta.env.BASE_URL;
 
@@ -62,12 +64,15 @@ export default function GuideDetail() {
             </section>
           ))}
 
-          <div className="flex flex-col items-start justify-between gap-6 rounded-2xl bg-ink p-8 text-white md:flex-row md:items-center md:p-10">
+          <div data-cta-location="guide_end" className="flex flex-col items-start justify-between gap-6 rounded-2xl bg-ink p-8 text-white md:flex-row md:items-center md:p-10">
             <div>
-              <h2 className="font-display text-4xl font-black uppercase leading-none">Want us to review your profile?</h2>
+              <h2 className="font-display text-4xl font-black uppercase leading-none">Want help putting this in place?</h2>
               <p className="mt-3 text-white/75">{guide.closing}</p>
             </div>
-            <a href={base + '#contact'} className="btn-ember shrink-0">Book a call <ArrowRight className="h-5 w-5" /></a>
+            <div className="flex shrink-0 flex-wrap gap-3">
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-ember">Book a call <ArrowRight className="h-5 w-5" /></a>
+              <a href="#get-in-touch" className="btn-ghost on-dark">Send a message</a>
+            </div>
           </div>
         </article>
 
@@ -97,6 +102,7 @@ export default function GuideDetail() {
           )}
         </aside>
       </div>
+      <PageContact location="guide_page" />
     </div>
   );
 }

@@ -79,7 +79,7 @@ export default function Navbar() {
             <Link href="/case-studies/" aria-current={onCaseStudies ? "page" : undefined} className={`ulink text-sm font-semibold tracking-wide ${onCaseStudies ? "text-ember" : ""}`}>
               Case studies
             </Link>
-            <a href="https://calendar.app.google/FPUDRXb8M71c1psD7" className="btn-ink px-6 py-2.5 text-sm" data-testid="nav-cta">
+            <a href="https://calendar.app.google/o7VBxEWFGqhCR9scA" className="btn-ink px-6 py-2.5 text-sm" data-testid="nav-cta">
               Start a project <ArrowRight className="h-4 w-4" />
             </a>
           </div>
@@ -119,7 +119,7 @@ export default function Navbar() {
               ),
             )}
           </div>
-          <a href="https://calendar.app.google/FPUDRXb8M71c1psD7" onClick={closeMenu} className="btn-ember w-full py-4 text-lg">
+          <a href="https://calendar.app.google/o7VBxEWFGqhCR9scA" onClick={closeMenu} className="btn-ember w-full py-4 text-lg">
             Start a project <ArrowRight className="h-5 w-5" />
           </a>
         </div>

@@ -25,7 +25,7 @@ export default function Footer() {
               Have a project?<br /><span className="text-ember">Tell us the goal.</span>
             </h2>
           </div>
-          <a href="https://calendar.app.google/FPUDRXb8M71c1psD7" className="btn-ember shrink-0 text-lg" data-testid="footer-cta">
+          <a href="https://calendar.app.google/o7VBxEWFGqhCR9scA" className="btn-ember shrink-0 text-lg" data-testid="footer-cta">
             Start a project <ArrowRight className="h-5 w-5" />
           </a>
         </div>

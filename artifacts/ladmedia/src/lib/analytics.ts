@@ -1,4 +1,4 @@
-export const BOOKING_URL = 'https://calendar.app.google/FPUDRXb8M71c1psD7';
+export const BOOKING_URL = 'https://calendar.app.google/o7VBxEWFGqhCR9scA';
 
 type Params = Record<string, string | number | undefined>;
 

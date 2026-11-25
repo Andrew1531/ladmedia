@@ -1120,8 +1120,8 @@ const allGuides: Guide[] = [
     "closing": "LAD Media plans and runs first-year marketing for New Jersey startups and Web3 projects. Tell us your goal and timeline.",
     "related": [
       {
-        "path": "/guides/launching-in-new-jersey-marketing-checklist-founders/",
-        "label": "Launch checklist for founders"
+        "path": "/services/seo/",
+        "label": "SEO and content services"
       },
       {
         "path": "/new-jersey-crypto-marketing-agency/",

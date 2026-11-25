@@ -9,6 +9,9 @@ on:
   push:
     branches: [source]
   workflow_dispatch:
+  # Rebuild every morning so guides dated for that day go live automatically.
+  schedule:
+    - cron: '15 10 * * *'
 
 permissions:
   contents: write

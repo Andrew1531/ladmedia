@@ -1061,7 +1061,7 @@ const allGuides: Guide[] = [
     "title": "A first 90 days marketing plan for New Jersey startups",
     "description": "A simple 90 day marketing plan for New Jersey startups and Web3 projects: what to set up, what to test each month, and how to decide where the budget goes.",
     "category": "Startups & Web3",
-    "published": "2027-02-03",
+    "published": "2026-11-25",
     "readMinutes": 6,
     "intro": "A new company cannot do everything at once, and trying usually means doing nothing well. A 90 day plan gives you three clear steps: lay the foundation, test a few channels, then put money behind what works.",
     "sections": [

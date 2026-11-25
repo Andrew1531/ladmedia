@@ -27,8 +27,19 @@ if (!basePath) {
   );
 }
 
+// Date the site is built, in New Jersey time. Guides dated after it stay hidden until the next build.
+const guidesCutoff = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'America/New_York',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+}).format(new Date());
+
 export default defineConfig({
   base: basePath,
+  define: {
+    __GUIDES_CUTOFF__: JSON.stringify(guidesCutoff),
+  },
   plugins: [
     react(),
     tailwindcss(),

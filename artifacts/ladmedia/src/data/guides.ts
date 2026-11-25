@@ -803,6 +803,336 @@ const allGuides: Guide[] = [
       }
     ]
   },
+  {
+    "slug": "fast-mobile-website-nj-restaurants-and-shops",
+    "pageTitle": "A Fast Mobile Website for NJ Restaurants and Shops",
+    "title": "A fast mobile website for New Jersey restaurants and shops",
+    "description": "What a New Jersey restaurant or shop website needs on a phone: speed, clear hours, a tappable menu, easy directions and a way to order, with a simple test.",
+    "category": "Restaurants & retail",
+    "published": "2027-01-13",
+    "readMinutes": 5,
+    "intro": "Most people who look up a restaurant or shop do it on a phone, often while standing outside or already on the way. If your website is slow, hard to read or hides the hours, they move on to the next result. This guide covers what a mobile site for a walk-in business needs, in the order that matters.",
+    "sections": [
+      {
+        "id": "first-screen",
+        "heading": "What the first screen must show",
+        "intro": "Someone should know what you are and how to reach you without scrolling or zooming:",
+        "items": [
+          {
+            "title": "What you are and where",
+            "text": "Your name, what you sell and your town, in plain words at the top of the page."
+          },
+          {
+            "title": "Today’s hours",
+            "text": "Current opening hours, including holiday and seasonal changes, kept in step with your Google Business Profile."
+          },
+          {
+            "title": "Tap to call and tap for directions",
+            "text": "A phone number and an address that open the dialer and the maps app with one tap."
+          },
+          {
+            "title": "Your main action",
+            "text": "Order online, reserve a table, or see products. Make that one button easy to find and use."
+          }
+        ]
+      },
+      {
+        "id": "content",
+        "heading": "Menu and product pages",
+        "items": [
+          {
+            "title": "Menus as web pages, not PDFs",
+            "text": "A PDF menu is slow to open, hard to read on a small screen and cannot be searched by Google. Put the menu on a normal page and update it there."
+          },
+          {
+            "title": "Real photos, sized properly",
+            "text": "Use your own photos, compressed before upload. Huge image files are the most common cause of slow pages."
+          },
+          {
+            "title": "Prices and options",
+            "text": "Show prices, sizes and allergen notes if you can. People decide faster when they do not have to call."
+          }
+        ]
+      },
+      {
+        "id": "speed",
+        "heading": "Speed and a quick test",
+        "paragraphs": [
+          "Open your site on your own phone using mobile data, not Wi-Fi. If the page takes more than a few seconds to be usable, or buttons jump around as it loads, there is work to do.",
+          "Google’s free PageSpeed Insights tool gives a mobile report and a list of the biggest problems. Fix the largest images and unneeded scripts first."
+        ]
+      },
+      {
+        "id": "start",
+        "heading": "Where to start this week",
+        "paragraphs": [
+          "Check the first screen on your phone, replace any PDF menu with a page, and compress your biggest photos. Then make sure the hours match your Google profile."
+        ]
+      }
+    ],
+    "closing": "LAD Media designs fast, simple websites for New Jersey restaurants and shops. Send us your current site and we will tell you what we would fix first.",
+    "related": [
+      {
+        "path": "/guides/google-maps-nj-restaurants-and-shops/",
+        "label": "Getting found in Google Maps"
+      },
+      {
+        "path": "/services/design/",
+        "label": "Website design services"
+      },
+      {
+        "path": "/new-jersey-marketing-agency/",
+        "label": "Marketing for New Jersey businesses"
+      }
+    ]
+  },
+  {
+    "slug": "track-calls-and-leads-nj-home-services",
+    "pageTitle": "Tracking Calls and Leads for NJ Home Service Businesses",
+    "title": "Tracking calls and leads for New Jersey home service businesses",
+    "description": "How New Jersey home service businesses can tell which marketing brings calls: call tracking, form tracking, simple notes at the phone and a monthly review.",
+    "category": "Home services",
+    "published": "2027-01-20",
+    "readMinutes": 6,
+    "intro": "Most home service work arrives by phone, and most owners cannot say which marketing produced the call. That makes it easy to keep paying for what does not work. You do not need an expensive system. This guide covers a simple way to see where calls and requests come from.",
+    "sections": [
+      {
+        "id": "why",
+        "heading": "What you want to know",
+        "intro": "Three answers are enough to guide your spending:",
+        "items": [
+          {
+            "title": "Where leads come from",
+            "text": "Google search, the map listing, ads, referrals or repeat customers."
+          },
+          {
+            "title": "Which leads become jobs",
+            "text": "A call that never books costs the same to get as one that does. Track booked work, not only calls."
+          },
+          {
+            "title": "What each job cost to win",
+            "text": "Divide marketing spend by booked jobs. Compare channels over a few months, not a few days."
+          }
+        ]
+      },
+      {
+        "id": "methods",
+        "heading": "Simple ways to track",
+        "items": [
+          {
+            "title": "Ask every caller",
+            "text": "Add \"How did you hear about us?\" to your call script and write the answer down. It is imperfect but costs nothing."
+          },
+          {
+            "title": "Separate tracking numbers",
+            "text": "A different phone number for ads, your website and your Google profile shows which source rings. Check that your provider keeps your main number visible and consistent across the web."
+          },
+          {
+            "title": "Form and click tracking",
+            "text": "Track contact form submissions and taps on the phone number in Google Analytics or your ad platform."
+          },
+          {
+            "title": "Your Google profile numbers",
+            "text": "Your Business Profile shows calls, direction requests and website clicks. Note them each month."
+          }
+        ]
+      },
+      {
+        "id": "record",
+        "heading": "A one-page lead log",
+        "paragraphs": [
+          "Keep a shared sheet with the date, source, service, whether it booked and the job value. Whoever answers the phone fills it in.",
+          "Once a month, total each source and compare it with what you spent. Move money toward what books jobs."
+        ]
+      },
+      {
+        "id": "privacy",
+        "heading": "Be careful with call recording",
+        "paragraphs": [
+          "If you record calls to review quality or tracking, tell callers at the start of the call. Recording rules vary, so check them for your situation before turning it on."
+        ]
+      }
+    ],
+    "closing": "LAD Media sets up call and lead tracking for New Jersey home service businesses, so you can see what is working. Tell us how leads reach you now.",
+    "related": [
+      {
+        "path": "/guides/google-business-profile-checklist-nj-home-services/",
+        "label": "Google Business Profile checklist"
+      },
+      {
+        "path": "/services/ppc/",
+        "label": "Paid advertising services"
+      },
+      {
+        "path": "/case-studies/polar-point-hvac-website/",
+        "label": "HVAC website case study"
+      }
+    ]
+  },
+  {
+    "slug": "choosing-a-marketing-agency-nj-small-business",
+    "pageTitle": "How to Choose a Marketing Agency in New Jersey",
+    "title": "How to choose a marketing agency as a New Jersey small business",
+    "description": "Questions to ask before hiring a marketing agency in New Jersey: what you own, how results are reported, contract terms, and warning signs to look out for.",
+    "category": "Professional services",
+    "published": "2027-01-27",
+    "readMinutes": 6,
+    "intro": "Hiring an agency is easier when you know what to ask. Good agencies are glad to answer clear questions, and vague answers tell you something too. This guide lists what to ask and what to check before you sign.",
+    "sections": [
+      {
+        "id": "goals",
+        "heading": "Start with your own goal",
+        "paragraphs": [
+          "Decide what a good result looks like: more calls, more booked appointments, more online orders. An agency can only be judged against a goal you both understand.",
+          "Write down your monthly budget and how long you are willing to wait before judging results. SEO takes months. Ads can show results sooner."
+        ]
+      },
+      {
+        "id": "questions",
+        "heading": "Questions to ask",
+        "items": [
+          {
+            "title": "Who will do the work?",
+            "text": "Ask who your main contact is and who actually writes, designs and manages campaigns."
+          },
+          {
+            "title": "Can I see relevant examples?",
+            "text": "Look for work with businesses like yours, with a clear explanation of what changed."
+          },
+          {
+            "title": "How will you report results?",
+            "text": "Ask for the numbers you will see each month and how they connect to calls, leads or sales."
+          },
+          {
+            "title": "What do I own?",
+            "text": "Your website, domain, ad accounts, analytics and Google Business Profile should be in your name, not the agency’s."
+          },
+          {
+            "title": "What are the contract terms?",
+            "text": "Check the length, how to cancel, what happens to your accounts if you leave, and what costs extra."
+          }
+        ]
+      },
+      {
+        "id": "flags",
+        "heading": "Warning signs",
+        "items": [
+          {
+            "title": "Guaranteed rankings",
+            "text": "No one controls Google. Be wary of promises of a number-one ranking or fixed results."
+          },
+          {
+            "title": "Reports full of vanity numbers",
+            "text": "Impressions and followers matter less than calls, leads and sales."
+          },
+          {
+            "title": "Locked-in accounts",
+            "text": "If the agency will not give you admin access to your own accounts, think twice."
+          }
+        ]
+      },
+      {
+        "id": "start",
+        "heading": "Where to start",
+        "paragraphs": [
+          "Talk to two or three agencies with the same short brief, compare their questions as much as their answers, and start with a small, clearly defined first project."
+        ]
+      }
+    ],
+    "closing": "LAD Media works with New Jersey small businesses on websites, search and ads, and you keep ownership of your accounts. Tell us your goal and budget.",
+    "related": [
+      {
+        "path": "/new-jersey-marketing-agency/",
+        "label": "Marketing for New Jersey businesses"
+      },
+      {
+        "path": "/guides/seo-or-google-ads-first-nj-small-business/",
+        "label": "SEO or Google Ads first"
+      },
+      {
+        "path": "/services/seo/",
+        "label": "SEO and content services"
+      }
+    ]
+  },
+  {
+    "slug": "first-90-days-marketing-plan-nj-startups",
+    "pageTitle": "A First 90 Days Marketing Plan for NJ Startups",
+    "title": "A first 90 days marketing plan for New Jersey startups",
+    "description": "A simple 90 day marketing plan for New Jersey startups and Web3 projects: what to set up, what to test each month, and how to decide where the budget goes.",
+    "category": "Startups & Web3",
+    "published": "2027-02-03",
+    "readMinutes": 6,
+    "intro": "A new company cannot do everything at once, and trying usually means doing nothing well. A 90 day plan gives you three clear steps: lay the foundation, test a few channels, then put money behind what works.",
+    "sections": [
+      {
+        "id": "month1",
+        "heading": "Month one: foundation",
+        "items": [
+          {
+            "title": "Clear message and website",
+            "text": "A one-sentence explanation of what you do, a simple site, and a way to capture email addresses or bookings."
+          },
+          {
+            "title": "Tracking",
+            "text": "Analytics and goal tracking in place so every later test can be measured."
+          },
+          {
+            "title": "Your first audience list",
+            "text": "Friends of the business, early customers and community members who agree to hear from you."
+          }
+        ]
+      },
+      {
+        "id": "month2",
+        "heading": "Month two: test a few channels",
+        "items": [
+          {
+            "title": "Pick two or three channels",
+            "text": "For example search, one social platform and local or industry outreach. Do not spread across everything."
+          },
+          {
+            "title": "Small, time-boxed tests",
+            "text": "Set a small budget and a fixed end date for each test, and write down what you expect."
+          },
+          {
+            "title": "Talk to users",
+            "text": "Ask new customers or community members how they found you and what almost stopped them."
+          }
+        ]
+      },
+      {
+        "id": "month3",
+        "heading": "Month three: double down",
+        "paragraphs": [
+          "Compare results across channels using cost per lead or cost per customer, not likes or visits. Move budget to the best performer and stop the weakest.",
+          "Turn the best content and answers from month two into your standard pages and posts."
+        ]
+      },
+      {
+        "id": "web3",
+        "heading": "If you are launching a Web3 project",
+        "paragraphs": [
+          "Check each ad platform’s current crypto policy before planning paid campaigns, publish verifiable details such as policy IDs and supply, and get legal advice before describing any token sale."
+        ]
+      }
+    ],
+    "closing": "LAD Media plans and runs first-year marketing for New Jersey startups and Web3 projects. Tell us your goal and timeline.",
+    "related": [
+      {
+        "path": "/guides/launching-in-new-jersey-marketing-checklist-founders/",
+        "label": "Launch checklist for founders"
+      },
+      {
+        "path": "/new-jersey-crypto-marketing-agency/",
+        "label": "Crypto marketing in New Jersey"
+      },
+      {
+        "path": "/services/token-launch/",
+        "label": "Token launch services"
+      }
+    ]
+  },
 ];
 
 declare const __GUIDES_CUTOFF__: string | undefined;

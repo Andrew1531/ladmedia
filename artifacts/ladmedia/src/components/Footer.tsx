@@ -12,6 +12,12 @@ const services = [
   ["seo", "SEO & Content"],
 ] as const;
 
+const socials = [
+  ["Instagram", "https://www.instagram.com/l.a.d.media/"],
+  ["LinkedIn", "https://www.linkedin.com/company/l-a-d-media/"],
+  ["Facebook", "https://www.facebook.com/LadMedia/"],
+] as const;
+
 const linkCls = "ulink text-bone/70 transition-colors hover:text-bone";
 
 export default function Footer() {
@@ -76,6 +82,16 @@ export default function Footer() {
               <li className="flex gap-4">
                 <MapPin className="mt-1 h-5 w-5 shrink-0 text-ember" />
                 <span className="text-bone/70">Based in Newark, NJ.<br />Remote collaboration available.</span>
+              </li>
+              <li>
+                <p className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-lilac">Follow us</p>
+                <ul className="flex flex-wrap gap-x-6 gap-y-2">
+                  {socials.map(([label, href]) => (
+                    <li key={label}>
+                      <a href={href} target="_blank" rel="noopener noreferrer me" className={linkCls} aria-label={`LAD Media on ${label}`}>{label}</a>
+                    </li>
+                  ))}
+                </ul>
               </li>
             </ul>
           </div>

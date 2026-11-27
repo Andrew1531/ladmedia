@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { ArrowUp, Mail, MapPin, ArrowRight } from "lucide-react";
+import { ArrowUp, Mail, MapPin, ArrowRight, Instagram, Linkedin, Facebook } from "lucide-react";
 
 const base = import.meta.env.BASE_URL;
 
@@ -13,9 +13,9 @@ const services = [
 ] as const;
 
 const socials = [
-  ["Instagram", "https://www.instagram.com/l.a.d.media/"],
-  ["LinkedIn", "https://www.linkedin.com/company/l-a-d-media/"],
-  ["Facebook", "https://www.facebook.com/LadMedia/"],
+  ["Instagram", "https://www.instagram.com/l.a.d.media/", Instagram],
+  ["LinkedIn", "https://www.linkedin.com/company/l-a-d-media/", Linkedin],
+  ["Facebook", "https://www.facebook.com/LadMedia/", Facebook],
 ] as const;
 
 const linkCls = "ulink text-bone/70 transition-colors hover:text-bone";
@@ -85,10 +85,19 @@ export default function Footer() {
               </li>
               <li>
                 <p className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-lilac">Follow us</p>
-                <ul className="flex flex-wrap gap-x-6 gap-y-2">
-                  {socials.map(([label, href]) => (
+                <ul className="flex flex-wrap gap-3">
+                  {socials.map(([label, href, Icon]) => (
                     <li key={label}>
-                      <a href={href} target="_blank" rel="noopener noreferrer me" className={linkCls} aria-label={`LAD Media on ${label}`}>{label}</a>
+                      <a
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer me"
+                        aria-label={`LAD Media on ${label}`}
+                        title={label}
+                        className="flex h-11 w-11 items-center justify-center rounded-full border border-bone/25 text-bone/80 transition-colors hover:border-ember hover:text-ember"
+                      >
+                        <Icon className="h-5 w-5" aria-hidden="true" />
+                      </a>
                     </li>
                   ))}
                 </ul>

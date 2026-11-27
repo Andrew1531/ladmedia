@@ -40,9 +40,12 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": "https://ladmedia.co/#organization",
       "name": "LAD Media",
       "url": "https://ladmedia.co",
+      "image": "https://ladmedia.co/assets/lad-media-official-logo.png",
+      "inLanguage": "en-US",
       "logo": "https://ladmedia.co/assets/lad-media-official-logo.png",
       "description": "A digital marketing agency based in Newark, NJ, specializing in crypto and Web3, with SEO, content, social media, paid advertising, branding, and web design for businesses beyond the space.",
       "email": "andrew@ladmedia.co",
@@ -52,7 +55,11 @@
         "addressRegion": "NJ",
         "addressCountry": "US"
       },
-      "areaServed": ["Newark, NJ", "United States", "Global"],
+      "areaServed": [
+        { "@type": "State", "name": "New Jersey" },
+        { "@type": "City", "name": "Newark" },
+        { "@type": "Country", "name": "United States" }
+      ],
       "knowsAbout": [
         "Crypto Marketing",
         "Web3 Marketing",
@@ -64,18 +71,23 @@
         "Community Building",
         "Social Media Marketing",
         "Website Design",
-        "Search Engine Optimization"
+        "Search Engine Optimization",
+        "Local SEO",
+        "Google Business Profile Management"
       ]
     }
     </script>
 
-    <!-- Structured Data: WebSite with SearchAction -->
+    <!-- Structured Data: WebSite -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
+      "@id": "https://ladmedia.co/#website",
       "name": "LAD Media",
-      "url": "https://ladmedia.co"
+      "url": "https://ladmedia.co",
+      "inLanguage": "en-US",
+      "publisher": { "@id": "https://ladmedia.co/#organization" }
     }
     </script>
 
@@ -95,7 +107,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/assets/index-COZfw_o-.js"></script>
+    <script type="module" crossorigin src="/assets/index-Ch7nhKxQ.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-JTDkXjeO.css">
   <style>
   #root > main { background: #000; color: #fff; min-height: 100vh; padding: 7rem max(1.5rem, calc((100vw - 72rem)/2)) 5rem; font: 400 1.1rem/1.75 system-ui, sans-serif; }

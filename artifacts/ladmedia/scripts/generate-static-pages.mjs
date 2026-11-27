@@ -37,6 +37,8 @@ const staticContentStyle = `<style>
   #root > main a { color: #fff; text-decoration: underline; text-underline-offset: .2em; }
 </style>`;
 const siteUrl = 'https://ladmedia.co';
+// Bump when site pages change in a way worth telling search engines about.
+const siteUpdated = '2026-11-27';
 const sitemapMarker = '<!-- SERVICE_URLS -->';
 const caseStudySitemapMarker = '<!-- CASE_STUDY_URLS -->';
 const guideSitemapMarker = '<!-- GUIDE_URLS -->';
@@ -188,6 +190,36 @@ function renderPage(page) {
     );
   }
 
+  if (page.guidesIndex) {
+    const guidesSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'Marketing guides for New Jersey businesses',
+      url: `${siteUrl}/guides/`,
+      inLanguage: 'en-US',
+      isPartOf: { '@type': 'WebSite', name: 'LAD Media', url: siteUrl },
+      publisher: { '@type': 'Organization', name: 'LAD Media', url: siteUrl },
+      mainEntity: {
+        '@type': 'ItemList',
+        itemListElement: guides.map((g, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          url: `${siteUrl}/guides/${g.slug}/`,
+          name: g.title,
+        })),
+      },
+    };
+    const guidesBreadcrumb = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
+        { '@type': 'ListItem', position: 2, name: 'Guides', item: `${siteUrl}/guides/` },
+      ],
+    };
+    html = html.replace('</head>', `${[guidesSchema, guidesBreadcrumb].map(schema => `    <script type="application/ld+json">${JSON.stringify(schema)}</script>`).join('\n')}\n  </head>`);
+  }
+
   if (page.guide) {
     const guide = page.guide;
     const articleSchema = {
@@ -197,7 +229,12 @@ function renderPage(page) {
       description: guide.description,
       datePublished: guide.published,
       dateModified: guide.published,
-      mainEntityOfPage: canonical,
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+      url: canonical,
+      inLanguage: 'en-US',
+      articleSection: guide.category,
+      image: `${siteUrl}/assets/lad-media-official-logo.png`,
+      isPartOf: { '@type': 'Blog', name: 'LAD Media Guides', url: `${siteUrl}/guides/` },
       author: { '@type': 'Person', name: 'Andrew', worksFor: { '@type': 'Organization', name: 'LAD Media', url: siteUrl } },
       publisher: { '@type': 'Organization', name: 'LAD Media', url: siteUrl, logo: { '@type': 'ImageObject', url: `${siteUrl}/assets/lad-media-official-logo.png` } },
     };
@@ -301,13 +338,13 @@ if (sitemapTemplate.split(sitemapMarker).length !== 2) {
   throw new Error(`Expected exactly one ${sitemapMarker} marker in public/sitemap.xml`);
 }
 const serviceEntries = servicesData.map((service) =>
-  `  <url><loc>${escapeHtml(`${siteUrl}/services/${service.id}/`)}</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>`,
+  `  <url><loc>${escapeHtml(`${siteUrl}/services/${service.id}/`)}</loc><lastmod>${siteUpdated}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>`,
 ).join('\n');
 if (sitemapTemplate.split(caseStudySitemapMarker).length !== 2) {
   throw new Error(`Expected exactly one ${caseStudySitemapMarker} marker in public/sitemap.xml`);
 }
 const caseStudyEntries = caseStudies.map((study) =>
-  `  <url><loc>${escapeHtml(`${siteUrl}/case-studies/${study.slug}/`)}</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>`,
+  `  <url><loc>${escapeHtml(`${siteUrl}/case-studies/${study.slug}/`)}</loc><lastmod>${siteUpdated}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`,
 ).join('\n');
 if (sitemapTemplate.split(guideSitemapMarker).length !== 2) {
   throw new Error(`Expected exactly one ${guideSitemapMarker} marker in public/sitemap.xml`);
